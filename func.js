@@ -71,3 +71,39 @@ function passWord(string) {
     return storage(string)
 }
 
+//to remove duplicates from a given testarray
+function sortedArray(arr) {
+    var newArray = arr.filter(function (elem, index, self) {
+        return index == self.indexOf(elem);
+    });
+    return newArray;
+}
+
+sortedArray(testArray);
+
+//Write a function which accepts an array as an argument and displays(via the console.log() method) the 2nd lowest & 2nd greatest numbers in the list.
+
+
+function Second_Greatest_Lowest(arr_num) {
+    arr_num.sort(function (x, y) {
+        return x - y;
+    });
+    var uniqa = [arr_num[0]];
+    var result = [];
+
+    for (var j = 1; j < arr_num.length; j++) {
+        if (arr_num[j - 1] !== arr_num[j]) {
+            uniqa.push(arr_num[j]);
+        }
+    }
+    result.push(uniqa[1], uniqa[uniqa.length - 2]);
+    return result.join(' , ');
+}
+
+// Multiples of 3 and 5 under 1000
+for (
+    var sum = 0, i = 1;
+    i < 1000;
+    !(i % 3 && i % 5) && (sum += i), i++
+);
+console.log(sum);
