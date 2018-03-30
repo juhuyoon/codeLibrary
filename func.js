@@ -107,3 +107,74 @@ for (
     !(i % 3 && i % 5) && (sum += i), i++
 );
 console.log(sum);
+
+//Try catch is SYNCHRONOUS, so put them inside asynchronous functions!
+setTimeout(function(){
+    try{
+       if (1 == 1){
+          throw new Error("something is still wrong")
+       }else{
+          throw new TypeError("something else is wrong")
+       }
+    }catch(err){
+      console.log(err.message)
+  }
+},3000)
+
+ 
+
+//The difference between i++ and ++i is the value of the expression.
+//The value i++ is the value of i before the increment. The value of ++i is the value of i after the increment.
+var i = 42;
+    alert(i++); // shows 42
+    alert(i); // shows 43
+    i = 42;
+    alert(++i); // shows 43
+    alert(i); // shows 43
+
+//Promise example
+
+var promise = new Promise(function(resolve,reject){
+    var output = 5;
+    setTimeout(function(){
+       try{
+            console.log(++output);
+            resolve(output); //1
+         }catch(e){
+             reject("something is still wrong");
+         }
+    }, 3000);
+ });
+ 
+ promise.then(function(result){
+   console.log("the value is "+ result);
+   return result;
+ }).then(function(result){
+   console.log(result * result);
+   return result;
+ }).then(function(result){
+   console.log(result*3)
+   return result;
+ })
+ 
+ promise.catch(function(err){
+     console.log(err);
+ })
+   
+
+//Different Error Class examples
+ class MyError extends Error {}
+// callback with a custom error object
+let getError = cb => cb(new MyError('there was a problem'))
+// get the error and log the stack trace
+getError((err) => console.log(err))
+
+//adding information to a database using `` from ES6
+function displayResults(data) {
+    // Add to the table here...
+    //empty first!
+    $("tbody").empty();
+    data.forEach(function(animals){
+      $("tbody").append(`<tr><td>$(animals.name)</td></tr><tr><td>$(animals.numLegs)</td></tr>``<tr><td>$(animals.class)</td></tr><tr><td>$(animals.weight)</td></tr><tr><td>$(animals.whatICallIt)</td></tr>`)
+    });
+  }
