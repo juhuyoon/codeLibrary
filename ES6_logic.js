@@ -142,3 +142,146 @@
 
 
 7) Promises in ES6 //(https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+        //implemented with Promise as a Reserved Word
+        *ES5*
+            setTimeout(function(){
+                console.log("Yay!");  
+            },1000);
+
+        *ES6*
+            const wait1000 =  new Promise(function(resolve, reject) {
+                setTimeout(resolve, 1000)
+            }).then(function() {
+                console.log('Yay!')
+            });
+
+            //or with the arrow function
+            
+
+            var wait1000 =  new Promise((resolve, reject)=> {
+                setTimeout(resolve, 1000)
+            }).then(()=> {
+                console.log('Yay!')
+            });
+//if you need to know WHY promises are good: (http://jamesknelson.com/grokking-es6-promises-the-four-functions-you-need-to-avoid-callback-hell)
+
+
+8a) Block-Scoped Constructs (Let) //(https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/block)
+        
+        *ES5*
+                function calculateTotalAmount (vip) {
+                    var amount = 0
+                    if (vip) {
+                     var amount = 1
+                    }
+                    { // more crazy blocks!
+                    var amount = 100
+                    {
+                        var amount = 1000
+                        }
+                    }  
+                    return amount
+                }
+              
+                console.log(calculateTotalAmount(true))
+
+        *ES6 with Let*
+            function calculateTotalAmount (vip) {
+                var amount = 0 // probably should also be let, but you can mix var and let
+                if (vip) {
+                let amount = 1 // first amount is still 0
+                } 
+                { // more crazy blocks!
+                    let amount = 100 // first amount is still 0
+                    {
+                    let amount = 1000 // first amount is still 0
+                    }
+                }  
+                return amount
+            }
+          
+            console.log(calculateTotalAmount(true))
+            //'let' allows you to make changes to variable words throughout your code, making scoping easier
+        
+        *ES6 with Const*
+            function calculateTotalAmount (vip) {
+                const amount = 0  
+                if (vip) {
+                  const amount = 1 
+                } 
+                { // more crazy blocks!
+                  const amount = 100 
+                  {
+                    const amount = 1000
+                    }
+                }  
+                return amount
+              }
+              
+              console.log(calculateTotalAmount(true))
+              //'const' does not allow you to change the variable ever! It will stay immutable unless you have different block scopes. 
+        
+
+9) Classes //(https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
+            //Objects inherited from objects
+
+        *ES6*
+        class baseModel {
+            constructor(options = {}, data = []) { // class constructor
+              this.name = 'Base'
+              this.url = 'http://azat.co/api'
+              this.data = data
+              this.options = options
+            }
+          
+              getName() { // class method
+                console.log(`Class name: ${this.name}`)
+              }
+          }
+          //sets up a class in the beginning where the objects are now stored in one object. 
+
+          class AccountModel extends baseModel {
+            constructor(options, data) {
+         //Accountmodel now inherits the basemodel 
+            super({private: true}, ['32113123123', '524214691']) //call the parent method with super
+                this.name = 'Account Model'
+                this.url +='/accounts/'
+            } //use super() to evoke the parameters of the parent constructor (baseModel)
+
+        //Now to call..
+            let accounts = new AccountModel(5)
+                accounts.getName()
+                console.log('Data is %s', accounts.accountsData)
+
+        //Output : Class name: Account Model
+                // Data is %s 32113123123,524214691
+
+
+10) Modules in ES6 //(https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/Using)
+                    
+        //if we had to this export as a setup...
+                    module.exports = {
+                        port: 3000,
+                        getAccounts: function() {
+                        }
+                      }
+                      
+
+        *ES5*
+            var service = require('module.js')
+            console.log(service.port) // 3000
+            //how we would have to import to module.js.
+
+        *ES6*
+            export var port = 3000
+            export function getAccounts(url) {
+            }
+            //we would set up our module.js file as above...
+
+            import {port, getAccounts} from 'module'
+            console.log(port) // 3000
+            //then we would import using {} to access the export 'port' and 'getAccounts'
+
+            import * as service from 'module'
+            console.log(service.port) // 3000
+            //the star would be the default to import everything within that module.js
