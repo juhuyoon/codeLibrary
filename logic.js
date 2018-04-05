@@ -1,4 +1,4 @@
-//lexical logic of this thinking process. 
+//lexical logic of thinking process. 
 
   // ---------- OLD Methods (no arrow function)
   
@@ -32,4 +32,3 @@ function Person() {
       this.age++; // |this| is parent's context - properly refers to the person object
     }, 1000);
   }
-  

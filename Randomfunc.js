@@ -178,3 +178,17 @@ function displayResults(data) {
       $("tbody").append(`<tr><td>$(animals.name)</td></tr><tr><td>$(animals.numLegs)</td></tr>``<tr><td>$(animals.class)</td></tr><tr><td>$(animals.weight)</td></tr><tr><td>$(animals.whatICallIt)</td></tr>`)
     });
   }
+
+//ordering a sort listing using 1 and -1
+  const ordered = inventors.sort(function(a, b){
+    if (a.year > b.year){
+        return 1;
+    } else {
+        return -1;
+    }
+});
+console.table(ordered);
+
+        //ternary function of same sorting list
+        const ordered = inventors.sort((sorta,b) => a.year > b.year ? 1 : -1)
+
