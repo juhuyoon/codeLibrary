@@ -1,5 +1,10 @@
 # CodeLibrary
-Recyclable codes for various scenarios
+
+As people step into the world of coding, often times, there are random scenarios and problems that people run into that leave people befuddled. 
+
+The hope with this code library is to be a place to find generic codes, strange logic problems, and quick explanations for new languages that people can use to read, learn, and use!
+
+
 
 ### What the Files are:
 
