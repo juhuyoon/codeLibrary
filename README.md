@@ -18,4 +18,4 @@ The hope with this code library is to be a place to find generic codes, strange 
 ## Contributors   
 
 1) **Junghoon** [Github](https://github.com/juhuyoon)
-2) **Katherine**[Github](https://github.com/krosenk729)
+2) **Katherine** [Github](https://github.com/krosenk729)
