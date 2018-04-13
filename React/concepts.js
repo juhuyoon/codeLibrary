@@ -34,3 +34,4 @@ Things you should know about React //Simple!
 3) React is Declarative
         //use declarative style to write the components. 
         //Declarative means that the code expresses the logic of computation without needing control flow. 
+        
