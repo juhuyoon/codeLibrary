@@ -10,7 +10,7 @@ Javascript
 2) Javascript conundrums and Gotcha codes filled with the best puns [JS-Gotcha.js](https://github.com/juhuyoon/codeLibrary/blob/master/JS-Gotchas.js)
 
 React
-1) [concepts.js] (https://github.com/juhuyoon/codeLibrary/blob/master/React/concepts.js) Work in Progress
+1)  [concepts.js](https://github.com/juhuyoon/codeLibrary/blob/master/React/concepts.js) Work in Progress
 2) Create React App How to Library [createreactapp.md](https://github.com/juhuyoon/codeLibrary/blob/master/React/createreactapp.md)
 
 Random Files 
