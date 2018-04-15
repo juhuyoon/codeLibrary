@@ -6,7 +6,7 @@ The hope with this code library is to be a place to find generic codes, strange 
 
 ### Folders
 Javascript 
-1) Practices and examples of how to use the various array functions in ES6[Arrays Folder](https://github.com/juhuyoon/codeLibrary/tree/master/Javascript/ES6-Arrays)  
+1) Practices and examples of how to use the various array functions in ES6 [Arrays Folder](https://github.com/juhuyoon/codeLibrary/tree/master/Javascript/ES6-Arrays)  
 2) Key differences between ES5 and ES6 [ES6.js](https://github.com/juhuyoon/codeLibrary/blob/master/ES6_logic.js)
 3) Javascript conundrums and Gotcha codes filled with the best puns [JS-Gotcha.js](https://github.com/juhuyoon/codeLibrary/blob/master/JS-Gotchas.js)
 
