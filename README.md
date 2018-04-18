@@ -6,8 +6,9 @@ The hope with this code library is to be a place to find generic codes, strange 
 
 ### Folders
 Javascript 
-1) Key differences between ES5 and ES6 [ES6.js](https://github.com/juhuyoon/codeLibrary/blob/master/ES6_logic.js)
-2) Javascript conundrums and Gotcha codes filled with the best puns [JS-Gotcha.js](https://github.com/juhuyoon/codeLibrary/blob/master/JS-Gotchas.js)
+1) Practices and examples of how to use the various array functions in ES6 [Arrays Folder](https://github.com/juhuyoon/codeLibrary/tree/master/Javascript/ES6-Arrays)  
+2) Key differences between ES5 and ES6 [ES6.js](https://github.com/juhuyoon/codeLibrary/blob/master/ES6_logic.js)
+3) Javascript conundrums and Gotcha codes filled with the best puns [JS-Gotcha.js](https://github.com/juhuyoon/codeLibrary/blob/master/JS-Gotchas.js)
 
 React
 1)  [concepts.js](https://github.com/juhuyoon/codeLibrary/blob/master/React/concepts.js) Work in Progress
@@ -24,3 +25,4 @@ Random Files
 
 1) **Junghoon** [Github](https://github.com/juhuyoon)
 2) **Katherine** [Github](https://github.com/krosenk729)
+3) **Marsalis** [Github](https://github.com/Sanders97)
