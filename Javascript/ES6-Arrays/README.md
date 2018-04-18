@@ -10,3 +10,5 @@ Learning how to use the multiple array methods available to manipulate data with
 2) Index2.html = Array.some, arrow function, array.find, findIndex()
 
 3) Index3.html = how to make references and copies
+
+4) Index4.html = Array sort while removing articles from the array
