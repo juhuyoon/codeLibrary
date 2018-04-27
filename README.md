@@ -10,6 +10,7 @@ Javascript
 2) What Bubbling, Propagation, and the Once method does in ES6 [ES6-Bubbling](https://github.com/juhuyoon/codeLibrary/tree/master/Javascript/ES6-Bubbling%20and%20Propagation)
 3) Key differences between ES5 and ES6 [ES6.js](https://github.com/juhuyoon/codeLibrary/blob/master/ES6_logic.js)
 4) Javascript conundrums and Gotcha codes filled with the best puns [JS-Gotcha.js](https://github.com/juhuyoon/codeLibrary/blob/master/JS-Gotchas.js)
+5) Sorting Algorithms for consideration written with javascript [Sorting Algorithms](https://github.com/juhuyoon/codeLibrary/tree/master/Sorting%20Algorithms)
 
 React
 1)  [concepts.js](https://github.com/juhuyoon/codeLibrary/blob/master/React/concepts.js) Work in Progress
