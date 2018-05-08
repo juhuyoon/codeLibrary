@@ -55,5 +55,39 @@ After the technical interviews, follow up with the recruiter if there is no deci
                                     Amazon asks a lot about object-oriented design. 
 
 *** Google Interview *** 
+    Typical Interview is: Google engineer performs first phone screen (so expect technical questions) via coding/shared                     document
+
+                        -On site interview: 4 to 6 people, one with a lunch interviewer. 
+                        - Interviewer feedback is kept confidential from other interviewers. 
+                        - Lunch interviwer does not submit feedback, so can ask honest questions. 
+                        - Graded from a scale of 1.0 to 4.0 from the 4 categories. 
+                        - To be hired, wants at least one interviewer who is an 'enthusiastic endorser'.    
+                                [Scores of 3.6, 3.1, 3.1, 2.6 is better than a score of all 3.1s]
+                        -Offer is measured from the scores you got, and decision can take up to several weeks. 
+
+                Definitely Prepare: Scalable systems, strong focus on analytical skills. 
+
+*** Apple Interview ***
+    Typical Interview is : Recruiter phone screen to get a basic sense of your skills, then a series of technical phone screens with team members. 
+                        -Then an on site interview with 6 - 8 interviews with members of the team. 
+                        -Mix of one on one or two on one interviews, expect to code on a whiteboard. 
+                        - Lunch interview with a manager, wants to measure other aspects beyond coding. 
+                        - If interviewed at the end of the day, then it is with the director and VP of the organzation and good measure that you have made it. 
+
+                Definitely Prepare: be knowledgeable about the product that you wish to be a part of. What you like, what you would improve, etc. 
+
+*** Facebook Interview *** 
+    Typical interview is: Candidates do one or two phone screens which involve technical quesitons with shared document                     coding. 
+
+                        - Homework assignment with a mix of coding and algorithms, and be careful of your coding style. 
+                        - On site interview with primarily other software engineers, but hiring managers may be involved whenever they are available. 
+                        -Each interviewer is given a role on the on site interviews. 
+                            -Measure: Behavioral[Jedi], Coding and Algorithm[Ninja], and Design/Architecture[Pirate].
+                                Typically expect two ninjas and one jedi interview. 
+                        -After the interviewes, written feedback is submitted, then the intervieweing team and a hiring manager make final decision. 
+
+                Definitely Prepare: Want developers with entrepreneurial spirit, show that you love to build stuff fast. C++, Python, Erland, and other languages are more important backend. 
+                
+                 
 
                             
