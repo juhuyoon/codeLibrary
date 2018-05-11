@@ -124,3 +124,72 @@ int pairSum(int a, int b) {
                     //What is the sum of 1 + 2 +4 + 8 + 16 ... + X = 2X. 
                     //Therefore, X insertions take O(2X) time. Amortized time for each insertion is O(1). 
                     
+//=============================================================================================================================
+//Log N Runtimes
+            
+                //2^4 = 16 -> log(2)16 = 4
+                //log(2)N = k -> 2^k = N
+    // When you see a problem where the number of elements in the problem space gets halved each time, that will likely be a O(log N) runtime
+    //Finding an element in a balanced binary search tree is O(log N). Go either left or right, half the nodes on each side, and then cut the problem space in half. 
+
+//=============================================================================================================================
+//Recursive Runtimes
+                //What is the runtime of this code?
+        int f(int n) {
+            if(n <= 1) {
+                return 1;
+            }
+            returnf(n - 1) + f(n - 1);
+        }
+            //The runtime is O(2^n).
+            //Draw a binary search tree, and for every depth, there will be double the nodes down the tree. 
+            //Learn this pattern. When you have a recursive function that makes multiple calls, the runtime will often look like O(branches ^ depth). 
+        
+            //Space Complexity of this algorithm is O(N). Only O(N) memory/space exists at any given time. 
+
+//Examples and Exercises:
+
+//Example 1:
+        //Runtime? 
+        void foo(int[] array){
+            int sum = 0;
+            int product = 1;
+            for(int i=0; i < array.length; i++) {
+                sum += array[i];
+            }
+            for(int i = 0; i < array.length; i++){
+                product *= array[i];
+            }
+            System.out.println(sum + ", " + product);
+        }
+
+        //Answer: O(N) time. Iterating through the array twice does NOT matter. 
+
+//Example 2:
+        //Runtime? 
+        void printPairs(int[] array) {
+            for(int i = 0; i < array.length; i++){
+                for(int j = 0; j < array.length; j++) {
+                    System.out.println(array[i] + "," + array[j]);
+                }
+            }
+        }
+
+
+        //Answer: O(N^2) because the inner for loop has O(N) iterations and it is called on N times. 
+        //Another way: It is printing all pairs (two element sequences). There are O(N^2) pairs; therefore runtime is O(N^2)
+
+//Example 3:
+        //Runtime?
+        void printUnorderedPairs(int[] array){
+            for(int i = 0; i < array.length; i++){
+                for(int j = i + 1; j < array.length; j++) {
+                    System.out.println(array[i] + ',' + array[j]);
+                }
+            }
+        }
+
+    //Answer: O(N^2);
+    //The code iterates through each pair of values for (i, j) where j > i. 
+    //There are N^2 total pairs, and roughly half of those will have i < j and the remaining i > j. 
+    //Means code goes through roughly N^2 / 2 pairs, so O(N^2) works. 
