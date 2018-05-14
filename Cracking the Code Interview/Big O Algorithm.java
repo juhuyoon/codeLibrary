@@ -193,3 +193,80 @@ int pairSum(int a, int b) {
     //The code iterates through each pair of values for (i, j) where j > i. 
     //There are N^2 total pairs, and roughly half of those will have i < j and the remaining i > j. 
     //Means code goes through roughly N^2 / 2 pairs, so O(N^2) works. 
+
+//Example 4: 
+        //Runtime?
+        void printUnorderedPairs(int[] arrayA, int[] arrayB) {
+            for (int i = 0; i < arrayA.length; i++) {
+                for( int j = 0; j < arrayB.length; j++){
+                    if(arrayA[i] < arrayB[j]) {
+                        System.out.pringln(arrayA[i] + "," } arrayB[j]);
+                    }
+                }
+            }
+        }
+
+        //if-statement within j's for loop is O(1) time as it's a sequence of constant-time statements. 
+        //For each element of arrayA, inner for loop goes through b iterations, b = arrayB.length. a = arrayA.length,
+        //Answer: O(ab)
+
+//Example 5:
+        void printUnorderedPairs(int[] arrayA, int[] arrayB) {
+            for (int i = 0; i < arrayA.length; i++) {
+                for(int j = 0; j < arrayB.length; j++) {
+                    for(int k = 0; k < 10000; k++){
+                        System.out.println(arrayA[i] + "," + arrayB[j])
+                    }
+                }
+            }
+        }
+
+        //Answer: O(ab);
+
+//Example 6:
+        //Runtime? The code reverses an array. 
+            void reverse(int[] array) {
+                for(int i = 0; i< array.length / 2; i++){
+                    int other = array.length -i -1;
+                    int temp = array[i];
+                    array[i] = array[other];
+                    array[other] = temp;
+                }
+            }
+        //Runs in O(N) time. The fact that it only goes through half the array does not impact the big O time.
+
+//Example 7: 
+        //Which of the following are equivalent to O(N)? Why?
+            O(N + P), where P < N/2
+            O(2N)
+            O(N + log N )
+            O(N + M)
+
+        //answer 1: YES as N is the dominant term so drop P
+        //answer 2: YES as 2 is a constant so drop it. 
+        //answer 3: YES as logN is dominated by N. 
+        //answer 4: NO as we don't know what M is 
+
+//Example 8:
+        //What would the runtime of an algorithm that took in an array of strings, sorted each string, and then sorted the full array be?
+
+        //Use variables to represent the Ns in different ways:
+            //s = length of longest string
+            //a = length of array. 
+            //Sorting each string is O(s log s)
+            //for every array, so it's O(a * s log s)
+            //now sort all the strings and there are a amount of strings, so it would be O(a * s log a) time. 
+            //Add the two parts together, it's O(a * s(log a + log s)).
+
+//Example 9: 
+        //What is the runtime of a code that sums the values of all the nodes in a balanced binary search tree?
+            int sum(Node node) {
+                if(node == null) {
+                    return 0;
+                }
+                return sum(node.left) + node.value + sum(node.right);
+            }
+        //just because it's a binary search tree does NOT mean there is a log in it!
+        //Code touches each node in the tree once and does a constant time amount of work with each "touch" (excluding the recursive calls)
+        //Therefore, the runtime will be linear, if there are N nodes, then the runtime is O(N).
+
