@@ -152,7 +152,27 @@ print(nested_number[2][1])
 # {'key1':'value1', 'key2': 'value2'}
 #Objects retrieved by key name. Unordered and cannot be sorted.
 
-my_dict = {'key1' : 'value1', 'key2' : 'valu2'}
+my_dict = {'key1' : 'value1', 'key2' : 'value2'}
+print(my_dict)
+print(my_dict['key1'])
 
+prices_lookup = {'apple': 2.99, 'oranges': 1.99, 'milk':5.80}
+print(prices_lookup['apple'])
 
+elementD = {'k1':123, 'k2': [0,1,2], 'k3':{'insideKey':100}}
+print(elementD['k2'][1])
+print(elementD['k3'])
+print(elementD['k3']['insideKey'])
 
+upperD = {'key1':['a', 'b', 'c']}
+print(upperD['key1'][1].upper())
+
+#adding new values
+d = {'k1': 100, 'k2':200}
+print(d)
+d['k3'] = 300
+print(d)
+
+#to get all the keys and values
+print(d.keys())
+print(d.values())
