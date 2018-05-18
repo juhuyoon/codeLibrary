@@ -231,3 +231,6 @@ print(1 == 1)
 b = None
 print(b)
 
+#Square Roots
+num = 4 ** 0.5
+print(num)
