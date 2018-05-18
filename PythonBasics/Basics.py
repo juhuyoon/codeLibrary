@@ -176,3 +176,58 @@ print(d)
 #to get all the keys and values
 print(d.keys())
 print(d.values())
+
+
+#=========================================================
+#Tuples
+# Very similar to lists, but they cannot be changed [immutable]
+#Once an element is inside the tuple, it cannot be reassigned
+#Tuples use parenthesis: {1,2,3)
+
+
+t = (1,2,3)
+print(type(t))
+print(t)
+
+t=('one', 2)
+print(t[0])
+
+# counting with tuple
+t = ('a', 'a', 'b')
+print(t.count('a'))
+
+#indexing with tuple
+print(t.index('a'))
+
+#TUPLE DOES NOT ALLOW ITEM ASSIGNMENT
+#Done for data integrity
+
+#==================================================================
+#Sets
+#unordered collections of unique elements
+#there can be only one representative of the same object.
+
+myset = set()
+print(myset)
+myset.add(1)
+print(myset)
+myset.add(2)
+print(myset)
+#The additional 2 won't be noticed as they must all be unique values
+myset.add(2)
+print(myset)
+
+mylist = [1,2,2,3,2,2,3,1,2,3,4]
+print(set(mylist))
+
+#===================================================================
+#Booleans
+#True or False statements
+#Must be Capitalized True or False
+
+print(type(True))
+print(1 > 2)
+print(1 == 1)
+b = None
+print(b)
+

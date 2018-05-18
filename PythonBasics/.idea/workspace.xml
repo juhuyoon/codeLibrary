@@ -15,8 +15,8 @@
       <file leaf-file-name="Basics.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Basics.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="509">
-              <caret line="173" column="8" lean-forward="true" selection-start-line="173" selection-start-column="8" selection-end-line="173" selection-end-column="8" />
+            <state relative-caret-position="441">
+              <caret line="227" column="17" lean-forward="true" selection-start-line="227" selection-start-column="17" selection-end-line="227" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -38,7 +38,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="24" />
     <option name="y" value="81" />
     <option name="width" value="1400" />
@@ -49,8 +49,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -62,7 +62,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="RunDashboard">
@@ -205,17 +205,24 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39918947" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Messages" order="7" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Messages" order="7" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Basics.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2941">
+          <caret line="173" column="8" lean-forward="true" selection-start-line="173" selection-start-column="8" selection-end-line="173" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Basics.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2669">
@@ -226,8 +233,8 @@
     <entry file="file://$PROJECT_DIR$/Numbers.py" />
     <entry file="file://$PROJECT_DIR$/Basics.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="509">
-          <caret line="173" column="8" lean-forward="true" selection-start-line="173" selection-start-column="8" selection-end-line="173" selection-end-column="8" />
+        <state relative-caret-position="441">
+          <caret line="227" column="17" lean-forward="true" selection-start-line="227" selection-start-column="17" selection-end-line="227" selection-end-column="17" />
         </state>
       </provider>
     </entry>
