@@ -16,6 +16,14 @@ React
 1)  [concepts.js](https://github.com/juhuyoon/codeLibrary/blob/master/React/concepts.js) Work in Progress
 2) Create React App How to Library [createreactapp.md](https://github.com/juhuyoon/codeLibrary/blob/master/React/createreactapp.md)
 
+Python
+1) Basics of Python and the different syntaxes [Basics](https://github.com/juhuyoon/codeLibrary/blob/master/PythonBasics/Basics.py) 
+2) Comparison Operators [Comparisons](https://github.com/juhuyoon/codeLibrary/blob/master/PythonBasics/Comparison%20Operators.py)
+3) Methods and Functions [Func](https://github.com/juhuyoon/codeLibrary/blob/master/PythonBasics/Methods%20and%20Functions.py)
+4) Control Flow Statements [Flow](https://github.com/juhuyoon/codeLibrary/blob/master/PythonBasics/control%20flow%20statements.py)
+
+Outside the repository random games and codes [Games](https://github.com/juhuyoon/python_games)
+
 Random Files 
 1) Random generic functions that you can pull out and use for various scenarios (I) 
 [Randomfunc.js](https://github.com/juhuyoon/codeLibrary/blob/master/Randomfunc.js)
