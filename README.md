@@ -24,6 +24,10 @@ Python
 
 Outside the repository random games and codes [Games](https://github.com/juhuyoon/python_games)
 
+Cracking the Code Interview [the book](https://www.amazon.com/Cracking-Coding-Interview-Programming-Questions/dp/0984782850/ref=pd_lpo_sbs_14_img_0?_encoding=UTF8&psc=1&refRID=GB1HKJW9Q92CRSCZS9FD)
+1) Big O Algorithm what it is and examples [injava](https://github.com/juhuyoon/codeLibrary/blob/master/Cracking%20the%20Code%20Interview/Big%20O%20Algorithm.java)
+2) Different Interview styles of big companies [interview](https://github.com/juhuyoon/codeLibrary/blob/master/Cracking%20the%20Code%20Interview/Interviews.md)
+
 Random Files 
 1) Random generic functions that you can pull out and use for various scenarios (I) 
 [Randomfunc.js](https://github.com/juhuyoon/codeLibrary/blob/master/Randomfunc.js)
