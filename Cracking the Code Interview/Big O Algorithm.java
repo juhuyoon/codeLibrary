@@ -345,3 +345,62 @@ int pairSum(int a, int b) {
 
 //Example 14:   
             //What is the time complexity of a code that prints all Fibonacci numbers from 0 to n?
+            void allFib(int n) {
+                for (int i = 0; i< n; i++) {
+                    System.out.println(i + ": " + fib(i));
+                }
+            }
+
+            int fib(int n) {
+                if( n <= 0) return 0;
+                else if ( n == 1) return 1;
+                return fib(n - 1) + fib(n - 2);
+            }
+
+            //first iteration by itself would just be a runtime of n, but the n is changing throughout the fibonacci sequence for a time of O(2^N)
+            //Which would just be O(2^N+1), which results in a runtime of O(2^N)
+
+//Example 15:
+            //Following prints all Fibonacci numbers from 0 to N, but it stores previous computed values in an integer array. If computed, it just returns the cache. 
+            //What is the runtime?
+
+            void allFib(int n) {
+                int[] memo = new int[ n+ 1];
+                for (int i = 0; i < n; i++) {
+                    System.out.println(i + ": " + fib(i, memo));
+                }
+            }
+
+            int fib(int n, int[] memo) {
+                if (n <= 0) return 0;
+                else if ( n == 1) return 1;
+                else if ( memo[n] > 0) return memo[n];
+
+                memo[n] = fib(n - 1, memo) + fib(n - 2, memo);
+                return memo[n];
+            }
+
+            //First prints out the iteration. At each call to fib(i), the values are stored during fib(n-1) and fib(n-2). So we just have to look them up and return them after solving.
+            //So the constant amount of work is N times, so it is O(n). 
+
+//Example 16:
+        //What is the runtime of a function that prints the powers of 2 from 1 through n (inclusive)
+
+        int powersOf2(int n) {
+            if (n < 1) {
+                return 0;
+            } else if ( n == 1) {
+                System.out.println(1);
+                return 1;
+            } else {
+                int prev = powersOf2(n / 2);
+                int curr = prev * 2;
+                System.out.println(curr);
+                return curr;
+            }
+        }
+
+        //example to think of: powersOf2(5) would be powersof2(25), (12), (6), (3), (1), prints & returns all the results
+        //The number of times we can halve n until we get 1 is O(log n), thus the runtime is O(log n)
+
+        
