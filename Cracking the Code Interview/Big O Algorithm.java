@@ -270,3 +270,78 @@ int pairSum(int a, int b) {
         //Code touches each node in the tree once and does a constant time amount of work with each "touch" (excluding the recursive calls)
         //Therefore, the runtime will be linear, if there are N nodes, then the runtime is O(N).
 
+//Example 10:
+            //What is the time complexity?
+            boolean isPrime(int n){
+                for (int x = 2; x * x <= n; x++) {
+                    if (n % x == 0) {
+                        return false;
+                    }
+                }
+                return true;
+            }
+
+        //Work inside loop is constant, for loop starts at x = 2, ends at x * x = n. 
+        //Stops when x = sqrt(n). 
+        boolean isPrime(int n) {
+            for (int x =2; x <= sqrt(n); x++) {
+                if (n % x == 0) {
+                    return false
+                }
+            }
+            return true
+        }
+        //runs in O(sqrt(n)) time.
+
+//Example 11:
+            //What is the time complexity?
+            int factorial(int n) {
+                if (n < 0) {
+                    return -1;
+                } else if (n == 0){
+                    return 1;
+                } else {
+                    return n * factorial(n - 1);
+                }
+            }
+            
+            //recursion from n to n-1 to n-2 down to 1. Will take O(n) time. [Because it's recursion]
+
+//Example 12:
+            //What is the time complexity?
+            void permutations(String str) {
+                permutation(str, "");
+            }
+
+            void permutation(String str, String prefix){
+                if (str.length() == 0){
+                    System.out.println(prefix);
+                } else {
+                    for (int i = 0; i < str.length(); i++){
+                        String rem = str.substring(0, i) + str.substring(i + 1);
+                        permutation(rem, prefix + str.charAt(i));
+                    }
+                }
+            }
+
+            //Difficult as you have to look at how many times permutations get called and thus aim at getting as tight of an upper bound as possible. 
+            //Permutations down a node, there would be a slot for each character picked. If it's 7 character string, there'd be 7 choices. 
+            //There would thus be n! permutations. 
+            //The number of times the permutation gets called before its base case is dependent on the amount of n! nodes. 
+            //The println takes O(n) time to print, string concatenation takes O(n) time, thus calling each node in call tree corresponds to O(n) work. 
+            //Total runtime therefore is O(n * n!) times and each one takes O(n) time. 
+
+//Example 13:
+            //What is the time complexity?
+            //This computes Nth Fibonacci number
+            int fib(int n) {
+                if(n <= 0) return 0;
+                else if (n == 1) return 1;
+                return fib(n - 1) + fib(n - 2);
+            }
+
+            //O(branches^depth), and since there's 2 branches per call fib(n-1) and fib(n -2), the runtime is O(2 ^ N). 
+            //When you see an algorithm with muultiple recursive calls, you're looking at EXPONENTIAL RUNTIME!!!
+
+//Example 14:   
+            //What is the time complexity of a code that prints all Fibonacci numbers from 0 to n?
