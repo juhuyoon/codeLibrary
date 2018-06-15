@@ -30,7 +30,7 @@ e.g.:
         //throw hash table, then look up if x + k/x-k exist. This is done in O(N) time. 
 
 
-//Unnecessary WOrk
+//Unnecessary Work
     e.g.:
         //print all positive integer solutions to the equation a^3 + b ^3 = c ^3 + d^3, all variables integer between 1 and 1000
         //brute force solution = 
@@ -54,6 +54,3 @@ e.g.:
                 //the if statement at the end is important. d's value will be found but then check that it's right integer value with the if statement.
                     //Runtime goes from O(N^4) to O(N^3)
 
-
-//Duplicated Work:
-    
