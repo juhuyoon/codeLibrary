@@ -270,4 +270,332 @@ int pairSum(int a, int b) {
         //Code touches each node in the tree once and does a constant time amount of work with each "touch" (excluding the recursive calls)
         //Therefore, the runtime will be linear, if there are N nodes, then the runtime is O(N).
 
+<<<<<<< HEAD
 `
+=======
+//Example 10:
+            //What is the time complexity?
+            boolean isPrime(int n){
+                for (int x = 2; x * x <= n; x++) {
+                    if (n % x == 0) {
+                        return false;
+                    }
+                }
+                return true;
+            }
+
+        //Work inside loop is constant, for loop starts at x = 2, ends at x * x = n. 
+        //Stops when x = sqrt(n). 
+        boolean isPrime(int n) {
+            for (int x =2; x <= sqrt(n); x++) {
+                if (n % x == 0) {
+                    return false
+                }
+            }
+            return true
+        }
+        //runs in O(sqrt(n)) time.
+
+//Example 11:
+            //What is the time complexity?
+            int factorial(int n) {
+                if (n < 0) {
+                    return -1;
+                } else if (n == 0){
+                    return 1;
+                } else {
+                    return n * factorial(n - 1);
+                }
+            }
+            
+            //recursion from n to n-1 to n-2 down to 1. Will take O(n) time. [Because it's recursion]
+
+//Example 12:
+            //What is the time complexity?
+            void permutations(String str) {
+                permutation(str, "");
+            }
+
+            void permutation(String str, String prefix){
+                if (str.length() == 0){
+                    System.out.println(prefix);
+                } else {
+                    for (int i = 0; i < str.length(); i++){
+                        String rem = str.substring(0, i) + str.substring(i + 1);
+                        permutation(rem, prefix + str.charAt(i));
+                    }
+                }
+            }
+
+            //Difficult as you have to look at how many times permutations get called and thus aim at getting as tight of an upper bound as possible. 
+            //Permutations down a node, there would be a slot for each character picked. If it's 7 character string, there'd be 7 choices. 
+            //There would thus be n! permutations. 
+            //The number of times the permutation gets called before its base case is dependent on the amount of n! nodes. 
+            //The println takes O(n) time to print, string concatenation takes O(n) time, thus calling each node in call tree corresponds to O(n) work. 
+            //Total runtime therefore is O(n * n!) times and each one takes O(n) time. 
+
+//Example 13:
+            //What is the time complexity?
+            //This computes Nth Fibonacci number
+            int fib(int n) {
+                if(n <= 0) return 0;
+                else if (n == 1) return 1;
+                return fib(n - 1) + fib(n - 2);
+            }
+
+            //O(branches^depth), and since there's 2 branches per call fib(n-1) and fib(n -2), the runtime is O(2 ^ N). 
+            //When you see an algorithm with muultiple recursive calls, you're looking at EXPONENTIAL RUNTIME!!!
+
+//Example 14:   
+            //What is the time complexity of a code that prints all Fibonacci numbers from 0 to n?
+            void allFib(int n) {
+                for (int i = 0; i< n; i++) {
+                    System.out.println(i + ": " + fib(i));
+                }
+            }
+
+            int fib(int n) {
+                if( n <= 0) return 0;
+                else if ( n == 1) return 1;
+                return fib(n - 1) + fib(n - 2);
+            }
+
+            //first iteration by itself would just be a runtime of n, but the n is changing throughout the fibonacci sequence for a time of O(2^N)
+            //Which would just be O(2^N+1), which results in a runtime of O(2^N)
+
+//Example 15:
+            //Following prints all Fibonacci numbers from 0 to N, but it stores previous computed values in an integer array. If computed, it just returns the cache. 
+            //What is the runtime?
+
+            void allFib(int n) {
+                int[] memo = new int[ n+ 1];
+                for (int i = 0; i < n; i++) {
+                    System.out.println(i + ": " + fib(i, memo));
+                }
+            }
+
+            int fib(int n, int[] memo) {
+                if (n <= 0) return 0;
+                else if ( n == 1) return 1;
+                else if ( memo[n] > 0) return memo[n];
+
+                memo[n] = fib(n - 1, memo) + fib(n - 2, memo);
+                return memo[n];
+            }
+
+            //First prints out the iteration. At each call to fib(i), the values are stored during fib(n-1) and fib(n-2). So we just have to look them up and return them after solving.
+            //So the constant amount of work is N times, so it is O(n). 
+
+//Example 16:
+        //What is the runtime of a function that prints the powers of 2 from 1 through n (inclusive)
+
+        int powersOf2(int n) {
+            if (n < 1) {
+                return 0;
+            } else if ( n == 1) {
+                System.out.println(1);
+                return 1;
+            } else {
+                int prev = powersOf2(n / 2);
+                int curr = prev * 2;
+                System.out.println(curr);
+                return curr;
+            }
+        }
+
+        //example to think of: powersOf2(5) would be powersof2(25), (12), (6), (3), (1), prints & returns all the results
+        //The number of times we can halve n until we get 1 is O(log n), thus the runtime is O(log n)
+
+//Example 17:
+        //The following code computes the products of a and b. What is its runtime?
+        int product(int a, int b) {
+            int sum = 0;
+            for (int i = 0; i < b; i++) {
+                sum += a;
+            }
+            return sum;
+        }
+        //O(b) as the loop only iterates through b.
+        
+//Example 18:
+        //Following code computes a^b. What is its runtime?
+        int power(int a, int b) {
+            if(b < 0) {
+                return 0;
+            } else if (b == 0) {
+                return 1;
+            } else {
+                return a * power(a, b - 1);
+            }
+        }
+        //O(b) as its a recursive code that iterates through b. 
+
+//Example 19:
+        //Following code computes a % b. WHat is its runtime?
+            int mod(int a, int b) {
+                if ( b <= 0 ) {
+                    return -1
+                }
+                int div = a / b;
+                return a - div * b;
+            }
+
+        //O(1) as it does the same constant amount of work, return a single value if less than 0, if not, just do arithmetic.
+
+//Example 20:
+        //The following code performs integer division. What is its runtime( assume a and b are both positive)
+            int div(int a, int b) {
+                int count = 0;
+                int sum = b;
+                while ( sum <= a) {
+                    sum += b;
+                    count++;
+                }
+                return count;
+            }
+        //The runtime is O(a/b). The variable 'count' will eventually equal a/b. The while loop iterates count times. Therefore, it iterates a/b times. 
+
+//Example 21:
+        //The following code computes the integer square root of a number. If the number is not a perfect square, then it returns -1. It does this by successive guessing. 
+        //If n i 100, it first guesses 50. Too high? Try something lower - halfway between 1 and 50. What is the runtime? 
+
+            int sqrt(int n) {
+                return sqrt_helper(n, 1, n);
+            }
+
+            int sqrt_helper(int n, int min, int max) {
+                if(max < min) return -1 //no sqrt
+                int guess = (min + max)/2;
+                if(guess * guess == n ) {
+                    return guess;
+                } else if (guess * guess < n) //too low {
+                    return sqrt_helper(n, guess + 1, max); //try higher
+                } else {
+                    return sqrt_helper(n, min, guess -1); //try lower
+                }
+            }
+
+            //The runtime is O(log n). The algorithm is just a binary search to find the sqare root. 
+
+//Example 22:
+            //The following code computes the integer square root of a number. If the number is not a perfect square then it returns -1. 
+            //It does this by trying increasingly large numbers until it finds the right value ( or is too hihg). What is the runtime?
+
+            int sqrt(int n) {
+                for (int guess = 1; guess * guess <= n; guess++) {
+                    if(guess * guess == n) {
+                        return guess;
+                    } 
+                }
+                return -1;
+            }
+
+            //O(sqrt(n)) as it's a straightforward loop that stops when guess*guess > n. 
+
+//Example 23:
+            //If a binary search tree is not balanced, how long might it take to find an element in it? (Worst Case)
+            
+            //It's just a binary tree at the end, so O(n) where n is the number of nodes in the tree. 
+
+//Example 24:
+            //You are looking for a specific value in a binary tree, but the tree is not a binary search tree. What is the time complexity?
+            
+            //O(n) as with no ordering property, we have to go through ALL the nodes. 
+
+//Example 25:
+            //The appendToNew method appends a value to an array by creating a new, longer array and returning this longer array. 
+            //You use the appendToNew method to create a copyArray funtion that repeatedly calls appendToNew. How long does copying an array take?
+
+            int[] copyArray(int[] array) {
+                int[] copy = new int[0];
+                for(int value: array) {
+                    copy = appendToNew(copy, value);
+                }
+                return copy;
+            }
+
+            int[] appendToNew(int[] array, int value) {
+                //copy all elements to new array
+                int[] bigger = new int[array.length +1];
+                for(int i = 0; i < array.length; i++){
+                    bigger[i] = array[i];
+                }
+
+                //add new element
+                bigger[bigger.length -1] = value;
+                return bigger;
+            }
+            //Total runtime is O(n^2) as where n is # of elements in array. The first call takes 1 copy, the second call takes 2 copies, third takes 3 copies so on.
+            //Total runtime thus is sum of 1 through n
+
+//Example 26:
+
+            //The following code sums the digits in a number. What is its big O time?
+            int sumDigits(int n ) {
+                int sum = 0;
+                while(n > 0) {
+                    sum += n % 10;
+                    n /= 10;
+                }
+                return sum;
+            }
+
+            //Runtime is O(log n). Will be the number of digits in the number. A number with d digits can have a value up to 10^d, then d =- log n. 
+
+//Example 27:
+            //The following code prints all strings of length k where the characters are in sorted order./**
+            //It does this by generating all strings of length k and then checking if each is sorted. What is its runtime? 
+
+            int numChars = 26;
+            void printSortedStrings(int remaining) {
+                printSortedStrings(remaining, "");
+            }
+
+            void printSortedStrings(int remaining, String prefix) {
+                if( remaining == 0) {
+                    if(isInOrder(prefix)) {
+                        System.out.println(prefix);
+                    }
+                } else {
+                    for (int i = 0; i < numChars; i++) {
+                        char c = ithLetter(i);
+                        printSortedStrings(remaining - 1, prefix + c);
+                    }
+                }
+            }
+
+            boolean isInOrder(String s) {
+                for(int i = 1; i < s.length(); i++) {
+                    int prev = ithLetter(s.charAt(i - 1));
+                    int curr = ithLetter(s.charAt((i));
+                    if(prev > curr) {
+                        return false;
+                    }
+                }
+                return true;
+            }
+            char ithLetter(int i) {
+                return(Char (((int) 'a') + 1);
+            }
+
+            //The runtime is O(kc^k), where k = length of the string and c = number of characters. 
+            //It takes O(c^k) time to generate each string. Then check each of these is sorted, which takes O(k) time. 
+
+//Example 28:
+            //Computes the intersection of two arrays. It assumes that neither array has duplicates. It computes the intersection by sorting one array and then iterating through array a checking if each value is in b./**
+            int intersection(int[] a, int[] b) {
+                mergesort(b);
+                int intersect = 0;
+
+                for (int x : a) {
+                    if (binarySearch(b, x) >= 0) {
+                        intersect++;
+                    }
+                }
+
+                return intersect;
+            }
+
+            //The runtime is O(b log b + a log b) as you sort through array b, which takes O(b log b) time.
+            //For each element in a, do binary search in O(log b) time. Second part takes O(a log b) time. 
+>>>>>>> b78270acb4fa818c815fd3ab0bd4ed2639168199

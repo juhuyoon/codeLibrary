@@ -22,11 +22,19 @@ Python
 3) Methods and Functions [Func](https://github.com/juhuyoon/codeLibrary/blob/master/PythonBasics/Methods%20and%20Functions.py)
 4) Control Flow Statements [Flow](https://github.com/juhuyoon/codeLibrary/blob/master/PythonBasics/control%20flow%20statements.py)
 
+MongoDB/Mongoose
+1)Command line quick [guide](https://github.com/juhuyoon/codeLibrary/blob/master/MongoDB/commandline.md)
+
 Outside the repository random games and codes [Games](https://github.com/juhuyoon/python_games)
 
 Cracking the Code Interview [the book](https://www.amazon.com/Cracking-Coding-Interview-Programming-Questions/dp/0984782850/ref=pd_lpo_sbs_14_img_0?_encoding=UTF8&psc=1&refRID=GB1HKJW9Q92CRSCZS9FD)
-1) Big O Algorithm what it is and examples [injava](https://github.com/juhuyoon/codeLibrary/blob/master/Cracking%20the%20Code%20Interview/Big%20O%20Algorithm.java)
+1) Big O Algorithm what it is and examples in [java](https://github.com/juhuyoon/codeLibrary/blob/master/Cracking%20the%20Code%20Interview/Big%20O%20Algorithm.java)
 2) Different Interview styles of big companies [interview](https://github.com/juhuyoon/codeLibrary/blob/master/Cracking%20the%20Code%20Interview/Interviews.md)
+3) Data sets and what to know for [algorithms](https://github.com/juhuyoon/codeLibrary/blob/master/Cracking%20the%20Code%20Interview/Datasets.java)
+4) Technical Interviews and how to [approach](https://github.com/juhuyoon/codeLibrary/blob/master/Cracking%20the%20Code%20Interview/Technical_Questions.java) 
+
+
+
 
 Random Files 
 1) Random generic functions that you can pull out and use for various scenarios (I) 
