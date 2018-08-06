@@ -2,13 +2,18 @@
 //http://blondiebits.herokuapp.com/#/4
 //https://medium.com/@jaeger.rob/jquery-selectors-the-absolute-basics-d781500c722c
 //http://learn.jquery.com/using-jquery-core/selecting-elements/
-
+//https://github.com/jeresig/jquery.hotkeys
+//https://learn.shayhowe.com/advanced-html-css/jquery/
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="js/script.js"></script>
 
 //Transitioning to jQuery
 //Now for the jQuery. Here is that same HTML snippet again.
+
+$(document).ready(function (event) {
+    // jQuery code 
+});
 
 <h1>Hello jQuery!</h1>
 <p class="intro-content">Let's use some selectors.</p>

@@ -6,7 +6,7 @@ document.querySelector('.btn-roll').addEventListener('click', function () {
         //display the result.
         var diceDOM = document.querySelector('.dice');
         diceDOM.style.display = 'block';   //block: The element displayed as a block-level element (like paragraphs and headers)
-        diceDOM.src = 'images/dice-' + dice + '.png';
+        diceDOM.src = 'dice-' + dice + '.png';
         if (dice !== 1) {
             //Add the scores
             roundScore += dice;
