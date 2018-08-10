@@ -62,3 +62,24 @@ console.log("A" - "B" + 2);
 "112"
 "NaN2"
 NaN
+
+
+//1. Can you name two programming paradigms important for JavaScript app developers?
+//JavaScript is a multi-paradigm language, supporting imperative/procedural programming along with OOP (Object-Oriented Programming) and functional programming. 
+//JavaScript supports OOP with prototypal inheritance.
+
+//2. What is Functional Programming?
+//Functional programming produces programs by composing mathematical functions and avoids shared state & mutable data. 
+
+//3. What is the difference between classical inheritance and prototypal inheritance?
+//Class Inheritance: instances inherit from classes (like a blueprint — a description of the class), and create sub-class relationships: hierarchical class taxonomies. 
+//Instances are typically instantiated via constructor functions with the `new` keyword. Class inheritance may or may not use the `class` keyword from ES6.
+
+//Prototypal Inheritance: instances inherit directly from other objects. 
+//Instances are typically instantiated via factory functions or `Object.create()`. Instances may be composed from many different objects, allowing for easy selective inheritance.
+
+//4.When is classical inheritance an appropriate choice?
+//Never.
+
+//5. What does “favor object composition over class inheritance” mean?
+//It means that code reuse should be achieved by assembling smaller units of functionality into new objects instead of inheriting from classes and creating object taxonomies.
