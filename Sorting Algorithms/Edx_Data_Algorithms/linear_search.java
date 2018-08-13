@@ -18,3 +18,14 @@ static void linearsearch(int[] lst, int v) {
     System.out.println("The element is not in the array");
     return;
 }
+
+//Suppose we perform Linear Search for an existing value on the following array:
+//1,3,5,4,2,6
+//In the worst case scenario, what number could you be searching for?
+
+//Answer: 
+
+
+
+//Suppose we perform Linear Search on an array of size N, and we are faced with the worst case scenario. How many steps does it take to find what we are looking for in terms of N?
+//Answer: N
