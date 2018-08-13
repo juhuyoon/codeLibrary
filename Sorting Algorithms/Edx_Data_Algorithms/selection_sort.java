@@ -45,3 +45,5 @@ static void selectionSort(int[] lst) {
 //1,3,5,4,2,6
 //How many steps/loops does it take for this array to be sorted? That is, after this number of stpes, there won't be any changes to the array anymore.
 //Answer: 
+
+
