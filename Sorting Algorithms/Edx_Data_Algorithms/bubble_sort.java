@@ -25,5 +25,18 @@ static void bubbleSort(int[] lst) {
 	} while (swapped == true)
 	
 	System.out.println(Arrays.toString(lst));
-}
+};
                 
+//Consider the following array for these exercises:
+//9,5,7,3,6,2,1
+
+//What does the array look like after going thorugh the entire array twice using the bubble sort algorithm(not completely sorted)?
+
+//result: 5,3,6,2,1,7,9
+
+//What about three times?
+//result: 3,5,2,1,6,7,9
+
+//For this array, which sorting algorithm takes fewer steps?
+//Selection sort (of N)
+
