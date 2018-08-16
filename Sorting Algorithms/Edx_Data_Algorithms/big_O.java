@@ -61,3 +61,13 @@
 //Thus, we call Merge Sort in order of O(n) space. As mentioned, Bubble Sort does not take extra space, so it is in order of O(1) space.
 // That is, regardless of how big our input is, the amount of extra space it takes is constant. In this case, the amount is actually 0.
 
+
+
+//Big Theta and Omega
+    // Big Omega Ω
+    //Big Omega is the best case scenario/super lucky scenario. 
+    //The best case, for example, of sorting an array of size N using bubble sort is:
+    //if it's already sorted, then Big Omega of Bubble sort is Ω(n)
+    
+    // Big Theta Θ
+    //If the best case scenario and worst case scenario are the same, then Big Theta notation is used. 
