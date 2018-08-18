@@ -16,7 +16,7 @@ System.out.println(Arrays.toString(lst));
 // Find the smallest element in this array, by calling a function Minimum(or building our own) that iterates over the entire array from element 0 (lst[0]) till N-1 (lst[N-1]). 
 //In this case it is 1, and then we will position it at the first position of this array by swapping it with the first element of the array(lst[0], which is 4)
 
-//At each step, select the smallest element from the unsorted portiono f the array and swap to the front.
+//At each step, select the smallest element from the unsorted portion of the array and swap to the front.
 static void selectionSort(int[] lst) {
     //gets the length
     int n = lst.length;

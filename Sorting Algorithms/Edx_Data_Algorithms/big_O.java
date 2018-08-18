@@ -1,4 +1,5 @@
 //references: https://rob-bell.net/2009/06/a-beginners-guide-to-big-o-notation/
+//References: https://www.cs.cmu.edu/~adamchik/15-121/lectures/Sorting%20Algorithms/sorting.html
 
 //Big O Notation and Concept
 //Used to analyze the efficiency of an algorithm.
