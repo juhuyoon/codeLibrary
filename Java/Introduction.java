@@ -15,5 +15,19 @@
     //To make an object useful, requests must be made and these are defined by an interface. 
     //Interface determines the requests that you can make for a particular object. 
 
-//An object provides services: 
-    
+//An object provides services:
+    //each object has a cohesive set of services it offers.
+    //In a good object-oriented design, each object does one thing well, but does not try to do too much.
+
+    //Break into class creators and client programmers
+        //Goal of class creators is to build a class that exposes only what's necessary to the client programmer and keeps everything else hiden.
+        //Goal of the client programmers is to collect a toolbox full of classes to use for rapid application development.
+    //When you create a library, you establish a relationship with the client programmer. 
+
+    //Java uses three explicit keywords to set boundaries in a class: public, private, and protected
+        //These are access specifiers determine who can use the classes/definitions.
+        //Public: following element is available to everyone.
+        //Private: no one can access that element except the creator
+        //Protected: similar to private, with the exception that an inheriting class has access to protected members, but not private members. 
+
+        //There is a 'default' access, which is package access b/c classes can access the members of other classses in the same package, but outside the package it is private. 
