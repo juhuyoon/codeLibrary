@@ -1,3 +1,5 @@
+import jdk.javadoc.internal.doclets.toolkit.taglets.ReturnTaglet;
+
 //Objects
 
 //Holding an object with a word/sentence, create a String reference
@@ -74,3 +76,42 @@ class ATypeName { /* Class body goes here */}
                 data.i = 47;
                 data.d = 1.1;
                 data.b = false;
+
+    //2) Methods: Determines the messages an object can receive. The fundamental parts of a method are the name, arguments, return type, and body. 
+                //Basic Form:
+                ReturnType methodName( /* Argument */) {
+                    /* Method Body */
+                }
+                //Return type describes value that comes back from the method after it is called. 
+                //The method name and argument list uniquely identify that method. 
+                //Methods in Java can be created only as part of a class, can only be called for an object, the object must be able to eprform the method call. 
+
+                //Call a method for an object by naming the object followed by a period, followed by the name of the method and its argument list:
+                objectName.methodName(arg1, arg2, arg3);
+
+                int x = a.f(); //return value must be compatible with the type of x, which in this case, is int. 
+                
+        //Argument List
+                //Specifies what information you pass into the method, takes in the form of objects. 
+                //Type of reference must be correct, so if the argument is a String, must also pass in a String or compiler will give an error. 
+
+                int storage(String s) {
+                    return s.length() * 2;
+                }
+                //argument is of type String and is called s, s is passed into the method, then treat it like any other object. 
+                //the return keyword means ending and produces a value of whatever statement is after. Can return any type you want, but if you don't want to return anything,
+                //To not return anything, use the method void. 
+
+                boolean flag() { return true; }
+                double naturalLogBase() { return 2.718; }
+                void nothing() { return; }
+                void nothing2() {}
+
+                //when the return type is void, the return keyword is used only to exit the method, so it is unnecessary when you reach the end of the method. 
+                //if you have a non-void return type, then compiler will force you to return the appropriate type of value regardless of where you return. 
+
+//Using other components
+                //when using a predefined class in the program, the compiler must know how to locate it. 
+                //Must use the "import" keyword, which tells the compiler to bring in a package, which is a library of classes. 
+                 import java.util.ArrayList; //to use Java's ArrayList class
+                 import java.util.*; //To use all, indicating a wild card of the util's packages. 
