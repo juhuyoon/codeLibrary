@@ -1,5 +1,3 @@
-import jdk.javadoc.internal.doclets.toolkit.taglets.ReturnTaglet;
-
 //Objects
 
 //Holding an object with a word/sentence, create a String reference
@@ -97,15 +95,15 @@ class ATypeName { /* Class body goes here */}
 
                 int storage(String s) {
                     return s.length() * 2;
-                }
+                };
                 //argument is of type String and is called s, s is passed into the method, then treat it like any other object. 
                 //the return keyword means ending and produces a value of whatever statement is after. Can return any type you want, but if you don't want to return anything,
                 //To not return anything, use the method void. 
 
-                boolean flag() { return true; }
-                double naturalLogBase() { return 2.718; }
-                void nothing() { return; }
-                void nothing2() {}
+                boolean flag() { return true; };
+                double naturalLogBase() { return 2.718; };
+                void nothing() { return; };
+                void nothing2() {};
 
                 //when the return type is void, the return keyword is used only to exit the method, so it is unnecessary when you reach the end of the method. 
                 //if you have a non-void return type, then compiler will force you to return the appropriate type of value regardless of where you return. 
@@ -117,4 +115,46 @@ class ATypeName { /* Class body goes here */}
                  import java.util.*; //To use all, indicating a wild card of the util's packages.
 
 //Static keyword
-                
+    //Used when the new method does not work due to 1) Want to have only a single piece of storage for a particular field 
+                                                //  2) If you need a method that isn't associated with any particular object of this class. 
+    //When using static, it means that particular field/method is not tied to any particular object instance of that class, so even if you've never created an object of that class you can call static method/static field.
+
+    //e.g.:
+    class StaticTest {
+        static int i = 47;
+    };
+
+    StaticTest st1 = new StaticTest();
+    StaticTest st2 = new StaticTest(); //both have the same value of 47 since they refer to the same piece of memory. 
+            //Two ways to refer to a static variable: 
+                    //1) Name it via object, such as st2.i
+                    //2) Refer to it directly thorugh class name, which you cannot do with a non-static member.
+                StaticTest.i++; //i = 48;
+            //Using class name is preferred way to refer to a static variable. 
+    
+    //Similar logic applies to static methods, refer through an object as you can with any method or with special additional syntax ClassName.method()
+    //can define a static method in a similar way:
+    class Incrementable {
+        static void increment() { StaticTest.i++}
+    };
+
+    //Incrementable method increment() increments the static data i using the ++ operator. 
+    Incrementable sf = new Incrementable();
+    sf.increment(); 
+
+    //because it is a static method, can just call directly:
+    Incrementable.increment();
+    //Static, when applied to a field, definitely changes the way the data is created, but in a method not as dramatic. 
+
+//First Java Program:
+    //prints a string, and then the date, using the Date class from Java standard library
+    import java.util.*;
+
+    public class HelloDate {
+        public static void main(String[] args) {
+            System.out.println("Hello, it's: ");
+            System.out.println(new Date());
+        }
+    };
+
+    
