@@ -114,4 +114,7 @@ class ATypeName { /* Class body goes here */}
                 //when using a predefined class in the program, the compiler must know how to locate it. 
                 //Must use the "import" keyword, which tells the compiler to bring in a package, which is a library of classes. 
                  import java.util.ArrayList; //to use Java's ArrayList class
-                 import java.util.*; //To use all, indicating a wild card of the util's packages. 
+                 import java.util.*; //To use all, indicating a wild card of the util's packages.
+
+//Static keyword
+                
