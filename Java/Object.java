@@ -175,3 +175,64 @@ public class ShowProperties {
 
 //first line main() displays all "properties" from the system from where you are running the program,
 //list() method sends the results to its argument, System.out   
+
+//ex1):
+public class chapOneexOne {
+    static int i;
+    static char c;
+    public static void main(String[] args) {
+        System.out.println("int i = " + i);
+        System.out.println("char c = " + c);
+    }
+}
+
+//ex2): 
+public class chapOneexTwo {
+        public static void main(String[] args) {
+            System.out.println("Hello World!");
+        }
+}
+
+//ex3): 
+public class chapOneexThree {
+    public static void main(String[] args) {
+        class ATypeName {
+            int i;
+            double d;
+            boolean b;
+            void show() {
+                System.out.println(i);
+                System.out.println(d);
+                System.out.println(b);
+            }
+        }
+        ATypeName a= new ATypeName();
+        a.i = 3;
+        a.d = 3.14;
+        a.b = false;
+        a.show();
+    }
+}
+
+
+//ex4): 
+    public class chapOneexFour {
+        public static void main(String[] args) {
+            class DataOnly {
+                int i;
+                double d;
+                boolean b;
+
+                void show() {
+                    System.out.println(i);
+                    System.out.println(d);
+                    System.out.println(b);
+                }
+            }
+            DataOnly data = new DataOnly();
+            data.i = 3;
+            data.d = 3.14;
+            data.b = false;
+            data.show();
+        }
+    }
