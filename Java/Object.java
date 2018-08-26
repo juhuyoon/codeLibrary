@@ -157,4 +157,21 @@ class ATypeName { /* Class body goes here */}
         }
     };
 
-    
+    //At beginning of each program file, must place any necessary import statements to bring ine xtra classes you'll need for the code in that file. 
+    //Name of the class = same as the name of the file. When it is a standalone program, one of the classes in the file must have the same name as the file. 
+    //Class must contain a method called main() with signature and return type:
+    public static void main(String[] args)   //from above 
+    //public = method is available to outside world, main() argument = array os String objects. 
+
+//System is incredibly diverse:
+
+public class ShowProperties {
+    public static void main(String[] args) {
+        System.getProperties().list(System.out);
+        System.out.println(System.getProperty("user.name"));
+        System.out.println(System.getProperty("java.library.path"));
+    }
+}
+
+//first line main() displays all "properties" from the system from where you are running the program,
+//list() method sends the results to its argument, System.out   
