@@ -260,3 +260,163 @@ public class chapOneexFive {
 }
 
 //ex6):
+public class chapOneexSix {	
+	public static void main(String[] args) {
+		class StoreStuff {
+			int storage(String s) {
+				return s.length() * 2;
+			}	
+		}
+		StoreStuff x = new StoreStuff();
+		System.out.println(x.storage("hi"));		
+	}
+}
+
+//ex7):
+class StaticTest {
+	static int i = 47;
+}
+class Incrementable {
+	static void increment() { StaticTest.i++; }
+}
+public class ITest {
+	public static void main(String[] args) {
+	System.out.println("StaticTest.i= " + StaticTest.i);
+	StaticTest st1 = new StaticTest();
+	StaticTest st2 = new StaticTest();
+	System.out.println("st1.i= " + st1.i);
+	System.out.println("st2.i= " + st2.i);
+	Incrementable sf = new Incrementable();
+	sf.increment();
+	System.out.println("After sf.increment() called: ");
+	System.out.println("st1.i = " + st1.i);
+	System.out.println("st2.i = " + st2.i);
+	Incrementable.increment();
+	System.out.println("After Incrementable.increment called: ");
+	System.out.println("st1.i = " + st1.i);
+	System.out.println("st2.i = " + st2.i);
+	}
+}
+
+//ex8):
+class StaticTest {
+	static int i = 47;
+}
+
+class Incrementable {
+	static void increment() { StaticTest.i++; }
+}
+
+public class OneStaticTest {
+	public static void main(String[] args) {
+		System.out.println("StaticTest.i= " + StaticTest.i);
+		StaticTest st1 = new StaticTest();
+		StaticTest st2 = new StaticTest();
+		System.out.println("st1.i= " + st1.i);
+		System.out.println("st2.i= " + st2.i);
+		Incrementable.increment();
+		System.out.println("After Incrementable.increment() called: ");
+		System.out.println("st1.i = " + st1.i);
+		System.out.println("st2.i = " + st2.i);
+		Incrementable.increment();
+		System.out.println("After Incrementable.increment called: ");
+		System.out.println("st1.i = " + st1.i);
+		System.out.println("st2.i = " + st2.i);
+		st1.i = 3;
+		System.out.println("After st1.i = 3, ");
+		System.out.println("st1.i = " + st1.i);
+		System.out.println("st2.i = " + st2.i);
+		System.out.println("Create another StaticTest, st3.");
+		StaticTest st3 = new StaticTest();
+		System.out.println("st3.i = " + st3.i);
+	}
+}
+
+//ex9):
+public class AutoboxTest {
+	public static void main(String[] args) {
+		boolean b = false;
+		char c = 'x';
+		byte t = 8;
+		short s = 16;
+		int i = 32;
+		long l = 64;
+		float f = 0.32f;
+		double d = 0.64;
+		Boolean B = b;
+		System.out.println("boolean b = " + b); 		
+		System.out.println("Boolean B = " + B); 
+		Character C = c;
+		System.out.println("char c = " + c);
+		System.out.println("Character C = " + C);
+		Byte T = t;
+		System.out.println("byte t = " + t);
+		System.out.println("Byte T = " + T);
+		Short S = s;
+		System.out.println("short s = " + s);
+		System.out.println("Short S = " + S);
+		Integer I = i;
+		System.out.println("int i = " + i);
+		System.out.println("Integer I = " + I);
+		Long L = l;
+		System.out.println("long l = " + l);
+		System.out.println("Long L = " + L);
+		Float F = f;
+		System.out.println("float f = " + f);
+		System.out.println("Float F = " + F);
+		Double D = d;
+		System.out.println("double d = " + d);
+		System.out.println("Double D = " + D);		
+	}
+}
+
+//ex10):
+
+public class CommandArgTest {
+	public static void main(String[] args) {
+		System.out.println("args[0] = " + args[0]);
+		System.out.println("args[1] = " + args[1]);
+		System.out.println("args[2] = " + args[2]);	
+	}
+}
+
+//ex11):
+public class Rainbow {
+	public static void main(String[] args) {
+		AllTheColorsOfTheRainbow atc = new AllTheColorsOfTheRainbow();
+		System.out.println("atc.anIntegerRepresentingColors = " + atc.anIntegerRepresentingColors);
+		atc.changeColor(7);
+		atc.changeTheHueOfTheColor(77);
+		System.out.println("After color change, atc.anIntegerRepresentingColors = " + atc.anIntegerRepresentingColors);
+		System.out.println("atc.hue = " + atc.hue);	
+	}
+}
+
+class AllTheColorsOfTheRainbow {
+	int anIntegerRepresentingColors = 0;
+	int hue = 0;
+	void changeTheHueOfTheColor(int newHue) {
+		hue = newHue;
+	}
+	int changeColor(int newColor) {
+		return anIntegerRepresentingColors = newColor;		
+	}
+}
+
+//ex12): 
+
+import java.util.*;
+
+
+public class DocTest {
+	/** Entry poing to class & application.
+	* @param args array of string arguments
+	* @throws exceptions No exceptions thrown
+	*/
+	public static void main(String[] args) {
+		System.out.println("Hello, it's: ");
+		System.out.println(new Date());	
+	}
+} /* Output: (55% match)
+
+*/
