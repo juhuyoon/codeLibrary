@@ -417,6 +417,131 @@ public class DocTest {
 		System.out.println("Hello, it's: ");
 		System.out.println(new Date());	
 	}
-} /* Output: (55% match)
+}
 
+//ex14):
+
+//Add an HTML list of items to the documentation in the previous exercise.
+import java.util.*;
+
+// object/Documentation4.java
+/**
+* You can even insert a list:
+* <ol>
+* <li> Item one
+* <li> Item two
+* <li> Item three
+* </ol>
+		* Another test list
+		* <ol>
+		* <li> One
+		* <li> Two
+		* <li> Three
+		* </ol>
+		*/	
+
+public class Documentation4 {
+
+		/** Let's try a public field list
+		* <ol>
+		* <li> One
+		* <li> Two
+		* <li> Three
+		* </ol>
+		*/	
+		
+		public int i = 2;
+
+		/**
+		* A private field list (-private to see) 
+		* <ol>
+		* <li> One
+		* <li> Two
+		* <li> Three
+		* </ol>
+		*/	
+
+		private int j = 3;
+
+		/**
+		* Another list can be inserted here to help explain the
+		* following method call
+		* <ol>
+		* <li> One
+		* <li> Two
+		* <li> Three
+		* </ol><br>
+		* but may be formatted differently in Method Summary
+		*/	
+
+	public static void main(String[] args) {
+
+		/**
+		* Let's try another test list here
+		* <ol>
+		* <li> One
+		* <li> Two
+		* <li> Three
+		* </ol>
+		*/	
+
+		Date d = new Date();
+		System.out.println("d = " + d);
+	}
+};
+
+//ex16):
+/** creates type Tree wth two constructors and one info method
 */
+
+class Tree {
+	int height;
+	
+	/** no-argument constructor
+	* assigns height = 0
+	*/
+
+	Tree() {
+		System.out.println("Planting a seedling");
+		height = 0;
+	}
+
+	/** constructor taking an int argument,
+	* assigns height that int argument
+	*/
+
+	Tree(int initialHeight) {
+		height = initialHeight;
+		System.out.println("Creating new tree that is " + height + " feet tall");
+	}
+
+	/** method to print height of tree object
+	*/
+	
+	void info() {
+		System.out.println("Tree is " + height + " feet tall");
+	}
+
+	/** overloaded method to print string argument 
+	* and height of a tree object
+	*/
+
+	void info(String s) {
+		System.out.println(s + ": Tree is " + height + " feet tall");
+	}
+}
+
+/** class to test construction of tree objects
+*/
+
+public class Overloading {
+	public static void main(String[] args) {
+		for(int i = 0; i < 5; i++) {
+			Tree t = new Tree(i);
+			t.info();
+			t.info("overloading method");
+		}
+		// Overloaded constructor:
+		new Tree();
+	}
+}
