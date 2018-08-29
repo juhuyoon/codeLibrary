@@ -4,6 +4,7 @@
 //http://learn.jquery.com/using-jquery-core/selecting-elements/
 //https://github.com/jeresig/jquery.hotkeys
 //https://learn.shayhowe.com/advanced-html-css/jquery/
+//https://htmlcheatsheet.com/jquery/
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="js/script.js"></script>
