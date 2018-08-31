@@ -83,3 +83,6 @@ NaN
 
 //5. What does “favor object composition over class inheritance” mean?
 //It means that code reuse should be achieved by assembling smaller units of functionality into new objects instead of inheriting from classes and creating object taxonomies.
+
+//https://en.wikipedia.org/wiki/Fluent_interface
+//https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it
