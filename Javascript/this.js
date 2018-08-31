@@ -1,6 +1,6 @@
 //https://medium.com/@kristyburge/why-this-is-so-powerful-in-javascript-34116f1ca5f2
 //http://ryanmorr.com/understanding-scope-and-context-in-javascript/
-
+//SCOPING IN JAVASCRIPT: https://css-tricks.com/javascript-scope-closures/
 
 //What is this?
 
