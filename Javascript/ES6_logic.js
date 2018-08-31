@@ -1,5 +1,5 @@
 /////////ES6 LOGICS YOU SHOULD KNOW!!! https://webapplog.com/es6///////
-
+//https://www.plusfeeds.com/javascript-for-beginners-cheat-sheet/
 
 1) Default Parameters //(https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters)
 

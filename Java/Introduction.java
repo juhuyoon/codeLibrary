@@ -1,4 +1,6 @@
 // http://greggordon.org/java/tij4/solutions.htm 
+// https://www.plusfeeds.com/java-programming-for-beginners-cheat-sheet/
+// http://phaiax.github.io/rust-cheatsheet/
 //Soln Guide    
 
 //1) Everything is an Object
