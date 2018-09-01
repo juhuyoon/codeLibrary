@@ -104,6 +104,32 @@ public class Object {
 	//generates a boolean result, evalutes relationship between value of operands via true or false.
 		//< , > , <=, >=, !=, ==
 
+// : operators/Equivalence.java
+public class Equivalence {
+	public static void main(String[] args) {
+		Integer n1 = new Integer(47);
+		Integer n2 = new Integer(47);
+		System.out.println(n1 == n2);
+		System.out.println(n1 != n2);
+	}
+} /*
+	 * Output: false true
+	 */// :~ 
+	 //because while the contents of the objects are the same, the references for the objects are NOT the same. 
+
+	 //to compare actual contents of an object, use equals()
+	 // : operators/EqualsMethod.java
+public class EqualsMethod {
+	public static void main(String[] args) {
+ Integer n1 = new Integer(47);
+ Integer n2 = new Integer(47);
+ System.out.println(n1.equals(n2)); 
+	}
+} /*
+	 * Output: true
+	 */// :~
+
+ 
 //ex2): Create a class containing a float and use it to demonstrate aliasing.
 
 class MyClass {
@@ -194,3 +220,37 @@ public class VelocityTester {
 		System.out.println("Velocity: " + v);		
 	}
 }
+
+//ex5): Create a class called Dog containing two Strings: name and says. In main(), create two dogs objects with names "spot" and "scurffy". Then display their names and what htey say. 
+
+	class Dog {
+		String name;
+		String says;
+		void setName(String n){
+			name = n;
+		}
+		void setSays(String s) {
+			says = s;
+		}
+		void showName() {
+			Println(name);
+		}
+		void speak() {
+			Println(says);
+		}
+	}
+
+	public class DogTest {
+		public static void main(String[] args) {
+			Dog spot = new Dog();
+			spot.setName("Spot");
+			spot.setSays("Ruff!");
+			Dog scruffy = new Dog();
+			scruffy.setName("Scruffy");
+			scruffy.setSays("Wurf!");
+			spot.showName();
+			spot.speak();
+			scruffy.setName();
+			scruffy.speak();
+		}
+	}
