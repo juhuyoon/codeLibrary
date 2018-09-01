@@ -73,8 +73,36 @@ public class Object {
 //Auto increment and decrement
 	//-- (decrease by one unit) && ++ (increase by one unit)
 		//e.g. int a = ++a is equal to (a = a + 1)
+	//prefix & postfix versions of auto increment/decrements.
+		//pre-increment appears before variable, post-increment appears after.
+			//pre-increment/pre-decrement = the operation is performed and the value is produced.
+			//post-increment/post-decrement = value is produced and the operation is performed. 
+			//e.g.
+			public class AutoInc {
+				public static void main(String[] args) {
+					int i = 1;
+					print("i : " + i);
+		print("++i : " + ++i); // Pre-increment
+		print("i++ : " + i++); // Post-increment
+		print("i : " + i);
+		print("--i : " + --i); // Pre-decrement
+		print("i-- : " + i--); // Post-decrement
+		print("i : " + i);
+	}
+} /*
+	 * Output: i : 1 
+	 ++i : 2 
+	 i++ : 2 
+	 i : 3 
+	 --i : 2 
+	 i-- : 2 
+	 i : 1
+	 */
 
 
+//Relational Operators
+	//generates a boolean result, evalutes relationship between value of operands via true or false.
+		//< , > , <=, >=, !=, ==
 
 //ex2): Create a class containing a float and use it to demonstrate aliasing.
 
