@@ -64,6 +64,16 @@ public class Object {
 1: x.c: a
 2: x.c: z */
 
+//Mathematical Operators
+
+//to generate numbers, first create a Random object.
+//If Random object with no arguments = uses current time as a seed for the random number generator, creating a new output for each execution. 
+
+
+//Auto increment and decrement
+	//-- (decrease by one unit) && ++ (increase by one unit)
+		//e.g. int a = ++a is equal to (a = a + 1)
+
 
 
 //ex2): Create a class containing a float and use it to demonstrate aliasing.
@@ -133,5 +143,26 @@ public class PassObject2 {
 		print("1: x.a = " + x.a);
 		f(x);	
 		print("2: x.a = " + x.a);
+	}
+};
+
+//ex4): Write a program that calculates velocity using a constant distance and a constant time. 
+class VelocityCalculator {
+	static float velocity(float d, float t) {
+		if (t == 0)
+			return 0f;
+		else
+			return d / t;
+	}
+}
+
+public class VelocityTester {
+	public static void main(String[] args) {
+		float d = 565.3f;
+		float t = 3.6f;
+		System.out.println("Distance: " + d);
+		System.out.println("Time: " + t);
+		float v = VelocityCalculator.velocity(d, t);
+		System.out.println("Velocity: " + v);		
 	}
 }
