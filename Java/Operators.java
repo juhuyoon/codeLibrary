@@ -254,3 +254,65 @@ public class VelocityTester {
 			scruffy.speak();
 		}
 	}
+
+//ex6): Following Exercise 5, create a new Dog reference and assign it ot spot's object. Test for comparison using == and equals() for all referenes.
+	class Dog{
+		String name;
+		String says;
+		void setName(String n) {
+			name = n;
+		}
+		void setSays(String s) {
+			says = s;
+		}
+		void showName() {
+			Println(name);
+		}
+		void speak() {
+			Println(says);
+		}
+	}
+
+	public class DogCompare {
+		public static void main(String[] args) {
+			Dog spot = new Dog();
+			spot.setName("Spot");
+			spot.setSays("Ruff");
+			Dog scruffy = new Dog();
+			scruffy.setName("Scruffy");
+			scruffy.setSays("Wurf");
+
+			spot.showName();
+			spot.speak();
+
+			scruffy.showName();
+			scruffy.speak();
+
+			Dog butch = new Dog();
+			butch.setName("Butch");
+			butch.setSays("Hello");
+
+			butch.showName();
+			butch.speak();
+
+			Println("Comparison: ");
+			Println("spot == butch: " + (spot == butch));
+			Println("spot.equals(butch): " + spot.equals(butch));
+			Println("butch.equals(spot): " + butch.equals(spot));
+			Println("Now assign: spot = butch");
+
+			spot = butch;
+
+			Println("Compare again: ");
+			Println("spot == butch: " + (spot == butch));
+			Println("spot.equals(butch): " + spot.equals(butch));
+			Println("butch.equals(spot): " + butch.equals(spot));
+			Println("Spot: ");
+
+			spot.showName();
+			spot.speak();
+			Println("Butch: ");
+			butch.showName();
+			butch.speak();
+		}
+	}
