@@ -316,3 +316,25 @@ public class VelocityTester {
 			butch.speak();
 		}
 	}
+
+//ex7): Write a program that simulates coin-flipping
+public class CoinToss {
+	public static void main(String[] args) {
+		Random rand = new Random();
+		int coin = rand.nextInt();
+		if (coin % 2 == 0)
+			P.rintln("heads");
+		else
+			P.rintln("tails");
+	}
+}
+
+//ex8): Using Long.toBinaryString to display the results. 
+public class LongValues {
+	public static void main(String[] args) {
+		long n1 = 0xffff; // hexadecimal
+		long n2 = 077777; // octal
+		print("long n1 in hex = " + Long.toBinaryString(n1));
+		print("long n2 in oct = " + Long.toBinaryString(n2));
+	}
+}
