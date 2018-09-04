@@ -337,4 +337,72 @@ public class LongValues {
 		print("long n1 in hex = " + Long.toBinaryString(n1));
 		print("long n2 in oct = " + Long.toBinaryString(n2));
 	}
+};
+
+//ex9): Display the largest and smallest numbers for both float and double exponential notation.
+public class MinMax {
+	public static void main(String[] args) {
+		double max = java.lang.Double.MAX_VALUE;
+		System.out.println("Max double = " + max);
+		double min = java.lang.Double.MIN_VALUE; 
+		System.out.println("Min double = " + min);
+		float maxf = java.lang.Float.MAX_VALUE;
+		System.out.println("Max float = " + maxf);
+		float minf = java.lang.Float.MIN_VALUE; 
+		System.out.println("Min float = " + minf);	
+	}
+}
+
+//ex10):  Write a program with two constant values, one with alternating binary ones and zeroes, with a zero in the least-significant digit, and the second, also
+//alternating, with a one in the least-significant digit (hint: It's easiest to  use hexadecimal constants for this). Take these two values and combine them in
+// all possible ways using the bitwise operators, and display the results using Integer.toBinaryString(). 
+
+
+public class BinaryTest {
+	public static void main(String[] args) {
+		int i = 1 + 4 + 16 + 64;
+		int j = 2 + 8 + 32 + 128;
+		P.rintln("i = " + Integer.toBinaryString(i));
+		P.rintln("j = " + Integer.toBinaryString(j));
+		P.rintln("i & j = " + Integer.toBinaryString(i & j));
+		P.rintln("i | j = " + Integer.toBinaryString(i | j));
+		P.rintln("i ^ j = " + Integer.toBinaryString(i ^ j));
+		P.rintln("~i = " + Integer.toBinaryString(~i));
+		P.rintln("~j = " + Integer.toBinaryString(~j));
+	}
+}
+
+/* ex11): Start with a number that has a binary one in the most significant position
+* (hint: Use a hexadecimal constant). Using the signed right-shift operator,
+* right shift it all the way through all of its binary positions each time
+* displaying the result using Integer.toBinaryString().
+*/ 
+
+public class RightShiftTest {
+	public static void main(String [] args) {
+		int h = 0x10000000;
+		P.rintln(Integer.toBinaryString(h));
+		for(int i = 0; i < 28; i++) {
+			h >>>= 1;
+			P.rintln(Integer.toBinaryString(h));
+		}
+	}
+}
+
+/* ex12):  Start with a number that is all binary ones. Left shift it, then use the
+* unsigned right-shift operator to right shift through all of its binary
+* positions, each time displaying the result using Integer.toBinarySting().
+*/ 
+
+public class RightShiftTest2 {
+	public static void main(String [] args) {
+		int h = -1;
+		P.rintln(Integer.toBinaryString(h));
+		h <<= 10;
+		P.rintln(Integer.toBinaryString(h));
+		for(int i = 0; i < 32; i++) {
+			h >>>= 1;
+			P.rintln(Integer.toBinaryString(h));
+		}
+	}
 }
