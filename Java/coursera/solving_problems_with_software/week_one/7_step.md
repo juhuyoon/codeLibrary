@@ -18,3 +18,17 @@ How you should approach solving problems:
 6) Run Test Cases
 7) Debug failed test cases
 
+With solving how to run perimeters: 
+0. Start with TotalPerim = 0;
+1. Start with prevPt = the last point
+2. For each point currPt in the shape,
+    3. Find distance from prevPt pt to currPt, name it currDist
+    4. Update totalPerim to be totalPerim + currDist
+    5. Update prevPt to be currPt. 
+6. totalPerim is my answer
+
+public class PerimeterRunner {
+    public double getPerimeter(Shape s) {
+        
+    }
+}
