@@ -26,9 +26,3 @@ With solving how to run perimeters:
     4. Update totalPerim to be totalPerim + currDist
     5. Update prevPt to be currPt. 
 6. totalPerim is my answer
-
-public class PerimeterRunner {
-    public double getPerimeter(Shape s) {
-        
-    }
-}
