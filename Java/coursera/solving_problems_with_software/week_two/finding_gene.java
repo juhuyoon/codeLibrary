@@ -31,5 +31,20 @@ public class Part1 {
     }
 
 public void testSimpleGene() {
-    
-}
+        String a = "AAATGCCCTAACTAGATTAAGAAACC";
+        String ap = "CCAATGCAGCGATAC";
+        String apa = "CTAATCCGGATCCGA";
+        String app = "CCAGCATGCCAGTCAGCTAACAG";
+        String appa = "CCAGCATGCCAGTAGCTAACAG";
+
+        System.out.println("The string is: " + a + ". The Gene is: " + findSimpleGene(a));
+        System.out.println("The string is: " + ap + ". The Gene is: " + findSimpleGene(ap));
+        System.out.println("The string is: " + apa + ". The Gene is: " + findSimpleGene(apa));
+        System.out.println("The string is: " + app + ". The Gene is: " + findSimpleGene(app));
+        System.out.println("The string is: " + appa + ". The Gene is: " + findSimpleGene(appa));
+    }
+
+    public static void main (String[] args) {
+        Part1 gene = new Part1();
+        gene.testSimpleGene();
+    }
