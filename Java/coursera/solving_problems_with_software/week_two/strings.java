@@ -111,3 +111,19 @@
                 //4) If not, update currIndex to the index of the next "TAA", starting from (currIndex + 1)
                 //5) Check if (currIndex - startIndex) is a multiple of 3
                 //6) If so, text between startIndex and currIndex + 3 is the answer
+
+            //Repetition ends when you stop finding TAAs or the gene is longer running/going. 
+
+            while (expression) {
+                statement(s)
+            }   //evaluates expression, must return a boolean value. 
+
+class WhileDemo {
+    public static void main(String[] args){
+        int count = 1;
+        while (count < 11) {
+            System.out.println("Count is: " + count);
+            count++;
+        }
+    }
+}
