@@ -199,3 +199,26 @@ public class Part4{
     }
 
 }
+
+//Using While Loops to search more efficiently
+public class FindGeneWhile{
+    public Strinb findGene(String dna) {
+        //Find first occurrence of "ATG" call its index 'startIndex'
+        int startIndex = dna.indexOf("ATG");
+        //Find the "TAA" starting from (startIndex+3), call this result currIndex
+        int currIndex = dna.indexOf("TAA", startIndex + 3);
+        //As long as currIndex is not equal to -1
+        while(currIndex != -1) {
+            //Check if (currindex - startIndex) is a multiple of 3
+            if((currIndex - startIndex) % 3 == 0) {
+                //If so, the text between startIndex and currIndex
+                return dna.substring(startIndex, currIndex + 3);
+            } else {
+                currIndex = dna.indexOf("TAA", currIndex + 1);
+                //If not, update currIndex to the index
+            }
+        }
+        //Your answer is the empty string
+        return "";
+    }
+}

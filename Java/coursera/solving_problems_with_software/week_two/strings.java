@@ -114,16 +114,30 @@
 
             //Repetition ends when you stop finding TAAs or the gene is longer running/going. 
 
-            while (expression) {
-                statement(s)
+            while (x < y) { //Generally for (as long as [condition])
+                System.out.println(x);
+                x += 3;
             }   //evaluates expression, must return a boolean value. 
+                //returns back to the top until x is no longer less than y, and stops. 
 
-class WhileDemo {
-    public static void main(String[] args){
-        int count = 1;
-        while (count < 11) {
-            System.out.println("Count is: " + count);
-            count++;
-        }
-    }
-}
+            class WhileDemo {
+                public static void main(String[] args){
+                    int count = 1;
+                    while (count < 11) {
+                        System.out.println("Count is: " + count);
+                        count++;
+                    }
+                }
+            };
+
+        
+//What if there are three different stop codons of "TAA", "TGA", "TAG"
+//Try spliting the problem up into three parts:
+             //1) Find first occurrence of "ATG" and call its index startIndex
+        //2) Find the "TAA" starting from (startIndex + 3), call this result currIndex;
+            //Can make this repetitive! As long as...
+                //3) Check if(currIndex - startIndex) is a multiple of 3
+                //4) If not, update currIndex to the index of the next "TAA", starting from (currIndex + 1)
+                //5) Check if (currIndex - startIndex) is a multiple of 3
+                //6) If so, text between startIndex and currIndex + 3 is the answer
+
