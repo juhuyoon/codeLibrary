@@ -247,14 +247,24 @@ public class FindGeneWhile{
 
         public String findGene(String dna) {
             // 1) Find first occurrence of "ATG" and call its index startIndex
+                    int startIndex = dna.indexOf("ATG");
             // 2) If startIndex is -1, then your answer is the empty string.
-            // 3) findStopCodon (dnaStr, startIndex, "TAA") and call the result taaIndex
-            // 4) findStopCodon (dnaStr, startIndex, "TAG") and call the result tagIndex
-            // 5) findStopCodon (dnaStr, startIndex, "TGA") and call the result tgaIndex
-            // 6) Take the smallest of taaIndex, tgaIndex, and tagIndex: call it minIndex
-            return "";
+                    if(startIndex == -1) {
+                        return "";
+                    }   // 3) findStopCodon (dnaStr, startIndex, "TAA") and call the result taaIndex
+                        // 4) findStopCodon (dnaStr, startIndex, "TAG") and call the result tagIndex
+                        // 5) findStopCodon (dnaStr, startIndex, "TGA") and call the result tgaIndex
+                        // 6) Take the smallest of taaIndex, tgaIndex, and tagIndex: call it minIndex
+                    int taaIndex = findStopCodon(dna, startIndex, "TAA");
+                    int tagIndex = findStopCodon(dna, startIndex, "TAG");
+                    int tgaIndex = findStopCodon(dna, startIndex, "TGA");
+                    int temp = Math.min(taaIndex, tagIndex); //to find the smallest value and store it
+                    int minIndex = Math.min(temp, tgaIndex); //then the min of temp and tgaindex
+                    if(minIndex == dna.length()) {
+                        return "";
+                    }
+            return dna.substring(startIndex, minIndex +3);
         }
-    }
 
         public void testFindStop() {
             String dna = "xxxyyyzzzTAAxxxyyyzzzTAAxx";
@@ -267,5 +277,5 @@ public class FindGeneWhile{
             dex = findStopCodon(dna, 0, "TAG");
             System.out.println("tests finished");
         }
+    }
 
-        
