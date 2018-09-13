@@ -222,3 +222,50 @@ public class FindGeneWhile{
         return "";
     }
 }
+
+//now trying to look for 3 stop codons
+    public class AllCodons {
+        public int findStopCodon(String dnaStr, int startIndex, string stopCodon) {
+            // 2) Find the stopCodon starting from (startIndex + 3), call this result
+                    // currIndex;
+                    int currIndex = dnaStr.indexOf(stopCodon, startIndex+3);
+        // As long as currIndex is not equal to -1
+                    while(currIndex != -1) {       
+        // 3) Check if(currIndex - startIndex) is a multiple of 3
+                        int diff = currIndex - startIndex;
+        // 4) If so, currIndex is the answer
+                        if(diff % 3 == 0 ) {
+                            return currIndex;
+                        }
+        // 5) If not, update currIndex to the index of the next stopCodon, starting from
+                        else { currIndex = dnaStr.indexOf(stopCodon, currIndex +1)
+        // (currIndex + 1)
+                         }
+                }  // 6) If so, answer is dnrStr.length()
+        return dnaStr.length();
+        }
+
+        public String findGene(String dna) {
+            // 1) Find first occurrence of "ATG" and call its index startIndex
+            // 2) If startIndex is -1, then your answer is the empty string.
+            // 3) findStopCodon (dnaStr, startIndex, "TAA") and call the result taaIndex
+            // 4) findStopCodon (dnaStr, startIndex, "TAG") and call the result tagIndex
+            // 5) findStopCodon (dnaStr, startIndex, "TGA") and call the result tgaIndex
+            // 6) Take the smallest of taaIndex, tgaIndex, and tagIndex: call it minIndex
+            return "";
+        }
+    }
+
+        public void testFindStop() {
+            String dna = "xxxyyyzzzTAAxxxyyyzzzTAAxx";
+            int dex = findStopCodon(dnaStr, 0, "TAA");
+            if(dex != 9) System.out.println("error on 9");
+            dex = findStopCodon(dna, 9, "TAA");
+            if(dex != 21) System.out.println("error on 21");
+            dex = findStopCodon(dna, 1, "TAA");
+            if (dex != 26) System.out.println("error on 26");
+            dex = findStopCodon(dna, 0, "TAG");
+            System.out.println("tests finished");
+        }
+
+        

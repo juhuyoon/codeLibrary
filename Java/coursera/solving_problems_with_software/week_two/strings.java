@@ -134,10 +134,19 @@
 //What if there are three different stop codons of "TAA", "TGA", "TAG"
 //Try spliting the problem up into three parts:
              //1) Find first occurrence of "ATG" and call its index startIndex
-        //2) Find the "TAA" starting from (startIndex + 3), call this result currIndex;
-            //Can make this repetitive! As long as...
+                //2) If startIndex is -1, then your answer is the empty string. 
+                //3) findStopCodon (dnaStr, startIndex, "TAA") and call the result taaIndex
+                //4) findStopCodon (dnaStr, startIndex, "TAG") and call the result tagIndex
+                //5) findStopCodon (dnaStr, startIndex, "TGA") and call the result tgaIndex
+                //6) Take the smallest of taaIndex, tgaIndex, and tagIndex: call it minIndex
+                //7) Answer is text from startIndex to minIndex + 3, no longer always be TAA
+                
+//Split this into its own:
+findStopCodon(str, startIndex, codon)
+        //2) Find the stopCodon starting from (startIndex + 3), call this result currIndex;
+            //As long as currIndex is not equal to -1
                 //3) Check if(currIndex - startIndex) is a multiple of 3
-                //4) If not, update currIndex to the index of the next "TAA", starting from (currIndex + 1)
-                //5) Check if (currIndex - startIndex) is a multiple of 3
-                //6) If so, text between startIndex and currIndex + 3 is the answer
-
+                //4) If so, currIndex is the answer
+                //5) If not, update currIndex to the index of the next stopCodon, starting from (currIndex + 1)
+                //6) If so, answer is dnrStr.length()
+                                    //If no valid answer, then return to -1, but if we use -1, we need to check specially rather than just ask for the minimum. 
