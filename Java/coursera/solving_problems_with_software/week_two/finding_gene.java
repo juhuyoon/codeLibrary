@@ -295,8 +295,8 @@ public class AllCodonsAnd {
     }
     return -1;
 
-public String findGene(String dna) {
-    int startIndex = dna.indexOf("ATG");
+public String findGene(String dna, int where) {
+    int startIndex = dna.indexOf("ATG", where);
     if(startIndex == -1) {
         return "";
     }
@@ -323,7 +323,19 @@ public String findGene(String dna) {
           }
 }
 public void printAllGenes(String dna) {
-
+    int startIndex = 0;
+    while(true) { //while statement
+        //Finding the next gene after the startIndex
+        String currentGene = findGene(dna, startIndex);
+        //If no gene was found, leave the loop
+        if(currentGene.isEmpty()) {
+            break;
+        }
+        //Print that gene out
+        System.out.println(currentGene);
+        //Set startIndex to just past the end of the gene
+        startIndex = dna.indexOf(currentGene, startIndex) + currentGene.length();
+    }
 }
 
 }
