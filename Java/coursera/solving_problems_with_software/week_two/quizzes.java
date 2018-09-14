@@ -35,3 +35,4 @@ URLResource file = new  URLResource("http://someURL");
 int beg = item.lastIndexOf("\"",pos);
 int end = item.indexOf("\"", pos+1);
 System.out.println(item.substring(beg+1,end));
+
