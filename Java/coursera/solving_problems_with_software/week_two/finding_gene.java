@@ -294,7 +294,6 @@ public class AllCodonsAnd {
         } 
     }
     return -1;
-}
 
 public String findGene(String dna) {
     int startIndex = dna.indexOf("ATG");
@@ -322,6 +321,11 @@ public String findGene(String dna) {
           if(minIndex == -1) {
               return "";
           }
+}
+public void printAllGenes(String dna) {
+
+}
+
 }
 
 

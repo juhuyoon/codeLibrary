@@ -187,4 +187,15 @@ findStopCodon(str, startIndex, codon)
     //Since you can already find a gene...
                   //Might adjust slightly to take a starting position
                   //Loops are familiar now so.... (use a while loop?)
-    
+                  //Must determine when the loop ends using break
+
+//1) Set startIndex to 0
+//2) As long as there are more genes after startIndex, repeat the following steps
+    //3) Find the next gene after startIndex
+    //3.5) If no gene was found, leave the loop
+    while (true && gene.isEmpty()) {
+        ... 
+        break;
+    }
+    //4) Print that gene out
+    //5) Set startIndex to just past the end of the gene
