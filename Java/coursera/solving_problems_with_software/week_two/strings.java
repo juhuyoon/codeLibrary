@@ -150,3 +150,41 @@ findStopCodon(str, startIndex, codon)
                 //5) If not, update currIndex to the index of the next stopCodon, starting from (currIndex + 1)
                 //6) If so, answer is dnrStr.length()
                                     //If no valid answer, then return to -1, but if we use -1, we need to check specially rather than just ask for the minimum. 
+
+
+//Logical And/Or
+             //1) Find first occurrence of "ATG" and call its index startIndex
+                //2) If startIndex is -1, then your answer is the empty string. 
+                //3) findStopCodon (dnaStr, startIndex, "TAA") and call the result taaIndex
+                //4) findStopCodon (dnaStr, startIndex, "TAG") and call the result tagIndex
+                //5) findStopCodon (dnaStr, startIndex, "TGA") and call the result tgaIndex
+
+                //6) Take the smallest of taaIndex, tgaIndex, and tagIndex: call it minIndex
+                    //Manipulating step 6 so that we find stopCodon return at -1 when there's no valid stopCodon
+                    //Picking Minimum that is not -1 as well, done via step by step comparisons.
+                    //if taaIndex is -1 OR (tgaIndex is not -1 AND tgaIndex < taaIndex), then pick tgaIndex
+                //9) Check if minindex is =1 OR (tagIndex is not -1 AND tagIndex < minIndex)
+                    //10) If so, st minIndex to tagIndex
+                //11) If minIndex is -1, your answer is the empty string
+                //12) your answer is the text from startIndex to minIndex + 3
+                
+//Special Rules: "Short circuit evaluation" if Java can figure out the answer from one operand, it does not evaluate the other. 
+//Express AND with&&
+            if(x < y && y < z )  {...}
+//Express OR with ||
+            if(a > b || c < d)  {...}
+                //Check if taaIndex is =1 OR (tgaIndex is not =1 AND tgaIndex < taaIndex)
+                //if(taaIndex == -1 || tgaIndex != -1 && tgaIndex < taaIndex)
+
+                //EG: When x has value 5 and y has value 6
+                if ( (x%2 == 0 || y%2 == 0) && x>3 ){
+                    System.out.println("condition was true")
+                  }
+
+
+//Finding Multiple Genes
+    //Printing them out in one line
+    //Since you can already find a gene...
+                  //Might adjust slightly to take a starting position
+                  //Loops are familiar now so.... (use a while loop?)
+    
