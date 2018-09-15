@@ -41,8 +41,10 @@ public class Debugging_1 {
 String found = input.substring(index+1, index+4);
 
 //What is the index that is out of range?
+//Result: 8
 
 //What is the length of input for this method call?
+//Result: 7
 
 //At the time this error is produced, what are the values of index+1 and index+4? You may want to add print statements to your code and run it again to see what these values are.
 //Result: 5,8
