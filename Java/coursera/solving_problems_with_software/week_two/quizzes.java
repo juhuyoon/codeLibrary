@@ -36,3 +36,35 @@ int beg = item.lastIndexOf("\"",pos);
 int end = item.indexOf("\"", pos+1);
 System.out.println(item.substring(beg+1,end));
 
+//Which one of the following is the first gene for this strand of DNA where you want to consider all three of the stop codons?
+//“AATGCTAACTAGCTGACTAAT”
+
+//Result: ATGCTAACTAGCTGA
+
+//Consider the following code segment to count the number of times the string “TG” occurs in the string dna, that does not work correctly.
+String dna = "CTGCCTGCATGATCGTA";
+int pos = dna.indexOf("TG");
+int count = 0;
+while (pos >= 0) {
+  count = count + 1;
+  pos = dna.indexOf("TG",pos);
+}
+System.out.println(count);
+
+//result: Each time pos is reset in the while loop it finds the same “TG”.
+
+//Consider the following segment of code from a program:
+while (count < 3) {
+  count += 1;
+  newDna = newDna + dna.substring(startPos,pos);
+  startPos = pos+1;
+  pos = dna.indexOf("T", startPos);
+  if (pos == -1) {
+    break;
+  }
+}
+//result: 2
+
+//Which one of the following conditionals correctly evaluates to true if the integer num is an odd number and to false if it is an even number.
+
+//result : if(num%2==1)

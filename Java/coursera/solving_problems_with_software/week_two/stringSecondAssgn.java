@@ -45,10 +45,69 @@ public class Part1 {
 
     public void testFindStopCodon() {
         String dna = "aaabbbcccTAAaaabbbcccTAAaaa";
-        
+
         int fill = findStopCodon(dna, 0, "TAA");
         System.out.println(fill);
+
+        fill = findStopCodon(dna, 1, "TGA");
+        System.out.println(fill);
+
+        fill = findStopCodon(dna, 0, "TAG");
+        System.out.println(fill);
     }
+
+    public String findGene(String dna) {
+        int startIndex = dna.indexOf("ATG");
+        if(startIndex == -1) {
+            return "";
+        }
+        int taaIndex = findStopCodon(dna, startIndex, "TAA");
+        int tagIndex = findStopCodon(dna, startIndex, "TAG");
+        int tgaIndex = findStopCodon(dna, startIndex, "TGA");
+
+        int minIndex = 0;
+        if(taaIndex == -1 || (tagIndex != -1 && tagIndex < taaIndex)) {
+            minIndex = tagIndex;
+        } else {
+            minIndex = taaIndex;
+        }
+        if(minIndex == -1 || (tgaIndex != -1 && tgaIndex < minIndex)) {
+            minIndex = tgaIndex;
+        }
+        if(minIndex == -1) {
+            return "";
+        }
+        return dna.substring(startIndex, minIndex +3);
+    }
+
+    public void testFindGene() {
+        String one = "ATFxxxyyyzzzTAAxxxTAGxxx";
+        String two = "xxxATGxxxyyyxxTAGxTAAxxx";
+        String three = "xyyATGxxxyyyuuuTGAxxxTAGxxx";
+        String four = "xyyATGxxxyyxxxyuuuTGAxxxTAGxxx";
+
+        System.out.println("Gene is: " + one + " " + findGene(one));
+        System.out.println("Gene is: " + two + " " + findGene(two));
+        System.out.println("Gene is: " + three + " " + findGene(three));
+        System.out.println("Gene is: " + four + " " + findGene(four));
+    }
+
+        public void printAllGenes(String dna) {
+            while (true) {
+                String gene = findGene(dna);
+                if (gene.isEmpty()) {
+                    break;
+                } else {
+                    System.out.println(gene);
+                }
+
+            }
+        }
+
+        public static void main() {
+            Part1 test = new Part1();
+            test.testFindGene();
+        }
 }
 
 
@@ -80,3 +139,134 @@ public class Part1 {
 // 3. Write the method named countGenes that has a String parameter named dna representing a string of DNA. This method returns the number of genes found in dna. For example the call countGenes(“ATGTAAGATGCCCTAGT”) returns 2, finding the gene ATGTAA first and then the gene ATGCCCTAG. Hint: This is very similar to finding all genes and printing them, except that instead of printing all the genes you will count them.
 
 // 4. Write the void method named testCountGenes that has no parameters. This method calls countGenes with many example strings and prints the result for each. You should create several examples with different numbers of genes to test your code.
+
+public class Part3 {
+    public int findStopCodon(String dna, int startIndex, String stopCodon) {
+        int currIndex = dna.indexOf(stopCodon, startIndex + 3);
+        while (currIndex != -1) {
+            int diff = currIndex - startIndex;
+            if (diff % 3 == 0) {
+                return currIndex;
+            } else {
+                currIndex = dna.indexOf(stopCodon, currIndex + 1);
+            }
+        }
+
+        return -1;
+    }
+
+    public String findGene(String dna, int where) {
+        int startIndex = dna.indexOf("ATG", where);
+        if (startIndex == -1 || where == -1) {
+            return "";
+        }
+
+        int taaIndex = findStopCodon(dna, startIndex, "TAA");
+        int tagIndex = findStopCodon(dna, startIndex, "TAG");
+        int tgaIndex = findStopCodon(dna, startIndex, "TGA");
+
+        int minIndex = 0;
+
+        if (taaIndex == -1 || (tgaIndex != -1 && tgaIndex < taaIndex)) {
+            minIndex = tgaIndex;
+        } else {
+            minIndex = taaIndex;
+        }
+
+        if (minIndex == -1 || (tagIndex != -1 && tagIndex < minIndex)) {
+            minIndex = tagIndex;
+        }
+
+        if (minIndex == -1) {
+            return "";
+        }
+
+        return dna.substring(startIndex, minIndex + 3);
+    }
+
+    public void howManyGenes() {
+        int startIndex = 0;
+        int count = 0;
+
+        FileResource fr = new FileResource("GRch38dnapart.fa");
+        String dna = fr.asString().toUpperCase();
+
+        while (true) {
+            String gene = findGene(dna, startIndex);
+
+            if (gene == "") {
+                break;
+            }
+
+            startIndex = dna.indexOf(gene, startIndex) + gene.length();
+
+            if (gene.length() > 60) {
+                count++;
+            }
+        }
+
+        System.out.println("How many genes are: " + count);
+    }
+
+    public StorageResource getAllGenes(String dna) {
+        StorageResource sr = new StorageResource();
+        int startIndex = 0;
+        while (true) {
+            String gene = findGene(dna, startIndex);
+
+            if (gene == "") {
+                break;
+            }
+
+            sr.add(gene);
+
+            startIndex = dna.indexOf(gene, startIndex) + gene.length();
+
+        }
+        return sr;
+    }
+
+    public double cgRatio(String dna) {
+        double charRatio = 0.0;
+        double strLen = dna.length();
+
+        for (int i = 0; i < strLen; i++) {
+            if (dna.charAt(i) == 'C' || dna.charAt(i) == 'G') {
+                charRatio++;
+            }
+        }
+
+        double ratio = charRatio / strLen;
+        return ratio;
+    }
+
+    public int countCTG(String dna) {
+        int startIndex = 0;
+        int count = 0;
+        int index = dna.indexOf("CTG", startIndex);
+
+        while (true) {
+            if (index == -1 || count > dna.length()) {
+                break;
+            }
+
+            count++;
+            index = dna.indexOf("CTG", index + 3);
+        }
+        return count;
+    }
+
+    public void processGenes() {
+        String Longest = "";
+        FileResource fr = new FileResource("GRch38dnapart.fa");
+        String dna = fr.asString().toUpperCase();
+        StorageResource sr = getAllGenes(dna);
+
+        for (String s : sr.data()) {
+            if (s.length() > Longest.length()) {
+                Longest = s;
+            }
+        }
+        System.out.println(Longest.length());
+    }
+}
