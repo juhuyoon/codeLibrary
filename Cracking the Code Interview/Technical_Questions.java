@@ -54,3 +54,22 @@ e.g.:
                 //the if statement at the end is important. d's value will be found but then check that it's right integer value with the if statement.
                     //Runtime goes from O(N^4) to O(N^3)
 
+
+//Learning speed gains from branch predictions: 
+//http://web.cs.ucdavis.edu/~su/Berkeley/cs252/project.html
+//https://en.wikipedia.org/wiki/Branch_predictor
+//https://stackoverflow.com/questions/289405/effects-of-branch-prediction-on-performance
+//
+// Branch prediction is pretty darned good these days. But that doesn't mean the penalty of branches can be eliminated.
+
+// In typical code, you probably get well over 99% correct predictions, and yet the performance hit can still be significant. There are several factors at play in this.
+
+// One is the simple branch latency. On a common PC CPU, that might be in the order of 12 cycles for a mispredict, or 1 cycle for a correctly predicted branch. For the sake of argument, let's assume that all your branches are correctly predicted, then you're home free, right? Not quite.
+
+// The simple existence of a branch inhibits a lot of optimizations. The compiler is unable to reorder code efficiently across branches. Within a basic block (that is, a block of code that is executed sequentially, with no branches, one entry point and one exit), it can reorder instructions as it likes, as long as the meaning of the code is preserved, because they'll all be executed sooner or later. Across branches, it gets trickier. We could move these instructions down to execute after this branch, but then how do we guarantee they get executed? Put them in both branches? That's extra code size, that's messy too, and it doesn't scale if we want to reorder across more than one branch.
+
+// Branches can still be expensive, even with the best branch prediction. Not just because of mispredicts, but because instruction scheduling becomes so much harder.
+
+// This also implies that rather than the number of branches, the important factor is how much code goes in the block between them. A branch on every other line is bad, but if you can get a dozen lines into a block between branches, it's probably possible to get those instructions scheduled reasonably well, so the branch won't restrict the CPU or compiler too much.
+
+// But in typical code, branches are essentially free. In typical code, there aren't that many branches clustered closely together in performance-critical code.
