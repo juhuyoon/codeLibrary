@@ -26,3 +26,41 @@ public class FirstCSVExample {
 //print vs println : 
 //print = stays on the same line
 //println = finishes the line
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+//Exports in Petroleum:
+import edu.duke.*;
+import org.apache.commons.csv.*;
+
+public class WhichCountriesExport {
+    public void listExporters(CSVParser parser, String exportOfInterest) {
+        // for each row in the CSV File
+            for(CSVRecord record : parser) {
+        // Look at the "Exports" column
+                String export = record.get("Exports");
+        // Check if it contains exportOfInterest
+                if(export.contains(exportOfInterest)) { //contains() searches the sequence of characters in a given string, returns true if char values are found, other is false
+        // If so, write down the "Country" from that row
+                    String country = record.get("Country");
+                    System.out.print(country);
+
+            }
+        }
+    }
+    //This is made to take who exports coffee
+    public void whoExportsCoffee() {
+        FileResource fr = new FileResource();
+        CSVParser parser = fr.getCSVParser();
+        listExporters(parser, "coffee");
+    }
+}
+
+//What an instance of the problem
+//Write down what you did
+//Find patterns, generalize
+    //1) For each row in the CSV file
+        //a) Look at the "Exports" column of that row
+        //b) Check if it contains exportsOfInterest
+            //i) if so, write down "Country" from that row
