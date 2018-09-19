@@ -122,9 +122,6 @@ public class geneQuiz {
 
 //////////////////////FOR STORAGE////////////////////////////
 import edu.duke.*;
-import edu.duke.FileResource;
-
-import edu.duke.StorageResource;
 
 public class Part2 {
     public int findStopCodon(String dnaStr, int startIndex, String stopCodon) {
@@ -206,27 +203,6 @@ public class Part2 {
         return count;
     }
 
-    public float cgRatio(String dna) {
-        int c = countString("C", dna);
-        int g = countString("G", dna);
-
-        System.out.println("C:" + c + " times");
-        System.out.println("G:" + g + " times");
-
-        float fraction = (float) c / g;
-        return fraction;
-    }
-
-    public void processGenes(String sr) {
-        // FileResource fr = new FileResource("brca1line.fa");
-        // String dna = fr.asString();
-
-    }
-
-    public void testProcessGenes() {
-
-    }
-
     public void testOn(String dna) {
         int geneCount = 0;
         System.out.println("-----------------------------");
@@ -247,18 +223,7 @@ public class Part2 {
     }
 
     public void test() {
-        // ATGv TAAv ATG v v TGA
-
-        // testOn(dna1);
-        // System.out.println(cgRatio(dna1));
-
-        // ATGv v v v TAAv v v ATGTAA
-        // testOn("ATGATCATAAGAAGATAATAGAGGGCCATGTAA");
-
-        // System.out.println(cgRatio("ATGATCTAATTTATGCTGCAACGGTGAAGA"));
-        // URLResource fr = new
-        // URLResource("http://www.dukelearntoprogram.com/course2/data/dna/brca1line.fa");
-        URLResource fr = new URLResource("https://users.cs.duke.edu/~rodger/GRch38dnapart.fa");
+        URLResource fr = new URLResource();
 
         String kingDNA = fr.asString();
         String upcase_kingDNA = kingDNA.toUpperCase();
