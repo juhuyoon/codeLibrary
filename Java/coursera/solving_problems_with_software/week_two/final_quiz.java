@@ -2,7 +2,7 @@
 import edu.duke.*;
 
 public class geneQuiz {
-    public int findStopCodon(String dna, int startIndex, String stopCodon) {
+    public int findStopCodon(String dna, int startIndex, String stopCodon) { //to find the original Codons from previous exercises
         int currIndex = dna.indexOf(stopCodon, startIndex + 3);
         while (currIndex != -1) {
             int diff = currIndex - startIndex;
@@ -16,7 +16,7 @@ public class geneQuiz {
         return -1;
     }
 
-    public String findGene(String dna, int where) {
+    public String findGene(String dna, int where) { //finding gene based on the indices of the startCodon and stopCodons (multiples)
         int startIndex = dna.indexOf("ATG", where);
         if (startIndex == -1 || where == -1) {
             return "";
@@ -43,13 +43,13 @@ public class geneQuiz {
         }
 
         return dna.substring(startIndex, minIndex + 3);
-    }
+    } //returning dna up to +3 codons. 
 
     public void howManyGenes() {
-        int startIndex = 0;
+        int startIndex = 0; //to know which ones are longer than 60 codons.
         int count = 0;
 
-        FileResource fr = new FileResource("GRch38dnapart.fa");
+        FileResource fr = new FileResource(); //empty so that I can choose in a directory.
         String dna = fr.asString().toUpperCase();
 
         while (true) {
@@ -69,7 +69,7 @@ public class geneQuiz {
         System.out.println("How many genes are: longer than 60 " + count);
     }
 
-    public StorageResource getAllGenes(String dna) {
+    public StorageResource getAllGenes(String dna) { //grabbing all genes...
         StorageResource sr = new StorageResource();
         int startIndex = 0;
         while (true) {
@@ -87,21 +87,7 @@ public class geneQuiz {
         return sr;
     }
 
-    public double cgRatio(String dna) {
-        double charRatio = 0.0;
-        double strLen = dna.length();
-
-        for (int i = 0; i < strLen; i++) {
-            if (dna.charAt(i) == 'C' || dna.charAt(i) == 'G') {
-                charRatio++;
-            }
-        }
-
-        double ratio = charRatio / strLen;
-        return ratio;
-    }
-
-    public int countCTG(String dna) {
+    public int countCTG(String dna) { //counting every time the CTG shows up
         int startIndex = 0;
         int count = 0;
         int index = dna.indexOf("CTG", startIndex);
@@ -119,7 +105,7 @@ public class geneQuiz {
 
     public void processGenes() {
         String Longest = "";
-        FileResource fr = new FileResource("GRch38dnapart.fa");
+        FileResource fr = new FileResource();
         String dna = fr.asString().toUpperCase();
         StorageResource sr = getAllGenes(dna);
 
@@ -129,7 +115,6 @@ public class geneQuiz {
             }
         }
         System.out.println(Longest.length());
-        System.out.println(cgRatio(dna));
         System.out.println(countCTG(dna));
     }
 }
