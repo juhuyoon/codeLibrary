@@ -4,6 +4,8 @@ As people step into the world of coding, often times, there are random scenarios
 
 The hope with this code library is to be a place to find generic codes, strange logic problems, and quick explanations for new languages that people can use to read, learn, and use!
 
+Secondly serves as my reference files and studies included in here to work and progress
+
 ### Folders
 Javascript 
 1) Practices and examples of how to use the various array functions in ES6 [Arrays Folder](https://github.com/juhuyoon/codeLibrary/tree/master/Javascript/ES6-Arrays)  
@@ -33,7 +35,11 @@ Cracking the Code Interview [the book](https://www.amazon.com/Cracking-Coding-In
 3) Data sets and what to know for [algorithms](https://github.com/juhuyoon/codeLibrary/blob/master/Cracking%20the%20Code%20Interview/Datasets.java)
 4) Technical Interviews and how to [approach](https://github.com/juhuyoon/codeLibrary/blob/master/Cracking%20the%20Code%20Interview/Technical_Questions.java) 
 
-
+Java[link] (https://github.com/juhuyoon/codeLibrary/tree/master/Java)
+1) Coursera Studies: [Java Solving problems with software](https://github.com/juhuyoon/codeLibrary/tree/master/Java/coursera/solving_problems_with_software)
+1a) Week One [link](https://github.com/juhuyoon/codeLibrary/tree/master/Java/coursera/solving_problems_with_software/week_one)
+1b) Week Two [link] (https://github.com/juhuyoon/codeLibrary/tree/master/Java/coursera/solving_problems_with_software/week_two)
+1c) Week Three [link] (https://github.com/juhuyoon/codeLibrary/tree/master/Java/coursera/solving_problems_with_software/week_three)
 
 
 Random Files 
