@@ -5,6 +5,9 @@ module.exports = function(app) {
 
     //Routes for the words
     app.route('/words')
-       .get(wordList.)
-       .post()
+       .get(wordList);
+       .post(wordList.pull_words);
+
+    app.route("/words/:wordId")
+       .get(wordList)
 }
