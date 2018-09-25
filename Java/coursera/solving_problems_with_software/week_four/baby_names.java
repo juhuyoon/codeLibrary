@@ -22,4 +22,28 @@ public class BabyBirths {
         }
     }
     }
-}
+
+    public void totalBirths(FileResource fr) {
+        for (CSVRecord rec: fr.getCSVParser(false)) {
+            int totalBirths = 0; //must declare a variable on top first then use. 
+            int totalBoys = 0;
+            int toalGirls = 0;
+                //looping over all CSVRecords in the file, false because it has no header row
+                int numBorn = Integer.parseInt(rec.get(2));
+                totalBirths += numBorn;
+                if(rec.get(1).equals("M")) {
+                    totalBoys += numBorn;
+                } else {
+                    totalGirls += numBorn;
+                }
+        }
+        System.out.println("total births = " + totalBirths);
+        System.out.println("total girls = " + totalGirls);
+        System.out.println("total boys = " + totalBOys);
+
+    }
+
+    public void testTotalBirths() {
+        FileResource fr = new FileResource();
+        totalBirths(fr);
+    }
