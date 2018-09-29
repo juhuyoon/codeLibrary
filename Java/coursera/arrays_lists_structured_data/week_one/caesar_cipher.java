@@ -10,9 +10,14 @@
     //alphabet
     //Strings are immutable and cannot be changed
     //Can only make new ones
-    
+
    String encr =  alphabet.substring(key);
    encr = encr + alphabet.substring(0, key);
+
+   //StringBuilder
+    //For mutable sequence of characters
+    StringBuilder sb = new StringBuilder("Hello");
+        //methods: append, insert chatAt, setCharAt, toString
 
 
 
