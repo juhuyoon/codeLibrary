@@ -180,7 +180,7 @@ public class minTemp {
                 sum += temp;
                 num++;
             }
-        }
+        } 
 
         double average = sum / num;
         return average;
