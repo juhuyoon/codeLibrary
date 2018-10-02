@@ -74,3 +74,57 @@ public class CaesarCipher {
         // System.out.println(decrypted);
     }
 }
+
+// Which one of the following shows how you could assign the character variable ch to the lowercase version of itself, without having to write any additional methods?
+//result: ch = Character.toLowerCase(ch);
+
+
+//Consider writing the method isAorE that has one char parameter, ch. This method should return true if ch is either ‘a’ or ‘e’, and otherwise return false.
+//Which two of the following are correct implementations for the method isAorE?
+//result 1)
+public boolean isAorE (char ch) {    	
+     if (ch == 'a') {        
+          return true;          
+     }    	    
+     if (ch == 'e') {        	
+          return true;    	
+     }    	
+     return false;	
+}
+//result 2)
+public boolean isAorE (char ch) {
+     if (ch == 'a' || ch == 'e') { 
+          return true; 
+     }
+     return false;
+}
+
+//Assume that isVowel is a method with one char parameter, and that this method returns true if that character is a vowel, and false if it is not a vowel.
+//Consider the following code to replace all vowels in a string phrase with a given character ch.
+StringBuilder sb = new StringBuilder(phrase);for(
+    int k = 0;k<sb.length();k++)
+    {                  
+     // MISSING CODE       	
+}
+
+// Which one of the following is the missing code to modify sb so that all vowels in sb are replaced with the character ch?
+
+//result:
+
+    if(isVowel(sb.charAt(k))) {       
+     sb.setCharAt(k, ch);
+}
+
+// Consider the following definition where phrase is a String.
+StringBuilder sb = new StringBuilder(phrase);
+
+// Which two of the following are correct ways to ask if a character in the kth
+// position of sb is equal to the character ch, when we want them to match
+// regardless of case?
+//result 1):
+if (Character.toLowerCase(sb.charAt(k)) == Character.toLowerCase(ch)) {
+
+//result 2): 
+char one = Character.toLowerCase(sb.charAt(k));      	
+char two = Character.toLowerCase(ch);      	
+if (one == two) {
