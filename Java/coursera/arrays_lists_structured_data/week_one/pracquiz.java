@@ -128,3 +128,68 @@ if (Character.toLowerCase(sb.charAt(k)) == Character.toLowerCase(ch)) {
 char one = Character.toLowerCase(sb.charAt(k));      	
 char two = Character.toLowerCase(ch);      	
 if (one == two) {
+
+
+//Which two of the following check correctly if the last character of the String word is not a letter?
+//results 1 and 2: 
+if ( ! Character.isLetter(word.charAt(word.length()-1))){      wordlength--;   	   	
+}
+
+if (Character.isLetter(word.charAt(word.length()-1)) == false) {
+    wordlength--;
+}
+
+
+//Consider the following code which is in a program that counts the words of different lengths from a file, and assume resource is a FileResource to a file of words and counts is an array of integer counters.
+for(String word : resource.words()){  	
+     int wordlength = word.length();     	
+     if (wordlength >= counts.length) {  	    	   
+          wordlength = counts.length - 1;  	  	
+     }  	
+     if (wordlength > 0 ) {  	   	   
+          counts[wordlength] ++;  	  	
+     }
+}
+
+//Which one of the following best describes the purpose of the first if statement?
+//result: All words that are of length greater than or equal to the size of the counts array are counted in the last counter in the array.
+
+//Which one of the following words (or rather groups of characters with no blanks) might need a special case in the countWordLengths method?
+//result: $
+
+//What is the most common word length (ignoring the punctuation of the first and last character of each group of characters)? romeo txt
+//result: 4
+
+//What is the most common word length (ignoring the punctuation of the first and last character of each group of characters)? lotsOfWords.txt
+//result: 8
+
+//Consider the following code for the halfOfString method that is given a string named message and a starting position named start, and returns a new string that is formed from every other character starting with the given start location.
+
+String answer = "";   	
+// MISSING CODE   	
+return answer;
+
+//result: 
+for (int k = start; k< message.length() ; k+= 2) {
+     answer = answer + message.charAt(k);    	
+}
+
+//Suppose we decided to write an eyeball method for the two-key decrypt algorithm.
+//result: We would need to decrypt with all possible key combinations resulting in 26*26 = 676 possible combinations to look at. 
+
+
+//The following phrase was encrypted with the two key encryption method we discussed using the two keys 2 and 20.
+//Top ncmy qkff vi vguv vbg ycpx
+//result: 
+//What is the decrypted message?
+//Akag tjw Xibhr awoa aoee xakex znxag xwko
+//result: Eren and Emily have evil eerie green ears
+
+//Decrypt the encrypted file mysteryTwoKeysPractice.txt
+//This file is encrypted with the two key encryption method we discussed. You will need to decrypt the complete file by figuring out which keys were used to encrypt it.
+//What are the first five decrypted words?
+//result: Geometric computing research at Duke
+
+//Decrypt the encrypted file mysteryTwoKeysPractice.txt This file is encrypted with the two key encryption method we discussed. You’ll need to decrypt the complete file by figuring out which keys were used to encrypt it. What are the two keys (in order) that were used to encrypt it?
+
+//result: 17,4
