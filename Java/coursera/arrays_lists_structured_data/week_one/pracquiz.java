@@ -194,4 +194,26 @@ for (int k = start; k< message.length() ; k+= 2) {
 
 //result: 17,4
 
-//3rd pracquiz and final quiz left...
+
+//Which of the following options is the best choice for adding an additional private field to the CaesarCipher class to make it easier to call the decrypt method on a string that was encrypted using an object of this class?
+//result: The integer key which is a parameter to the constructor.
+
+//Which one of the following best describes the approach for the decrypt method that has one String parameter encrypted?
+//Assume decrypt can also access the key parameter that was used in the constructor, and that value is stored in an instance variable named mainKey in the constructor.
+//result:  
+
+CaesarCipher cc = new CaesarCipher(26-mainKey); 
+return cc.encrypt(encrypted);
+
+//Which one of the following is the best idea for the method breakCaesarCipher?
+//result: Calculate the frequency of all the letters using countLetters and compute the index of the largest frequency using maxIndex. 
+//Use those values to determine the key, then create a CaesarCipher with that key and call decrypt on the encrypted string.
+
+
+
+
+//In the class TestCaesarCipher, should the method countLetters be public or private?
+//result: private
+
+
+
