@@ -206,10 +206,10 @@ CaesarCipher cc = new CaesarCipher(26-mainKey);
 return cc.encrypt(encrypted);
 
 //Which one of the following is the best idea for the method breakCaesarCipher?
+
+
 //result: Calculate the frequency of all the letters using countLetters and compute the index of the largest frequency using maxIndex. 
 //Use those values to determine the key, then create a CaesarCipher with that key and call decrypt on the encrypted string.
-
-
 
 
 //In the class TestCaesarCipher, should the method countLetters be public or private?

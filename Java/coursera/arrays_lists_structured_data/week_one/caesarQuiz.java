@@ -2,11 +2,11 @@ import edu.duke.*;
 
 
 public class CaesarCipherDecrypt {
-    public int [] countLetters(String encrypted){
+    public int [] countLetters(String encrypted){ 
         String alph = "abcdefghijklmnopqrstuvwxyz";
-        int [] counts = new int[26];
-        for(int k = 0; k< encrypted.length(); k++){
-            char ch = Character.toLowerCase(encrypted.charAt(k));
+        int [] counts = new int[26]; //specificity on 26 
+        for(int k = 0; k< encrypted.length(); k++){ //for loop. 
+            char ch = Character.toLowerCase(encrypted.charAt(k)); //any letter received will be lowercased
             int dex = alph.indexOf(ch);
             if(dex != -1){
                 counts[dex] +=1; 
@@ -15,7 +15,7 @@ public class CaesarCipherDecrypt {
         return counts;
     }
     
-    public int maxIndex (int [] freqs){
+    public int maxIndex (int [] freqs){ //need to go over this one. 
         int max = 0;
         for(int i = 0; i<freqs.length; i++){
             if(freqs[i] > freqs[max]){

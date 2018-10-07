@@ -31,7 +31,7 @@ public class CaesarCipher {
      * and upper case characters and shift it according to the key.
      */
     public String encrypt(String input, int key) {
-        // Make a StringBuilder with message (encrypted)
+        // Make a StringBuilder with message (encrypted) is the StringBuilder an array build as well...?
         StringBuilder encrypted = new StringBuilder(input);
         // Write down the alphabet
         String alphabetUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -59,6 +59,7 @@ public class CaesarCipher {
         // Your answer is the String inside of encrypted
         return encrypted.toString();
     }
+
 
     /*
      * This function also encrypts the String, but usues two keys in the process.
