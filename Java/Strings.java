@@ -43,3 +43,16 @@ public String reverse(String s) {
     }
     return ret;
 }
+
+
+//Char Building
+//type char is primitive with single quotes:
+"a" = String
+
+//several methods:
+.isLowerCase(ch) //returns boolean if ch is a letter 'a'
+.isDigit(ch) //returns boolean if it's a number or not '1'
+.toLowerCase(ch) //returns lowercase
+.toUpperCase(ch) //returns uppercase
+
+//using array as an indexed collection:
