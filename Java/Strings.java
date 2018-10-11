@@ -56,3 +56,21 @@ public String reverse(String s) {
 .toUpperCase(ch) //returns uppercase
 
 //using array as an indexed collection:
+StorageResource //to collect strings
+//useful, but limited. 
+//define array with []
+int[] a = new int[256] //specifying the specific array storage size
+for(int i = 0; i < a.length; i++) {
+    int val = a[i];
+}
+//Indexed collection of elements/values and it reads and writes via indexes
+int[] x; //no storage, just a type
+int[] x = new int[12]; //all initialized to zero, to say how many are stored
+String[] s = new String[12]; //all initialized to null. 
+
+//read and write:
+s[3] = "Hello"; //storing
+ x[2] = x[3] + 4; //access and reading an array location like this. 
+//storage allocated and doesn't change. 
+
+//arr.length - find the number of elements in an array
