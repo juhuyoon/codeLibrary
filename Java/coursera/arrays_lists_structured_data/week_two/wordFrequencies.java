@@ -11,7 +11,7 @@ public class WordFrequencies {
 
     public void findUnique() {
         FileResource resource = new FileResource();
-        for String(s: resource.words()) {
+        for String (s: resource.words()) {
             s = s.toLowerCase();
             int index = myWords.indexOf(s);
             if(index == -1) {
