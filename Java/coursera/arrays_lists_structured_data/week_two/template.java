@@ -34,3 +34,14 @@ words.add("hello");
 words.add("world");
 String s = words.get(1);
 words.set(0, "goodbye");
+
+//Creating an Array is easier than using ArrayList.
+String[] a && ArrayList<String> b
+//a[k] is easier then b.get() and b.set()
+
+int[] ac 
+ArrayList<Integer> bc
+
+//Concerns with int/Integer conversions
+//ac[index]++ works //incrementing with array
+//bc.get(index) ++ DOES NOT WORK //does not work with ArrayList
