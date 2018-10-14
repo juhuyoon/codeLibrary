@@ -38,16 +38,6 @@ words.set(0, "goodbye");
 //Creating an Array is easier than using ArrayList.
 String[] a && ArrayList<String> b
 //a[k] is easier then b.get() and b.set()
-//When looping through with ArrayList, 
-        //Start with zero, loop to less than .size()
-        //Access via .get(index)
-        //Do not call .remove() during iteration
-    ArrayList<String> a = new ArrayList<String>();
-
-    for(int i = 0; i < a.size(); i++) {
-        String s = a.get(i);
-        //process s
-    }
 
 int[] ac 
 ArrayList<Integer> bc
