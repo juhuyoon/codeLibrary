@@ -56,3 +56,4 @@ public class WordFrequencies {
         System.out.println("The unique word is " + myWords.size());
     }
 }
+
