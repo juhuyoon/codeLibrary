@@ -12,6 +12,12 @@ public class Tester{
         System.out.println(le2);
     }
 
+    public void testAnalyzer() {
+        LogAnalyzer la = new LogAnalyzer();
+        la.readFile("short-test_log");
+        la.printAll();
+    }
+
 
 }
 
