@@ -50,8 +50,10 @@ public int getBytesReturned() {
     return bytesReturned;
 }
 
-public String toString() {
+public String toString() { //very important and must be spelled this way
     return ipAddress + " " + accessTime + " " + request + " " + statusCode + " " + bytesReturned;
     }
 }
 
+//every class has a toString method by default
+//however, if you do not specify that you want a toString method, then it will only log the location of the memory as seen in the tester case. 
