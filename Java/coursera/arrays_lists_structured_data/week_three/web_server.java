@@ -49,5 +49,9 @@ public int getStatusCode() {
 public int getBytesReturned() {
     return bytesReturned;
 }
+
+public String toString() {
+    return ipAddress + " " + accessTime + " " + request + " " + statusCode + " " + bytesReturned;
+    }
 }
 
