@@ -18,7 +18,7 @@ public class LogEntry{
   private  String ipAddress;
   private  Date accessTime;
   private  String request;
-  private  int StatusCode;
+  private  int statusCode;
   private  int bytesReturned; //private so that these variables are immutable. 
 
   public LogEntry(String ip, Date time, String req, int status, int bytes) {

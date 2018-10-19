@@ -12,10 +12,14 @@ public class Tester{
         System.out.println(le2);
     }
 
-    public void testAnalyzer() {
+    public void testLogAnalyzer() {
         LogAnalyzer la = new LogAnalyzer();
-        la.readFile("short-test_log");
+        la.readFile("weblog1_log");
         la.printAll();
+        System.out.println(la.countUniqueIPs());
+        System.out.println(la.uniqueIPVisitsOnDay("Mar 24").size());
+        System.out.println(la.countUniqueIPsInRange(200,299));
+        la.printAllHigherThanNum(400);
     }
 
 
