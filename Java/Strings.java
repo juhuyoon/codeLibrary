@@ -74,3 +74,9 @@ s[3] = "Hello"; //storing
 //storage allocated and doesn't change. 
 
 //arr.length - find the number of elements in an array
+
+//equality
+    //Two types of equality:
+        //1) == : same exact object
+        //2) .equals() : same meaning
+            //Defined by class: default == `

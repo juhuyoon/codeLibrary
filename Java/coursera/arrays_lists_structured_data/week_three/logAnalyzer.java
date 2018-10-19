@@ -16,6 +16,20 @@ public class LogAnalyzer {
         this.records = new ArrayList<>();
     }
 
+    public int countUniqueIPs() {
+        //uniqueIPs start as an empty list
+        ArrayList<String> uniqueIPs = new ArrayList<String>();
+        //for each element le in records
+        for (LogEntry le: records) {
+            String ipAddress = le.getIpAddress();
+            if(uniqueIPs.contains(ipAddress)) {
+                //add ipAddress to uniqueIps
+                uniqueIPs.add(ipAddress);
+            }
+        }
+        return uniqueIPs.size();
+    }
+
     public void readFile(String filename) {
         FileResource resource = new FileResource(filename);
         for (String line : resource.lines()) {
