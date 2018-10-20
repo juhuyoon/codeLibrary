@@ -66,13 +66,17 @@ public class LogAnalyzer {
         }
         return count;
     }
-    
+
     public void readFile(String filename) {
         FileResource resource = new FileResource(filename);
         for (String line : resource.lines()) {
             LogEntry l = WebLogParser.parseEntry(line);
             this.records.add(l);
         }
+    }
+
+    public HashMap<String, Integer> countVisitsPerIP() {
+        
     }
 
     public void printAll() {
