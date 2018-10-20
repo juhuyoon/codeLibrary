@@ -76,7 +76,22 @@ public class LogAnalyzer {
     }
 
     public HashMap<String, Integer> countVisitsPerIP() {
-        
+        //Make an empty HashMap<String, Integer> counts
+        HashMap<String, Integer> counts = new HashMap<String, Integer>(); 
+        //For each le in record
+        for ( LogEntry le: records) {
+            //ip = le's ipAddress
+            String ip = le.getIpAddress();
+            //check if ip is in counts
+            if(!counts.containsKey(ip)) {
+                //If not: put ip in with a value of 1
+                counts.put(ip, 1);
+            }  else {
+                //If so, update the value to be one more
+                counts.put(ip, counts.get(ip) + 1);    
+            }
+            }
+            return counts;
     }
 
     public void printAll() {
