@@ -16,3 +16,8 @@ for(int i = 4; i < 30; i += 7) {
     //counting for loops can...
         //start at any number
         //count by any number
+
+//Find key for encrypted for given klength
+    //mostCommon = most frequent letter('e');
+        //For later: differnt languages
+    
