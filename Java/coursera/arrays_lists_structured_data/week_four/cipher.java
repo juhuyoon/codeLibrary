@@ -17,7 +17,19 @@ for(int i = 4; i < 30; i += 7) {
         //start at any number
         //count by any number
 
+public int[] tryKeyLength(String encrypted, int klength, char mostCommon)
 //Find key for encrypted for given klength
     //mostCommon = most frequent letter('e');
         //For later: differnt languages
-    
+    //Use sliceString
+    //And CaesarCracker
+        //int getKey(String encrypted)
+        //Constructor takes mostCommons
+
+public void breakVigenere() 
+    //method to call from IDE
+    //use FileResource to read file
+        //useful: .asString()
+    //Use tryKeyLength to breka key
+        //for now keyLength given, most Common = 'e'
+    //Use vigenereCipher's .decrypt(String)
