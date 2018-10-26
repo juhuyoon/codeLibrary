@@ -20,12 +20,25 @@ public class VigenereBreaker {
         }
         return key;
     }
-}
+
+    public void testTryKeyLength() {
+        FileResource fr = new FileResource();
+        String message = fr.asString();
+        int[] array = tryKeyLength(message, 4, 'e');
+        System.out.println(Arrays.toString(array));
+    
 
 public void breakVigenere() {
     FileResource fr = new FileResource();
     String message = fr.asString();
 
-    VigenereBreaker
+    VigenereBreaker vb = new VigenereBreaker();
+    int[] key = vb.tryKeyLength(message, 4, 'e');
 
+    VigenereCipher vc = new VigenereCipher(key);
+    for(int i : key) {
+        System.out.println(i);
+    }
+    System.out.println(vc.decrypt(message));
+}
 }
