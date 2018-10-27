@@ -21,12 +21,6 @@ public class VigenereBreaker {
         return key;
     }
 
-    public void testTryKeyLength() {
-        FileResource fr = new FileResource();
-        String message = fr.asString();
-        int[] array = tryKeyLength(message, 4, 'e');
-        System.out.println(Arrays.toString(array));
-
     public void breakVigenere() {
         FileResource fr = new FileResource();
         String message = fr.asString();
@@ -59,6 +53,13 @@ public class VigenereBreaker {
         }
         return count;
         }
+
+        public void testTryKeyLength() {
+        FileResource fr = new FileResource();
+        String message = fr.asString();
+        int[] array = tryKeyLength(message, 4, 'e');
+        System.out.println(Arrays.toString(array));
+        }
     
     public String breakForLanguage(String encrypted, HashSet<String> dictionary) {
         int max = 0;
@@ -79,10 +80,5 @@ public class VigenereBreaker {
         }
         System.out.println("key length used is " + keyLong);
         return d;
-
     }
-
-
     }
-
-}
