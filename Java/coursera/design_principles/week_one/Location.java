@@ -40,10 +40,19 @@ public class Location {
         mProvider = provider;
     }
 
-    public Location(Location 1) {
+    public Location(Location l) {
         set(1);
     }
 
-    
+    public Location(double latitude, double longitude) {
+        mLatitude = latitude;
+        mLongitude = longitude; 
+    }
+
+    public void set(Location l) {
+        mProvider = l.provider
+    }
+
+
 }
 
