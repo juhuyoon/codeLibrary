@@ -1,6 +1,6 @@
 
 public class QuakeEntry implements Comparable<QuakeEntry>{
-	
+
 	private Location myLocation;
 	private String title;
 	private double depth;
@@ -8,6 +8,9 @@ public class QuakeEntry implements Comparable<QuakeEntry>{
 
 	public QuakeEntry(double lat, double lon, double mag, 
 	                  String t, double d) {
+		// this would be a POJO = Plain Old Java Object
+		// cannot create object without all characteristics
+		// No default/parameterless constructor
 		myLocation = new Location(lat,lon);
 		
 		magnitude = mag;
@@ -31,7 +34,7 @@ public class QuakeEntry implements Comparable<QuakeEntry>{
 		return depth;
 	}
 
-	@Override
+	@Override //compares and created by a Parser
 	public int compareTo(QuakeEntry loc) {
 		double difflat = myLocation.getLatitude() - loc.myLocation.getLatitude();
 		if (Math.abs(difflat) < 0.001) {

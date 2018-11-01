@@ -2,6 +2,13 @@
 import java.util.*;
 import edu.duke.*;
 
+
+//Class will create CSV data
+//can copy/paste this into the spreadsheet
+
+//Remember, debugging live-data can be tough! So capture stream for replay/analysis/etc
+
+
 public class EarthQuakeClient {
     
     public ArrayList<QuakeEntry> filterByMagnitude(ArrayList<QuakeEntry> quakeData, double magMin) {
