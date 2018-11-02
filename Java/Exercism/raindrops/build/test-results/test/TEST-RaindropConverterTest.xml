@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="RaindropConverterTest" tests="18" skipped="17" failures="0" errors="0" timestamp="2018-11-02T00:25:47" hostname="Jungs-MacBook-Pro.local" time="0.007">
+  <properties/>
+  <testcase name="soundFor27IsPlingAsItHasFactor3" classname="RaindropConverterTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="soundFor14IsPlongAsItHasFactor7" classname="RaindropConverterTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="soundFor7IsPlong" classname="RaindropConverterTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="soundFor9IsPlingAsItHasFactor3" classname="RaindropConverterTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="soundFor35IsPlangPlongAsItHasFactors5And7" classname="RaindropConverterTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="noSoundFor2Cubed" classname="RaindropConverterTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="soundFor5IsPlang" classname="RaindropConverterTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="soundFor21IsPlingPlongAsItHasFactors3And7" classname="RaindropConverterTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="soundFor25IsPlangAsItHasFactor5" classname="RaindropConverterTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="soundFor105IsPlingPlangPlongAsItHasFactors3And5And7" classname="RaindropConverterTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="soundFor1Is1" classname="RaindropConverterTest" time="0.001"/>
+  <testcase name="soundFor10IsPlangAsItHasFactor5" classname="RaindropConverterTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="soundFor49IsPlongAsItHasFactor7" classname="RaindropConverterTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="soundFor3IsPling" classname="RaindropConverterTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="noSoundFor52" classname="RaindropConverterTest" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase name="soundFor6IsPlingAsItHasFactor3" classname="RaindropConverterTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="soundFor3125IsPlangAsItHasFactor5" classname="RaindropConverterTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="soundFor15IsPlingPlangAsItHasFactors3And5" classname="RaindropConverterTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
