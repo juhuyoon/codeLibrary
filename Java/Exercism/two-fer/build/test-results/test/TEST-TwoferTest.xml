@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TwoferTest" tests="3" skipped="2" failures="0" errors="0" timestamp="2018-11-01T23:45:26" hostname="Jungs-MacBook-Pro.local" time="0.012">
+  <properties/>
+  <testcase name="noNameGiven" classname="TwoferTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="aNameGiven" classname="TwoferTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="anotherNameGiven" classname="TwoferTest" time="0.01"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
