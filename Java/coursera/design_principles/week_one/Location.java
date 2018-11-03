@@ -5,6 +5,9 @@ import java.util.StringTokenizer;
 
 
 public class Location {
+
+    //POJOs 
+    
     public static final int FORMAT_DEGREES = 0;
     public static final int FORMAT_MINUTES = 1;
     public static final int FORMAT_SECONDS = 2;
@@ -44,13 +47,33 @@ public class Location {
         set(1);
     }
 
+    //
     public Location(double latitude, double longitude) {
         mLatitude = latitude;
         mLongitude = longitude; 
     }
 
+    //to set the contents of the location. 
     public void set(Location l) {
-        mProvider = l.provider
+        mProvider = l.mProvider;
+        mTime = l.mTime;
+        mElapsedRealtimeNanos = l.mElapsedRealtimeNanos;
+        mLatitude = l.mLatitude;
+        mLongitude = l.mLongitude;
+        mHasAltitude = l.mHasAltitude;
+        mAltitude = l.mAltitude;
+        mHasSpeed = l.mHasSpeed;
+        mSpeed = l.mSpeed;
+        mHasBearing = l.mHasBearing;
+        mBearing = l.mBearing;
+        mHasAccuracy = l.mHasAccuracy;
+        mAccuracy = l.mAccuracy;
+        mIsFromMockProvider = l.mIsFromMockProvider;
+    }
+
+    //to reset the search
+    public void reset() {
+
     }
 
 
