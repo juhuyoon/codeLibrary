@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="IsogramCheckerTest" tests="12" skipped="11" failures="0" errors="0" timestamp="2018-11-03T15:36:40" hostname="Jungs-MacBook-Pro.local" time="0.006">
+  <properties/>
+  <testcase name="testDuplicateEndAlphabet" classname="IsogramCheckerTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="testIsogramWithDuplicatedHyphen" classname="IsogramCheckerTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="testCaseInsensitive" classname="IsogramCheckerTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="testLowercaseIsogram" classname="IsogramCheckerTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="testNotIsogram" classname="IsogramCheckerTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="testMadeUpNameThatIsAnIsogram" classname="IsogramCheckerTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="testEmptyString" classname="IsogramCheckerTest" time="0.002"/>
+  <testcase name="testIsogramWithHyphen" classname="IsogramCheckerTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="testSameFirstAndLast" classname="IsogramCheckerTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="testDuplicatMixedCase" classname="IsogramCheckerTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="testMediumLongIsogram" classname="IsogramCheckerTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="testDuplicatedCharacterInTheMiddleIsNotIsogram" classname="IsogramCheckerTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
