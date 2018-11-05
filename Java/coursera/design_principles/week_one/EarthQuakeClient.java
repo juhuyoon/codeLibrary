@@ -55,7 +55,7 @@ public class EarthQuakeClient {
 	public void bigQuakes() {
 	    EarthQuakeParser parser = new EarthQuakeParser();
         //String source = "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.atom";
-        String source = "data/nov20quakedata.atom";
+        String source = "data/nov20quakedata.txt";
         ArrayList<QuakeEntry> list = parser.read(source);
         double mag = 5.0;        
         ArrayList<QuakeEntry> bigOnes = filterByMagnitude(list, mag);
