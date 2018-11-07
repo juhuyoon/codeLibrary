@@ -24,11 +24,14 @@ public class EarthQuakeClient2 {
         ArrayList<QuakeEntry> list  = parser.read(source);         
         System.out.println("read data for "+list.size()+" quakes");
 
-        Filter f = new MinMagFilter(4.0); 
-        ArrayList<QuakeEntry> m7  = filter(list, f); 
-        for (QuakeEntry qe: m7) { 
+        Filter f = new MinMagFilter(3.5, 4.5); 
+        ArrayList<QuakeEntry> answer = filter(list, f);
+        f = new DepthFilter(-55000.0 , -20000.0);
+        answer = filter(answer, f);
+        for(QuakeEntry qe : answer) {
             System.out.println(qe);
-        } 
+        }
+        System.out.println("Found " + answer.size() + " earthquakes");
     }
 
     public void createCSV() {
@@ -51,5 +54,60 @@ public class EarthQuakeClient2 {
                 qe.getInfo());
         }
     }
-
+    public void testMatchAllFilter() {
+        String source = "data/nov20quakedata.atom";
+        EarthQuakeParser parser = new EarthQuakeParser();
+        ArrayList<QuakeEntry> list = parser.read(source);
+        
+        /*
+        for (QuakeEntry qe : list) {
+            System.out.println(qe);
+        }
+        */
+       
+        System.out.println("read data for "+list.size()+" quakes");
+       
+        MatchAllFilter maf = new MatchAllFilter();
+        Filter f = new MagnitudeFilter(1.0, 4.0);
+        maf.addFilter(f);
+        f = new DepthFilter(-180000.0, -30000.0);
+        maf.addFilter(f);
+        f = new PhraseFilter("any", "o");
+        maf.addFilter(f);
+        
+        ArrayList<QuakeEntry> answer = filter(list, maf);
+        for (QuakeEntry qe : answer) {
+            System.out.println(qe);
+        }
+        
+        System.out.println("Found " + answer.size() + " earthquakes ");
+        System.out.println("Filters used are: " + maf.getName());
+    }
+    
+    public void testMatchAllFilter2() {
+        String source = "data/nov20quakedata.atom";
+        EarthQuakeParser parser = new EarthQuakeParser();
+        ArrayList<QuakeEntry> list = parser.read(source);
+        System.out.println("read data for "+list.size()+" quakes");
+        
+        MatchAllFilter maf = new MatchAllFilter();
+        // Filter for magnitude between 0.0 and 5.0
+        Filter f = new MagnitudeFilter(0.0, 5.0);
+        maf.addFilter(f);
+        // Filter for distance from Billund, Denmark less than  3,000,000 meters (3000 km)
+        Location city = new Location(55.7308, 9.1153);
+        f = new DistanceFilter(city,  3000000);
+        maf.addFilter(f);
+        // Filter for the substring “e” in the title
+        f = new PhraseFilter("any", "e");
+        maf.addFilter(f);
+        
+        ArrayList<QuakeEntry> answer = filter(list, maf);
+        for (QuakeEntry qe : answer) {
+            System.out.println(qe);
+        }
+        
+        System.out.println("Found " + answer.size() + " earthquakes ");
+        System.out.println("Filters used are: " + maf.getName());
+    }
 }
