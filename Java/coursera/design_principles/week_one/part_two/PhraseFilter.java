@@ -9,7 +9,7 @@ public class PhraseFilter implements Filter {
         name = "PhraseFilter";
     }
 
-    public boolean satisfies(QuaekEntry qe) {
+    public boolean satisfies(QuakeEntry qe) {
         String title = qe.getInfo();
         if(where.equals("start") && title.startsWith(phrase)) {
             return true;

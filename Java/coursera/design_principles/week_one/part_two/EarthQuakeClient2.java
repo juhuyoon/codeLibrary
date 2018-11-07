@@ -24,7 +24,7 @@ public class EarthQuakeClient2 {
         ArrayList<QuakeEntry> list  = parser.read(source);         
         System.out.println("read data for "+list.size()+" quakes");
 
-        Filter f = new MinMagFilter(3.5, 4.5); 
+        Filter f = new MinMagFilter(4.0); 
         ArrayList<QuakeEntry> answer = filter(list, f);
         f = new DepthFilter(-55000.0 , -20000.0);
         answer = filter(answer, f);

@@ -10,7 +10,7 @@ public class DistanceFilter implements Filter {
     }
 
     public boolean satisfies(QuakeEntry qe) {
-        Locaiton quakeLoc = qe.getLocation();
+        Location quakeLoc = qe.getLocation();
         float dist = givenLoc.distanceTo(quakeLoc);
         if(dist < maxDist) {
             return true;
