@@ -1,11 +1,15 @@
 import java.util.*;
-
+    //sorting by selection sort in order to list the earthquakes from the biggest to the smallest
+    //destroys the input and produces the output in a new array list
 public class QuakeSort {
+    //helper function
     public QuakeEntry getSmallestMagnitude(ArrayList<QuakeEntry> quakes) {
-        QuakeEntry min = quakes.get(0);
+        //get the data
+        QuakeEntry min = quakes.get(0); 
+        //loop over starting from minimum
         for(QuakeEntry q: quakes) {
             if (q.getMagnitude() < min.getMagnitude()) {
-                min = q;
+                min = q; //min = q so that the smallest if always at the front
             }
         }
         return min;
@@ -14,17 +18,15 @@ public class QuakeSort {
     public ArrayList<QuakeEntry> sortByMagnitude(ArrayList<QuakeEntry> in) {
         //out starts as empty ArrayList
         ArrayList<QuakeEntry> out = new ArrayList<QuakeEntry>();
-        //As long as in is not empty
-        while(!in.isEmpty()) {
-            //Find smallest element in in (minElement)
-            QuakeEntry minElement = getSmallestMagnitude(in); 
-            //Remove minElement from in
-            in.remove(minElement);                            
-            //Add minElement to out
-            out.add(minElement);
+        //count from 0 to < in.size()
+        for (int i = 0; i < in.size(); i++) {
+            //find index of smallest quake
+            int minIdx = getSmallestMagnitude(in, i);
+            //swap the ith quake with the minIndexth quake
+            QuakeEntry qi = in.get(i);
+            QuakeEntry qmin = in.get(minIdx);
+
         }
-        //out is the answer
-        return out;
     }
     /* tester method to use in BlueJ */
     public void testSort(){
