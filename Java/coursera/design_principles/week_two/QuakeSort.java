@@ -3,7 +3,7 @@ import java.util.*;
     //destroys the input and produces the output in a new array list
 public class QuakeSort {
     //helper function
-    public QuakeEntry getSmallestMagnitude(ArrayList<QuakeEntry> quakes) {
+    public QuakeEntry getSmallestMagnitude(ArrayList<QuakeEntry> quakes, int from) {
         //get the data
         QuakeEntry min = quakes.get(0); 
         //loop over starting from minimum
@@ -12,7 +12,7 @@ public class QuakeSort {
                 min = q; //min = q so that the smallest if always at the front
             }
         }
-        return min;
+        return minIdx;
     }
     
     public ArrayList<QuakeEntry> sortByMagnitude(ArrayList<QuakeEntry> in) {
@@ -25,16 +25,19 @@ public class QuakeSort {
             //swap the ith quake with the minIndexth quake
             QuakeEntry qi = in.get(i);
             QuakeEntry qmin = in.get(minIdx);
-
+            in.set(i, qmin);
+            in.set(minIdx, qi);
         }
     }
+
+
     /* tester method to use in BlueJ */
     public void testSort(){
         EarthQuakeParser parser = new EarthQuakeParser();
         String source = "data/nov20quakedata.atom";
         //String source = "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.atom";
         ArrayList<QuakeEntry> list  = parser.read(source);
-        list = sortByMagnitude(list);
+        sortByMagnitude(list);
         for(QuakeEntry qe: list) {
             System.out.println(qe);
         }

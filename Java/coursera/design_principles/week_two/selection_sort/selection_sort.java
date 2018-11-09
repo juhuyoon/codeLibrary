@@ -15,3 +15,11 @@
         //Remove minElement from in
         //Add minElement to Out
         //out = answer
+
+    //Note that selection sort is simple and slow on large data as its running time is quadratic in data size 
+    //Two Categories in sorting algorithms:
+        //Simple + slow: runtime quadratic in data size 
+            //bubble and selection sorts are n^2 sorts, algorithms are easy to understand 
+        //Clever + fast = runtime closer to linear in data size
+            //quick sort, merge sort, etc. java.collections.sort (close to linear)
+            
