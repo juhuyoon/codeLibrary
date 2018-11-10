@@ -22,4 +22,5 @@
             //bubble and selection sorts are n^2 sorts, algorithms are easy to understand 
         //Clever + fast = runtime closer to linear in data size
             //quick sort, merge sort, etc. java.collections.sort (close to linear)
-            
+                //Tim sort function is much more efficient
+                    //Interfaces = a type that promises certain methods. 
