@@ -59,3 +59,20 @@
 //key algorithm: use of training to find all following characters
         //Develop for Markov-one, and then generalize outwards
         
+//how to build algorithm:
+        //1) Follows list is initially empty
+        //2) find first occurrence of 't' starting at index 0
+        //3) Add letter at index 1 to follows
+        //4) find first occurrence of 't' starting at index 1
+        //5) add letter at index 13 to follows
+        //6) find first occurrence of 't' starting at index 13
+        //7) add letter to index 14 to follows
+        //8) find first occurrence of 't' starting at index 14
+        //if not finding the 't' at the end, then stop
+
+//general algorithm:
+        //A. follows in an empty ArrayList, pos is zero
+        //B. While there is more searching to do
+            //1. index = first occurence of KEY starting at pos
+            //2. if found, add value at [index+1] to follows
+            //3. pos = index +1;
