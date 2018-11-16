@@ -76,3 +76,18 @@
             //1. index = first occurence of KEY starting at pos
             //2. if found, add value at [index+1] to follows
             //3. pos = index +1;
+
+//Software Design Concept: Open-Closed
+    //Open for extension, closed to modification
+    //Capture the common method signatures in the interface
+    //Name interfaces starting with "I" is common;
+    //Then have the Markovs implement the interface!
+    //Using an interface provides utility and flexibility
+        public interface IMarkovModel {
+            public void setTraining(String text);
+            public String getRandomText(int numChars);
+        }
+
+        public class MarkovOne implements IMarkovModel {
+            ...
+        }
