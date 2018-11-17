@@ -1,8 +1,9 @@
 import java.util.*;
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
-public class PigLatin  {
+public class pigLatin  {
     
         //consonants and vowels
     private static Pattern consonants = Pattern.compile("^((ch)|(th[r]?)|(sch)|(qu)|(squ))");
@@ -20,7 +21,7 @@ public class PigLatin  {
     }
 
     private static String getPigWord(String wholeWord, String suffix) {
-        String prefix = wholeWord.substring(0, wholeword.length() - suffix.length());
+        String prefix = wholeWord.substring(0, wholeWord.length() - suffix.length());
         return suffix + prefix + "ay";
     }
 
