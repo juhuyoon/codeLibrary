@@ -91,3 +91,27 @@
         public class MarkovOne implements IMarkovModel {
             ...
         }
+
+//Abstract Class
+    //you can capture commonality in abstract base class
+    //key idea is to implement the interface
+        //relies on inheritance (object-oriented concept);
+        //Used extensively in java.util package with AbstractList & AbstractMap and etc
+        //HashMap, etc
+
+        //used with the abstract key word
+        public abstract class AbstractMarkovModel implments IMarkovModel {
+            protected String myText; //shared state is protected, NOT private
+            protected String myRandom; //These instance variables would be accessible in each subclass that extends this abstract base class. 
+        }
+
+        //The methods labelled as abstract are methods that are implemented differently in each class that extends the AbstractMarkovModel. 
+            //These are the subclasses. 
+            //Protected functions can be called in each sub-class jsut as the protected instant variables can be accessed. 
+
+        //extends: Extending the Base Class
+            //When base class extended, get access to protected instance variables and methods from the super class [PARENT CLASS]
+                public class MarkovModel extends AbstractMarkovModel {
+                    private int ...
+
+                }
