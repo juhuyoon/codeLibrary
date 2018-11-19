@@ -1,4 +1,3 @@
-
 import java.util.*;
 
 public abstract class AbstractMarkovModel implements IMarkovModel {
