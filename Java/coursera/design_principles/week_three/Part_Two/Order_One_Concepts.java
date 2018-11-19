@@ -27,3 +27,38 @@ public String getRandomText(int numWords) {
     //for loop here
     return sb.toString().trim();
 }
+
+//Codes can be nearly identical to MarkovOne
+    //Changed numChars to numWords
+    for(int k = 0; k < numWords - 1; k++) {
+        ArrayList<String> follows = getFollows(key);
+        if(follows.size() == 0) {
+            break;
+        }
+        index = myRandom.nextInt(follows.size());
+        String next = follows.get(index);
+        sb.append(next);
+        sb.append(" ");
+        key = next;
+    }
+
+//Copy getFollows from MarkovOne
+    //Search String myText
+    //String methods .length() and .indexOf()
+    //Uses .substring() for one character String
+//Changes due to String[] myText
+    //write .indexOf() for arrays
+    //Java doesn't supply indexing search, does supply .contains for ArrayList
+
+//Setting up the Helper Functions in MarkovWordOne
+    public class MarkovWordOne implements IMarkovModel {
+        private ArrayList<String> getFollows(String key) {
+            ArrayList<String> follows = new ArrayList<String>();
+            int pos = 0;
+            while(pos < myText.length;
+ {
+     int start = indexOf(myText, key, pos);
+     ...
+ }    
+    }
+};
