@@ -74,4 +74,34 @@
         //Ways to keep track of errors and crashes that went wrong.
 
         //Stack trace : When your program has an unhandled exception and your program does not know how to deal with it, it prints a stack trace. 
-        
+        //When a program is unable to complete a process, this is known as an exception. 
+
+        //MalformedURLException: when the URL is some string that is not accepted.
+    
+    //How to handle Exceptions: Try/Catch
+        try {
+            URL myURL = new URL(someString);
+            //code that uses myURL
+            //e.g. connects to it and reads the data
+        } catch (MalformedURLException mfe) {
+            //code to handle the error
+        }
+
+    //Declaring Exceptions:
+        //When you don't know how to handle the exception:
+        public void myMethod(String urlName)
+            [throws malformedURLExeption] {
+                URL myURL = new URL(someString);
+                //cdoe that uses myURL
+                //e.g., connects to it and reads data
+            } //When you do not handle the exception, it will propagate to the caller automatically. 
+
+    //Any class can extend to Throwable
+            //a class that extends Exceptions (Exceptions extends Throwables)
+
+    //Java has many built-in exceptions
+            //up to 57..
+            //If you write a program where you need exceptions beyond the built in ones, you can always write you rown by writing you rown class and making it extended appropriate existing exception types.
+
+    //IN the java.nio.package, the following classes use static methods to get/create resources:
+            //Files & Paths
