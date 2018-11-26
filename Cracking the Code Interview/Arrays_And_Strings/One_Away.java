@@ -42,4 +42,4 @@
         return true;
     }
 
-    //takes O(n) time, where ni s the length of the shorter string. 
+    //takes O(n) time, where n is the length of the shorter string. 

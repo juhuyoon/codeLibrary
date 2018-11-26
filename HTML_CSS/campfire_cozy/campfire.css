@@ -1,0 +1,221 @@
+html {
+  font-size: 1vh;
+  margin: 0;
+  padding: 0;
+}
+@media screen and (max-aspect-ratio: 1 / 1) {
+  html {
+    font-size: 1vw;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  background: #1c2766;
+}
+
+.container {
+  width: 80rem;
+  height: 80rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.container * {
+  position: absolute;
+}
+
+.logs {
+  bottom: 0;
+  left: 50%;
+  transform: translatex(-50%);
+  width: 10rem;
+}
+.logs .two {
+  width: 20rem;
+  bottom: 0;
+  left: 50%;
+  transform: translatex(-50%);
+}
+.logs .two .log {
+  position: relative;
+  width: 100%;
+  height: 15rem;
+  background: #725442;
+  margin-bottom: -8rem;
+  clip-path: polygon(30% 0%, 70% 0%, 100% 100%, 0% 100%);
+}
+.logs .two::before {
+  content: '';
+  display: block;
+  position: relative;
+  width: 8rem;
+  height: 7.2rem;
+  background: #725442;
+  margin: 0 auto;
+  border-radius: 50%;
+  transform: translatey(60%);
+}
+.logs .two::after {
+  content: '';
+  display: block;
+  position: relative;
+  width: 20rem;
+  height: 18rem;
+  border-radius: 50%;
+  background: #91725c;
+  box-sizing: border-box;
+  border: 1rem #725442 solid;
+}
+.logs .one, .logs .three {
+  width: 18rem;
+  margin-left: -18rem;
+  bottom: -11rem;
+}
+.logs .one .log, .logs .three .log {
+  position: relative;
+  width: 100%;
+  height: 18rem;
+  background: #725442;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 41%, 11% 100%);
+  transform-origin: 0 0;
+  transform: skewy(-10deg);
+}
+.logs .one::before, .logs .three::before {
+  content: '';
+  display: block;
+  position: relative;
+  width: 4.8rem;
+  height: 7.2rem;
+  background: #725442;
+  margin-right: 0;
+  margin-left: auto;
+  border-radius: 50%;
+  transform: translate(45%, 57%);
+}
+.logs .one::after, .logs .three::after {
+  content: '';
+  display: block;
+  position: relative;
+  width: 12rem;
+  height: 18rem;
+  border-radius: 50%;
+  background: #91725c;
+  transform: translate(-50%, -100%);
+  box-sizing: border-box;
+  border: 1rem #725442 solid;
+}
+.logs .three {
+  transform: scalex(-1);
+  margin-left: 10rem;
+}
+
+.fire {
+  left: 50%;
+  bottom: 24.5rem;
+}
+
+.flames > * {
+  bottom: 0;
+  right: 0;
+}
+.flames > * .flame {
+  bottom: 0;
+  right: 0;
+  background: rgba(255, 119, 15, 0.6);
+  width: 35rem;
+  height: 48rem;
+  border-radius: 0 40rem;
+  transform-origin: 100% 100%;
+}
+.flames .two {
+  transform: rotate(30deg);
+}
+.flames .three {
+  transform: scalex(-1);
+}
+.flames.inner > * .flame {
+  background: rgba(255, 218, 119, 0.4);
+  width: 20rem;
+  height: 24rem;
+}
+
+.glow {
+  background: radial-gradient(closest-side, #ff770f, rgba(255, 119, 15, 0));
+  width: 100%;
+  height: 100%;
+  top: -8rem;
+}
+
+.one .flame, .inner .one .flame {
+  animation-delay: -0.2s;
+}
+
+.two .flame, .inner .one .flame {
+  animation-delay: -0.5s;
+}
+
+.three .flame, .inner .one .flame {
+  animation-delay: -0.9s;
+}
+
+.flame {
+  animation: wave 1s ease-in-out infinite alternate, flicker 0.3s ease-in-out infinite alternate, height 0.5s ease infinite alternate;
+}
+
+.inner .flame {
+  animation: wave 0.8s ease-in-out infinite alternate, flicker 0.2s ease-in-out infinite alternate, heightsmall 0.3s ease infinite alternate;
+}
+
+.glow {
+  animation: glow 0.8s ease-in-out infinite alternate, flicker 0.3s ease-in-out infinite alternate;
+}
+
+@keyframes wave {
+  from {
+    transform: rotate(-5deg);
+  }
+  to {
+    transform: rotate(5deg);
+  }
+}
+@keyframes flicker {
+  from {
+    opacity: 0.8;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes height {
+  from {
+    height: 48rem;
+    width: 35rem;
+  }
+  to {
+    height: 44rem;
+    width: 30rem;
+  }
+}
+@keyframes heightsmall {
+  from {
+    height: 24rem;
+    width: 20rem;
+  }
+  to {
+    height: 23rem;
+    width: 18rem;
+  }
+}
+@keyframes glow {
+  from {
+    transform: scale(1.1);
+  }
+  to {
+    transform: scale(1);
+  }
+}
