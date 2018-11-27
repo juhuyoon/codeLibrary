@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>let and const real world</title>
+</head>
+
+<body>
+    <script>
+        //IIFE = Immediately-Invoked Function Expression 
+            //A function that runs itself immediately where nothing will leak into the parent scope. 
+        {
+            const name = 'jae';
+            console.log(name);
+        }
+
+        for (let i = 0; i < 10; i++) {
+            console.log(i);
+            setTimeout(function () {
+                console.log('The number is ' + i);
+            }, 1000);
+        }
+        //this will return as 10 ten times if it's just var i = 0 as when the setTimeout is running per second, the for loop will have already run through. 
+        //by setting it to let, it will properly tick up from 1 to 10. 
+
+    </script>
+</body>
+
+</html>
