@@ -64,10 +64,28 @@
       //this keyword does NOT get rebound with arrow function
       const box = document.querySelector('.box');
       console.log(box);
-      box.addEventListener('click', function() {
+      box.addEventListener('click', function() { //generally want function() on your top level
+      let first = 'opening';
+      let second = 'open';
+
+      if(this.classList.contains(first)) {
+        //switching the first and second variables
+        [first, second] = [second, first]; 
+        //destructuring!
+      }
+
         console.log(this); //would be the box
-        
+        this.classList.toggle(first);
+        setTimeout(() => { //since this is a new function, without any bound, this would refer to the highest level of window if it's a normal function() 
+                            //doing arrow functions will have the THIS inherit from the parent downwards. 
+          console.log(this.classList);
+          this.classList.toggle(second);
+        }, 500);
       })
+
+      // box.addEventListener('click', () => {
+      //   console.log(this);
+      // }) during the arrow function, the value of THIS is not rebound to the function, and is just inherited from whatever the parent scope. [Window]
 
   </script>
 
