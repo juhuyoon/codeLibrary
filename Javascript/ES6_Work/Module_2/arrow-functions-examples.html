@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Arrow functions examples</title>
+</head>
+<body>
+<script>
+
+const race = '100m Dash';
+const winners = ['Hunter Gath', 'Singa Song', 'Imda Bos'];
+
+//what having this as an object would look like to hold...
+{
+  name: 'Hunter Gath',
+  place: 1,
+  race: race
+}
+
+//how do you implicit return curly brackets when it is with object literals?
+//Add parentheses
+const win = winners.map((winner, i) => ({name: winner, race, //same as race: race 
+ place: i + 1}));
+console.table(win); //place + 1 so that i does not start at 0;
+const ages = [23,62,45,234,2,62,234,62,34];
+
+const old = ages.filter(age => age >= 60); //can do this as it's a simple true or false return
+console.log(old);
+
+</script>
+</body>
+</html>
+ 

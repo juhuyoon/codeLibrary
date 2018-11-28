@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Arrow functions → → </title>
+</head>
+<body>
+<script>
+  const names = ['wes', 'kait', 'lux'];
+
+  const fullNames = names.map(function(name) {
+    return `${name} bos`;
+  });
+
+  console.log(fullNames);
+
+  const fullNames2 = names.map((name) => {
+    return `${name} bos`;
+  }); //to use the arrow sign to replace the 'function' word. 
+
+  const fullNames3 = names.map(name => {
+    return `${name} bos`;
+  }); //if there is only one parameter, no need to have the parentheses. 
+
+  const fullNames4 = names.map(name => `${name} bos`);
+  //IMPLICIT RETURN, where if it's just a one liner (that returns immediatel), 
+  //delete the return and have no curly brackets. 
+
+
+  const fullNames5 = names.map(() => `cool bos`);
+    //if there are no arguments, pass an empty parentheses. 
+  console.log(fullnames5);
+
+  //arrow functions are always anonymous functions. 
+
+  
+  function sayMyName(name) {
+    alert(`Hello ${name}`);
+  } //this is a named function. If there is a stack/trace, and can help find the named function.
+
+  const sayMyName = (name) => {
+    alert(`Hello ${name}!`)
+  } //with an arrow function, they are all anonymous functions, NOT a named function. 
+
+  sayMyName('Wes');
+
+</script>
+</body>
+</html>
