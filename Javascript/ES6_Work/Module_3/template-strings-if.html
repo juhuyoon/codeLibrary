@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Template Strings!</title>
+</head>
+<body>
+<script>
+  const song = {
+    name: 'Dying to live',
+    artist: 'Tupac',
+    featuring: 'Biggie Smalls'
+  };
+
+  const markup = `
+    <div class="song">
+      <p>
+        ${song.name} — ${song.artist}
+        ${song.featuring ? `(Featuring ${song.featuring})` : ''}  
+      </p>
+    </div>
+  `;   //ternary operators
+       //another way to make an if statement within the template literals
+      //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator
+
+  document.body.innerHTML = markup;
+
+</script>
+</body>
+</html>
