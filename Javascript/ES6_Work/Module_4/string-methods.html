@@ -15,13 +15,23 @@ const make = 'BMW';
 const model = 'x5';
 const colour = 'Royal Blue';
 
+//note that these string methods are case-sensitive!
+
 // .startsWith()
+course.startsWith('RFB');
+flightNumber.startsWith('AC', 3) //skips the first 3 characters then check if it starts there
 
 // .endsWith()
+flightNumber.endsWith('jz');
+accountNumber.endsWith('RT', 11); //only takes the first 11 characters. 
 
 // .includes()
+flightNumber.includes('AC');
 
 // .repeat()
+//repeats the string over and over again
+make.repeat(10);
+
 
 function leftPad(str, length = 20) {
   return `→ ${' '.repeat(length - str.length)}${str}`;
