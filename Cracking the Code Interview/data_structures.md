@@ -13,3 +13,6 @@
  https://www.geeksforgeeks.org/stack-data-structure/
  https://www.studytonight.com/data-structures/stack-data-structure
  
+ #StandardJS Coding Style
+ https://standardjs.com/rules.html
+ 
