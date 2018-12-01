@@ -7,15 +7,18 @@
 <body>
 <script>
   const details = ['Wes Bos', 123, 'wesbos.com'];
-  const [name, id, website] = details;
+  const [name, id, website] = details; //destructuring for arrays, used brackets as they are arrays. Curly brackets is for object destructuring. 
   console.log(name, id, website);
 
   const data = 'Basketball,Sports,90210,23,wes,bos,cool';
-  const [itemName, category, sku, inventory] = data.split(',');
+  const [itemName, category, sku, inventory] = data.split(','); //splitting and destructuring the data in a long list string of data. 
+  //if there's extra items, nothing will happen as those extra datas will be just tossed away.
+  console.log(itemName, category, sku, inventory);
 
-  const team = ['Wes', 'Harry', 'Sarah', 'Keegan', 'Riker'];
 
-  const [captain, assistant, ...players] = team;
+  //first two will be specified, but the REST OPERATORS will then be focused into players for the variable naming in the array. 
+  const team = ['Wes', 'Harry', 'Sarah', 'Keegan', 'Riker']; 
+  const [captain, assistant, ...players] = team; //
 
 </script>
 </body>

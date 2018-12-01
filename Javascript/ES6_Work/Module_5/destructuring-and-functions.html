@@ -16,6 +16,10 @@
     return converted;
   }
 
+  //note that when you are doing this destructuring, you don't have to put them in the same level of order. 
+  const {USD, GPB, AUD, MEX } = convertCurrency(100);
+
+    //by destructuring this, when you pass in an object, now you don't have to call for options.total, options.tip, etc...
   function tipCalc({ total = 100, tip = 0.15, tax = 0.13 } = {}) {
     return total + (tip * total) + (tax * total);
   }

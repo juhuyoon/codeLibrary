@@ -9,8 +9,15 @@
   let inRing = 'Hulk Hogan';
   let onSide = 'The Rock';
 
+  //past way to switch out the variables:
+  var temp = inRing;
+  inRing = onSide;
+  onSide = temp;
+  //then remove temp. 
+
+  //with destructuring, you can just swap this and not have to do the old way anymore. 
   console.log(inRing, onSide);
-  [inRing, onSide] = [onSide, inRing];
+  [inRing, onSide] = [onSide, inRing]; //easy swap ways. 
   console.log(inRing, onSide);
 
 </script>
