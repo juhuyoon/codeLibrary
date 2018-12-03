@@ -6,6 +6,7 @@
 </head>
 <body>
 <script>
+  //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype
   /* eslint-disable */
    Array.prototype.shuffle = function() {
      var i = this.length, j, temp;
@@ -23,20 +24,24 @@
 
   cuts.shop = 'MM MEats';
 
+    //what a normal for loop would be in order to show all the strings in the array. 
   // for (let i = 0; i < cuts.length; i++) {
   //   console.log(cuts[i]);
   // }
 
+    //https://www.w3schools.com/jsref/jsref_forEach.asp
   // cuts.forEach((cut) => {
   //   console.log(cut);
   //   if(cut === 'Brisket') {
   //     continue;
+        //cannot use break here. 
   //   }
-  // });
+  // }); //you cannot abort nor skip this loop. 
 
-  // for (const index in cuts) {
-  //   console.log(cuts[index]);
-  // }
+    //https://www.w3schools.com/jsref/jsref_forin.asp
+   for (const index in cuts) {
+     console.log(cuts[index]);
+   } //it can iterate over everything of the array, which can include the prototype. 
 
   for (const cut of cuts) {
     if(cut === 'Brisket') {
