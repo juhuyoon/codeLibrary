@@ -39,13 +39,15 @@
   // }); //you cannot abort nor skip this loop. 
 
     //https://www.w3schools.com/jsref/jsref_forin.asp
-   for (const index in cuts) {
-     console.log(cuts[index]);
-   } //it can iterate over everything of the array, which can include the prototype. 
+  //  for (const index in cuts) {
+  //    console.log(cuts[index]);
+  //  } //it can iterate over everything of the array, which can include the prototype. 
+     //if you add any extras later on, it will always be called on when you're using this for in loop. 
 
+    //best of all three worlds, where it can pull any type of data except objects. 
   for (const cut of cuts) {
     if(cut === 'Brisket') {
-      continue;
+      continue; //skips the brisket when you do this
     }
     console.log(cut);
   }

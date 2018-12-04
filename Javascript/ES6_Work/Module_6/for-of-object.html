@@ -7,12 +7,25 @@
 <body>
 
 <script>
+   //how do you use for of with a normal object?
   const apple = {
     color: 'Red',
     size: 'Medium',
     weight: 50,
     sugar: 10
   };
+  //Cannot do it because of [Symbol.iterator]
+  // for(const prop of apple) {
+  //   console.log(prop);
+  // }
+
+
+  for(const prop of Object.keys(apple)) {
+    const value = apple[prop];
+    console.log(prop);
+  }
+
+  //Can use in the future (or is out!) object method called .entries() [polyfill]
 
   for (const prop in apple) {
     const value = apple[prop];

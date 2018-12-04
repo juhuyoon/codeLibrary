@@ -177,9 +177,18 @@
         "display_src":"https://scontent.cdninstagram.com/hphotos-xpt1/t51.2885-15/e35/11326072_550275398458202_1726754023_n.jpg"
      }
   ];
+  //what it would look like from an arrow function structure
+//   const post = posts.find(post => {
+//      console.log(post.code);
+//      if(post.code === 'VBgtGQcSf') {
+//         return true;
+//      }
+//      return false;
+//   });
+
   const code = 'VBgtGQcSf';
   const post = posts.find(post => post.code === code);
-
+  //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex
   const postIndex = posts.findIndex(post => post.code === code);
   console.log(postIndex);
 

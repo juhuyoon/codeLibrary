@@ -18,11 +18,14 @@
 <script>
   const cuts = ['Chuck', 'Brisket', 'Shank', 'Short Rib'];
 
+  //Solving out the issue of having the data return as an array through destructuring
   // for (const [i, cut] of cuts.entries()) {
   //   console.log(`${cut} is the ${i + 1} item`);
-  // }
+  // } //and calling on the information afterwards with template literals. 
 
+  //arguments object. 
   // function addUpNumbers() {
+  // console.log(arguments) // will return everything that is depicted in that function in an 'arrayish' response. 
   //   let total = 0;
   //   for (const num of arguments) {
   //     total += num;
@@ -33,11 +36,13 @@
 
   // addUpNumbers(10,23,52,34,12,13,123);
 
-  // const name = 'Wes Bos';
+  // const name = 'Jung Yoon';
   // for (const char of name) {
   //   console.log(char);
   // }
 
+
+    //https://stackoverflow.com/questions/5501433/nodelist-object-in-javascript
   const ps = document.querySelectorAll('p');
   for (const paragraph of ps) {
     paragraph.addEventListener('click', function() {
