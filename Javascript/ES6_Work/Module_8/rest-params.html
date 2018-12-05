@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The ...Rest Param</title>
+</head>
+<body>
+<script>
+  //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters
+  //rest params do the opposite of spread params. 
+  //it takes multiple things and packs it into a single thing. 
+
+  // function convertCurrency(rate, tax, tip, ...amounts) {
+  //   console.log(rate, tax, tip, amounts);
+  //   return amounts.map(amount => amount * rate);
+  // }
+
+  // const amounts = convertCurrency(1.54, 10, 23, 52, 1, 56);
+  // console.log(amounts);
+
+  //using rest params to do destructuring. 
+  const runner = ['Wes Bos', 123, 5.5, 5, 3, 6, 35];
+  const [name, id, ...runs] = runner;
+  console.log(name, id, runs);
+
+  const team = ['Wes', 'Kait', 'Lux', 'Sheena', 'Kelly'];
+  const [captain, assistant, ...players] = team;
+  console.log(captain, assistant, players)
+
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The ...Spread Operator</title>
+</head>
+<body>
+<script>
+  //Take every single item from an iterable, anything that can be looped over a for loop. 
+  const featured = ['Deep Dish', 'Pepperoni', 'Hawaiian'];
+  const specialty = ['Meatzza', 'Spicy Mama', 'Margherita'];
+
+  const oldpizzas = featured.concat(specialty);
+  //or
+
+  //when you want to put an extra veg in the middle and it'll run through without any problems. 
+  const pizzas = [...featured, 'veg', ...specialty];
+  const fridayPizzas = [...pizzas]; //this would be to COPY the array, and not reference it so that you do not overwrite anything from the original array.
+  
+
+  const deepDish = {
+    pizzaName: 'Deep Dish',
+    size: 'Medium',
+    ingredients: ['Marinara', 'Italian Sausage', 'Dough', 'Cheese']
+  };
+
+</script>
+</body>
+</html>
