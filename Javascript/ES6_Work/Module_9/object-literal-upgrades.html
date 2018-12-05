@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Object Literal Upgrades</title>
+</head>
+<body>
+<script>
+  const first = 'snickers';
+  const last = 'bos';
+  const age = 2;
+  const breed = 'King Charles Cav';
+  //If the property name and the variable you are setting it to are the same, you can do: 
+  const dog = {
+    firstName: first,
+    last,
+    age,
+    breed,
+    pals: ['Hugo', 'Sunny'] //array inside of an object. 
+  };
+  console.log(dog);
+
+  //having method definitions inside of an object. 
+  const modal = {
+    //you don't have to do create function(): {}
+    create(selector) {
+
+    },
+    open(content) {
+
+    },
+    close(goodbye) {
+
+    }
+  }
+  
+  //returning the inverted color. 
+  function invertColor(color) {
+      return '#' + ("000000" + (0xFFFFFF ^ parseInt(color.substring(1),16)).toString(16)).slice(-6);
+  }
+  
+  
+  const key = 'pocketColor';
+  const value = '#ffc600';
+
+  const tShirt = { //dynamically set on the variable inside the object. 
+    [key]: value,
+    [`${key}Opposite`]: invertColor(value)
+  };
+
+  //plucks off from each array. 
+  const keys = ['size', 'color', 'weight'];
+  const values = ['medium', 'red', 100];
+
+  const shirt = {
+    [keys.shift()]: values.shift(),
+    [keys.shift()]: values.shift(),
+    [keys.shift()]: values.shift(),
+  }
+  console.log(shirt);
+
+
+</script>
+</body>
+</html>
