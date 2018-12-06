@@ -93,3 +93,43 @@ After the technical interviews, follow up with the recruiter if there is no deci
 
 *** Front End Developer Interviews *** 
 https://medium.freecodecamp.org/cracking-the-front-end-interview-9a34cd46237
+https://www.hongkiat.com/blog/html-5-semantics/
+
+https://www.sitepoint.com/understanding-css-grid-systems/
+https://css-tricks.com/almanac/properties/a/animation/
+https://css-tricks.com/css-sprites/
+https://medium.com/@fat/mediums-css-is-actually-pretty-fucking-good-b8e2a6c78b06
+
+https://trello.com/c/6ROaCxCW/71-can-you-name-two-programming-paradigms-important-for-javascript-app-developers
+https://scotch.io/tutorials/javascript-promises-for-dummies
+
+
+
+*** What is Object-oriented programming? ***
+
+https://medium.freecodecamp.org/object-oriented-programming-concepts-21bb035f7260
+
+The four principles of object-oriented programming are encapsulation, abstraction, inheritance, and polymorphism
+
+1) Encapsulation
+  - When each object keeps its state private inside a class. 
+    - Other objects don't have access to this state, can only call public functions (methods)
+  - The object manages its own state via methods with no other class allowed to touch it unless given explicit consent.
+
+
+2) Abstraction
+  - natural extension of encapsulation.
+    - Each object should only epxose a high-level mechanism for using it.
+    - Mechanism should hide internal implementation details and should reveal only operations relevant for the other objects.  
+    - e.g. imagine a coffee machine where you push one button and everything works!
+
+3) Inheritrance
+  - Done to reuse the common logic and extract unique logic into a separate class. 
+  - Creating a child class by deriving from another parent class. (Via forming of hierarchies)
+  - Child class reuses all fields and methods of the parent class and can implement its own. 
+
+4) Polymorphism
+  - Gives a way to use a class exactly like its parent so that there's no confusion with mixing types. 
+  - Define a parent interface then each child class can implement its own version of the methods. 
+  - When a collection/method expects an instance of the parent, the language will take care of evaluating the right implementation of the method. 
+  
