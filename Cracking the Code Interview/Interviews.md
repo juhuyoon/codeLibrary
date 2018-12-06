@@ -4,8 +4,8 @@ Assessment of interview performance:
  [Interviewers assess you relative to other candidates on that same question by the same interviewer]
     1) Analytical Skills   
         - Did you need help solving the problem
-        - How optimal was your solution/How long did it take to solve    it
-        - Did you structure the problem well and that you thought of     different tradeoffs of solutions?
+        - How optimal was your solution/How long did it take to solve it
+        - Did you structure the problem well and that you thought of different tradeoffs of solutions?
 
     2) Coding Skills
         - Did you translate your algorithm to reasonable code?
