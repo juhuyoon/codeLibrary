@@ -1,4 +1,4 @@
-Packages have been updated since recording. 
+giPackages have been updated since recording. 
 
 eslint-plugin-jsx-a11y version 3 is not compatible with rest of dependencies 
 
