@@ -6,10 +6,15 @@
 </head>
 <body>
 <script>
-  const wes = Symbol('Wes');
-  const person = Symbol('Wes');
+  //Symbols are unique identifiers
+  //Help avoid naming Collisions. 
+  //https://www.keithcirkel.co.uk/metaprogramming-in-es6-symbols/
+  const wes = Symbol('Wes'); //NOT A VALUE, IT IS A DESCRIPTOR. 
+  const person = Symbol('Wes'); //NOTE THAT wes & person are not the same. 
 
   const classRoom = {
+    //Good way to store private data OR a good way to have unique keys and ids. 
+    //Symbols are the property keys. 
     [Symbol('Mark')] : { grade: 50, gender: 'male' },
     [Symbol('olivia')]: { grade: 80, gender: 'female' },
     [Symbol('olivia')]: { grade: 80, gender: 'female' },
@@ -19,10 +24,9 @@
     console.log(person);
   }
 
-  const syms = Object.getOwnPropertySymbols(classRoom);
-  const data = syms.map(sym => classRoom[sym]);
+  const syms = Object.getOwnPropertySymbols(classRoom); //doing to access all the information within the symbols. 
+  const data = syms.map(sym => classRoom[sym]); //Using this syms as the property key, and will pull from the classRoom const. 
   console.log(data);
-
 </script>
 </body>
 </html>

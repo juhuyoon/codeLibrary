@@ -25,12 +25,13 @@
   //     console.log(weatherInfo, tweetInfo)
   //   });
 
-  const postsPromise = fetch('https://wesbos.com/wp-json/wp/v2/posts');
+  //https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+  const postsPromise = fetch('https://wesbos.com/wp-json/wp/v2/posts'); //to work with fetch, you must work with a server
   const streetCarsPromise = fetch('http://data.ratp.fr/api/datasets/1.0/search/?q=paris');
-
+  //if you want to fire all of the promises off at the same time as they are not codependent on each other. 
   Promise
-    .all([postsPromise, streetCarsPromise])
-    .then(responses => {
+    .all([postsPromise, streetCarsPromise]) //must pass in an array of promises. 
+    .then(responses => { //get the responses
       return Promise.all(responses.map(res => res.json()))
     })
     .then(responses => {

@@ -6,9 +6,10 @@
 </head>
 <body>
 <script>
-  const p = new Promise((resolve, reject) => {
+  const p = new Promise((resolve, reject) => { //either the promise resolves or it can reject itself due to an error, data issues, etc. 
     setTimeout(() => {
-      reject(Error('Err wes isn\'t cool'));
+      resolve('Data feedback returned');
+      //reject(Error('Err Data did not return')); //to have the error return on the line where the issue was, not where the catch was. 
     }, 1000);
   });
 
@@ -19,6 +20,7 @@
     .catch(err => {
       console.error(err);
     });
+
 
 </script>
 </body>

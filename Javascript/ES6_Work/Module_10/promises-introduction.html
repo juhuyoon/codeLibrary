@@ -9,13 +9,22 @@
 //promises are often used to fetch JSON API and doing AJAX work. 
 //since JS is asynchronous...
 
+console.log('Fetching data'); //this is done immediately
+const post = fetch('https://wesbos.com/wp-json/wp/v2/posts');
+console.log('Done!');
+console.log(post); //when you console log this, the data doesn't return with the fetch post. 
+//it does not just store into the post variable. 
+
+
+//using promises
 const postsPromise = fetch('https://wesbos.com/wp-json/wp/v2/posts');
 
+//listen to the fetch. 
 postsPromise
-  .then(data => data.json())
-  .then(data => { console.log(data) })
+  .then(data => data.json()) //only runs when the data returns. [DO THIS THEN RUN]
+  .then(data => { console.log(data) }) 
   .catch((err) => {
-    console.error(err);
+    console.error(err); //use the catch in order to catch the error if .then does not run. 
   })
 
 </script>

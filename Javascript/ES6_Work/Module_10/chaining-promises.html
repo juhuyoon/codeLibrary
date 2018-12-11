@@ -6,6 +6,8 @@
 </head>
 <body>
 <script>
+  //usage of promise to flow control. 
+  //use these arrays as databases. 
   const posts = [
     { title: 'I love JavaScript', author: 'Wes Bos', id: 1 },
     { title: 'CSS!', author: 'Chris Coyier', id: 2 },
@@ -21,7 +23,7 @@
   function getPostById(id) {
     // create a new promise
     return new Promise((resolve, reject) => {
-      // using a settimeout to mimick a databse
+      // using a settimeout to mimic a databse
       setTimeout(() => {
         // find the post we want
         const post = posts.find(post => post.id === id);
@@ -33,7 +35,7 @@
       }, 200);
     });
   }
-
+  //when you are replacing a string with the object of the same string.
   function hydrateAuthor(post) {
     // create a new promise
     return new Promise((resolve, reject) => {
@@ -49,6 +51,7 @@
     });
   }
 
+  //you can chain a series of promises in order to have multiple .thens for chaining. 
   getPostById(3)
     .then(post => {
       return hydrateAuthor(post);
