@@ -1,8 +1,15 @@
+//to open up json and prep for the eslint
+//Use double quotes when you are setting dependencies: 
+//https://eslint.org/docs/user-guide/configuring
+
 {
   "env": {
     "es6": true,
     "browser": true
+    //"jquery" : true
+    //"node" : true
   },
+  //https://github.com/airbnb/javascript
   "extends": "airbnb",
   "rules": {
     "no-console": 0,
