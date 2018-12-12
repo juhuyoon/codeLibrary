@@ -15,5 +15,6 @@
     "no-console": 0,
     "no-unused-vars": 1
   },
+  /* This is used to make it so that you can run eslint on files other than .js files*/
   "plugins": ["html", "markdown"]
 }
