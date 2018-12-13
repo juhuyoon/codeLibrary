@@ -1,0 +1,28 @@
+{
+  "name": "es6_module",
+  "version": "1.0.0",
+  "description": "practice with babel_building",
+  "main": "app.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/preset-env": "^7.2.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.4",
+    "uglifyjs-webpack-plugin": "^2.0.1",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "flickity": "^2.1.2",
+    "insane": "^2.6.2",
+    "jquery": "^3.3.1",
+    "jsonp": "^0.2.1",
+    "lodash": "^4.17.11",
+    "slug": "^0.9.3"
+  }
+}
