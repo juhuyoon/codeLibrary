@@ -18,6 +18,7 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "base-64": "^0.1.0",
     "flickity": "^2.1.2",
     "insane": "^2.6.2",
     "jquery": "^3.3.1",
