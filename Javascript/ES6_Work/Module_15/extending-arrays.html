@@ -6,9 +6,10 @@
 </head>
 <body>
 <script>
+  //Array is built-in. 
   class MovieCollection extends Array {
-    constructor(name, ...items) {
-      super(...items);
+    constructor(name, ...items) { //object rest operator
+      super(...items); //then use spread. 
       this.name = name;
     }
     add(movie) {
@@ -19,7 +20,9 @@
     }
   }
 
-  const movies = new MovieCollection('Wes\'s Fav Movies',
+  console.table(movies.topRated())
+
+  const movies = new MovieCollection('Fav Movies',
     { name: 'Bee Movie', stars: 10 },
     { name: 'Star Wars Trek', stars: 1 },
     { name: 'Virgin Suicides', stars: 7 },

@@ -22,8 +22,12 @@
     }
   }
 
+  //When wanting to extend the class of animals to create a more specific class. 
+  //Don't go extend past two or three as it can get very deep. 
   class Dog extends Animal {
     constructor(name, breed) {
+      //super = call the thing that it extends. 
+      //Animal(name)
       super(name);
       this.breed = breed;
     }
@@ -32,6 +36,8 @@
     }
   }
 
+  
+  //Taking the class originally created and creating a new const. 
   const rhino = new Animal('Rhiney');
   const snickers = new Dog('Snickers', 'King Charles');
 

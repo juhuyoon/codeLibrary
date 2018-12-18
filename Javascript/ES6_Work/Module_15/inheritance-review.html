@@ -6,20 +6,25 @@
 </head>
 <body>
 <script>
+  /* Constructor Function */
   function Dog(name, breed) {
+    //when you put a method on the original constructor, it will be inherited by the rest of them. 
     this.name = name;
     this.breed = breed;
   }
-  Dog.prototype.bark = function() {
-    console.log(`Bark Bark! My name is ${this.name}`)
-  }
 
-  const snickers = new Dog('Snickers', 'King Charles');
-  const sunny = new Dog('Sunny', 'Golden Doodle');
-
+  //What is a prototype?
+    //All JS objects inherit prototypes and methods from a prototype. 
+    //When you want to add new properties/methods to all existing objects of a given type or to an object constructor. 
+  
+  //When using a prototype, 'this' will be considered undefined when using an arrow function as it automatically binds to the context, so 
+  //you should use regular functions for prototype declarations!
   Dog.prototype.bark = function() {
-    console.log(`Bark Bark🇨🇦🇨🇦🇨🇦! My name is ${this.name} and I'm a ${this.breed}`);
+    console.log(`Bark bark! My name is ${this.name}, and I am a ${this.breed}!`);
   }
+  
+  const snickers = new Dog('Snicker', 'King Charles');
+  const sunny = new Dog('Sunny', 'Golden Retriever');
 
   Dog.prototype.cuddle = function() {
     console.log(`I love you owner!`);
