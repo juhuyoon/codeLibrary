@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Generators</title>
+</head>
+<body>
+<script>
+  /* Normally, JS code runs from top to bottm. */
+  /* Functions that you can start/stop(pause indefinite amount of time) or when you want to pass info to it whenever you want are generators. */
+  function* listPeople() {
+    let i = 0;
+    yield i; // return for now. 
+    i++;
+    yield i;
+    i++;
+    yield i;
+  }
+
+  function* differentList() {
+    yield 'Wes';
+    yield 'Kait';
+    yield 'Snickers';
+  } //all the information will return one at a time, so you must call it three times to get the entire information. 
+  
+  const listI = listPeople();
+  const people = differentList();
+  // then use people.next()
+  // at the end, when all three have run, done = true.  
+
+  const inventors = [
+    { first: 'Albert', last: 'Einstein', year: 1879 },
+    { first: 'Isaac', last: 'Newton', year: 1643 },
+    { first: 'Galileo', last: 'Galilei', year: 1564 },
+    { first: 'Marie', last: 'Curie', year: 1867 },
+    { first: 'Johannes', last: 'Kepler', year: 1571 },
+    { first: 'Nicolaus', last: 'Copernicus', year: 1473 },
+    { first: 'Max', last: 'Planck', year: 1858 },
+  ];
+
+  function* loop(arr) {
+    console.log(inventors);
+    for (const item of arr) {
+      yield item;
+    }
+  }
+
+  const inventorGen = loop(inventors);
+
+
+</script>
+</body>
+</html>
