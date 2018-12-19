@@ -1,17 +1,17 @@
 //http://aimforsimplicity.com/post/13-things-you-need-to-know-about-react/ 
 
-Things you should know about React //Simple!
+//Things you should know about React
 
-1) React is just a library
+/* 1) React is just a library */
     //Different from Angular (a framework)
 
     //You would use react because it is easy to mix with other libraries and has a rich library for almost anything
 
-2) JSX
+/* 2) JSX
     "Syntactic sugar for the react.createElement(components, props, ...children) function"
     "Used because rendering logic should be inherently coupled with UI logic" e.g. = how events are handled, etc. 
 
-    *JS*
+    *JS* */
         const rootElement =
         React.createElement('div', {},
             React.createElement('h1', {style: {color: 'red'}}, 'The world is yours'),
@@ -31,7 +31,20 @@ Things you should know about React //Simple!
         ReactDOM.render(RootElement, document.getElementById('app'))
         //converted with Babel. 
 
-3) React is Declarative
+/* 3) React is Declarative */
         //use declarative style to write the components. 
         //Declarative means that the code expresses the logic of computation without needing control flow. 
+        //React elements are immutable. Once you create it, you can't change its children or attributes.
         
+        function tick() {
+            const elements = (
+                <div>
+                    <h1>Hello, world!</h1>
+                    <h2> It is {new Date().toLocaleTimeString()}.</h2>
+                </div>
+            );
+            ReactDOM.render(element, document.getElementById('root'));
+        }
+        setInterval(tick, 1000);
+
+/* 4) Components and Props */
