@@ -21,12 +21,12 @@
         ReactDOM.render(rootElement, document.getElementById('app'))
 
     *JSX*
-        const RootElement = (
-            <div>
-            <h1 style=>The world is yours</h1>
-            <p>Say hello to my little friend</p>
-            </div>
-        ) 
+        // const RootElement = (
+        //     <div>
+        //     <h1 style=>The world is yours</h1>
+        //     <p>Say hello to my little friend</p>
+        //     </div>
+        // ) 
       
         ReactDOM.render(RootElement, document.getElementById('app'))
         //converted with Babel. 
@@ -61,9 +61,53 @@
         }
 
         //Elements can also represent user-defined components:
-        const element = <Welcome name="Sara" />;
+        const element = <Welcome name="Sara" />; 
 
-// We call ReactDOM.render() with the < Welcome name = "Sara" /> element.
-// React calls the Welcome component with { name: 'Sara' } as the props.
-// Our Welcome component returns a < h1 > Hello, Sara</h1 > element as the result.
-// React DOM efficiently updates the DOM to match < h1 > Hello, Sara</h1 >.
+        //We call ReactDOM.render() with the <Welcome name="Sara" /> element.
+        //React calls the Welcome component with {name: 'Sara'} as the props.
+        //Our Welcome component returns a <h1>Hello, Sara</h1> element as the result.
+        //React DOM efficiently updates the DOM to match <h1>Hello, Sara</h1>.
+        //React treats components starting with lowercase letters as DOM tags. 
+        //For example, <div /> represents an HTML div tag, but <Welcome /> represents a component and requires Welcome to be in scope.
+
+        function Welcome(props) {
+            return <h1>Hello, {props.name}</h1>;
+          }
+          
+          function App() {
+            return (
+              <div>
+                <Welcome name="Sara" />
+                <Welcome name="Cahal" />
+                <Welcome name="Edite" />
+              </div>
+            );
+          }
+          
+          ReactDOM.render(
+            <App />,
+            document.getElementById('root')
+          );
+
+          //Extracting Components and making them into smaller components:
+          function Comment(props) {
+            return (
+              <div className="Comment">
+                <div className="UserInfo">
+                  <img className="Avatar"
+                    src={props.author.avatarUrl}
+                    alt={props.author.name}
+                  />
+                  <div className="UserInfo-name">
+                    {props.author.name}
+                  </div>
+                </div>
+                <div className="Comment-text">
+                  {props.text}
+                </div>
+                <div className="Comment-date">
+                  {formatDate(props.date)}
+                </div>
+              </div>
+            );
+          }
