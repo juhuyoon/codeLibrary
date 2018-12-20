@@ -48,3 +48,22 @@
         setInterval(tick, 1000);
 
 /* 4) Components and Props */
+        function Welcome(props) {
+            return <h1> Hello, {props.name} </h1>
+        } //valid React component as it accepts a single "props", object argument with data and returns a React element. 
+        //these are "function components" as they are literally JS functions.
+
+        //with ES6 Class:
+        class Welcome extends React.Component {
+            render() {
+                return <h1>Hello, {this.props.name}</h1>
+            }
+        }
+
+        //Elements can also represent user-defined components:
+        const element = <Welcome name="Sara" />;
+
+// We call ReactDOM.render() with the < Welcome name = "Sara" /> element.
+// React calls the Welcome component with { name: 'Sara' } as the props.
+// Our Welcome component returns a < h1 > Hello, Sara</h1 > element as the result.
+// React DOM efficiently updates the DOM to match < h1 > Hello, Sara</h1 >.
