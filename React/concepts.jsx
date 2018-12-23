@@ -373,12 +373,14 @@ function tick() {
   }
 
   //Common pattern is for an event handler to be a method on the class. 
-  class Toggle extends React.Component {
+  class Toggle extends React.Component { //Note that the class methods are not bound by default. 
     constructor(props) {
       super(props);
-      this.state = {isToggleOn: true};
+      this.state = {isToggleOn: true}; 
   
       // This binding is necessary to make `this` work in the callback
+      //THIS will be UNDEFINED when the function is actually called. 
+      //Generally, if you refer to a method without (), should bind that method. 
       this.handleClick = this.handleClick.bind(this);
     }
   
@@ -391,8 +393,8 @@ function tick() {
     render() {
       return (
         <button onClick={this.handleClick}>
-          {this.state.isToggleOn ? 'ON' : 'OFF'}
-        </button>
+          {this.state.isToggleOn ? 'ON' : 'OFF'} 
+        </button> 
       );
     }
   }
@@ -401,3 +403,100 @@ function tick() {
     <Toggle />,
     document.getElementById('root')
   );
+
+  //Passing Arguments to Event Handlers:
+    <button onClick ={(e) => this.deleteRow(id, e)}> Delete Row </button>
+    
+    <button onClick={this.deleteRow.bind(this, id)}>Delete Row</button>
+    //both lines are equivalent, and use arrow functions and bind respectivly. 
+    //In both cases, the e argument represents the React even that will be passed as a second argument after the ID. 
+    //With an arrow function, we have to pass it explicitly, but with bind any further arguments are automatically forwarded. 
+
+
+//===============================================================
+  //Conditional Rendering
+    //Creating distinct components that encapsulate behavior when needed. 
+    //Then you can render only some of them depending on the state of your application.
+
+    function UserGreeting(props) {
+      return <h1>Welcome back!</h1>;
+    }
+    
+    function GuestGreeting(props) {
+      return <h1>Please sign up.</h1>;
+    }
+
+    //Using these two components, we will create a Greeting component. 
+    function Greeting(props) {
+      const isLoggedIn = props.isLoggedIn;
+      if(isLoggedIn) {
+        return <UserGreeting />;
+      }
+      return <GuestGreeting />;
+    }
+
+    ReactDOM.render(
+      <Greeting isLoggedIn={false} />; //changing this to true will lead to the UserGreeting. 
+      document.getElementById('root');
+    );
+
+    //Using variables to store elements. 
+    //This is done to conditionally render a part of the component while the rest of the output doesn't change. 
+
+    //creating a stateful component called LoginControl. 
+    function LoginButton(props) {
+      return (
+        <button onClick={props.onClick}>
+          Login
+        </button>
+      );
+    }
+    
+    function LogoutButton(props) {
+      return (
+        <button onClick={props.onClick}>
+          Logout
+        </button>
+      );
+    }
+
+    class LoginControl extends React.Component {
+      constructor(props) {
+        super(props);
+        this.handleLoginClick = this.handleLoginClick.bind(this);
+        this.handleLogoutClick = this.handleLogoutClick.bind(this);
+        this.state = {isLoggedIn: false};
+      }
+    
+      handleLoginClick() {
+        this.setState({isLoggedIn: true});
+      }
+    
+      handleLogoutClick() {
+        this.setState({isLoggedIn: false});
+      }
+    
+      render() {
+        const isLoggedIn = this.state.isLoggedIn;
+        let button;
+    
+        if (isLoggedIn) {
+          button = <LogoutButton onClick={this.handleLogoutClick} />;
+        } else {
+          button = <LoginButton onClick={this.handleLoginClick} />;
+        }
+    
+        return (
+          <div>
+            <Greeting isLoggedIn={isLoggedIn} />
+            {button}
+          </div>
+        );
+      }
+    }
+    
+    ReactDOM.render(
+      <LoginControl />,
+      document.getElementById('root')
+    );
+    
