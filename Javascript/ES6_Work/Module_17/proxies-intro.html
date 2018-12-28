@@ -17,7 +17,7 @@
       // console.log('someone is asking for ', target, name);
       return target[name].toUpperCase();
     },
-    set(target, name, value) {
+    set(target, name, value) { //setting the proxy. 
       if(typeof value === 'string') {
         target[name] = value.trim().toUpperCase() + '✂️';
       }

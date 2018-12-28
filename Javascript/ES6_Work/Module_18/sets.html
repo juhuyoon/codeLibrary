@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sets</title>
+</head>
+<body>
+<script>
+  //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set
+  //A set is a unique array that can only add the same item only once.
+  //Has a nice API to manage it. 
+  //Not index-based.  
+  const people = new Set();
+  people.add('Wes');
+  people.add('Snickers');
+  people.add('Kait');
+
+  for (const person of  people) {
+    console.log(person);
+  }
+
+  const students = new Set(['Wes', 'Kara', 'Tony']);
+
+  const dogs = ['Snickers', 'Sunny'];
+  const dogSet = new Set(dogs);
+
+</script>
+</body>
+</html>

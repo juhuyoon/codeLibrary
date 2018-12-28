@@ -6,6 +6,17 @@
 </head>
 <body>
 <script>
+  //This is for cases where you would expect on certain phrases/IDs for the objects:
+
+  const person = {name: 'Jay' };
+  person.ID = 123; //no
+  person.iD = 123; //no
+  person.id = 123; //yes
+
+
+
+
+  //great way to use proxies is when you are building a library others will use and need to implement ergonomics. 
   const safeHandler = {
     set(target, name, value) {
       const likeKey = Object.keys(target).find(k => k.toLowerCase() === name.toLowerCase());

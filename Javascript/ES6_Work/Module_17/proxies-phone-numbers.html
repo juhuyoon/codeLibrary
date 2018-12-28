@@ -6,12 +6,14 @@
 </head>
 <body>
 <script>
+  //using proxies to clean up the different ways people input their phone numbers. 
+  //cool trip to keep in mind while using regex!
   const phoneHandler = {
     set(target, name, value) {
-      target[name] = value.match(/[0-9]/g).join('');
+      target[name] = value.match(/[0-9]/g).join(''); //to get just the trimmed only number. 
     },
     get(target, name) {
-      return target[name].replace(/(\d{3})(\d{3})(\d{4})/, '($1) $2-$3');
+      return target[name].replace(/(\d{3})(\d{3})(\d{4})/, '($1) $2-$3'); //intercepts with the (get trap) and returns the values formatted. 
     }
   }
 
@@ -19,3 +21,4 @@
 </script>
 </body>
 </html>
+
