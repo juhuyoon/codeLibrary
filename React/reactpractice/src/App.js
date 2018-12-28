@@ -1,15 +1,13 @@
 import React from "react";
-import Navbar from "./components/Navbar";
 import Header from "./components/Header";
-import Card from "./components/Panel";
+import Section from "./components/Section";
+import Navbar from "./components/Navbar";
 
 const App = () => (
   <div>
-    <Header />
     <Navbar />
-    <Card />
-    <Card />
-    <Card />
+    <Header />
+    <Section />
   </div>
 );
 

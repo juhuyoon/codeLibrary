@@ -1,14 +1,6 @@
 .navbar {
-  background: #653bb5;
+  background: #6a1b9a;
   height: 60px;
-}
-
-.navbar ul {
-  margin: 0;
-}
-
-.navbar li {
-  display: inline-block;
 }
 
 .navbar a {
