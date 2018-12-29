@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Maps!</title>
+  <style>
+    button {
+      font-size: 50px;
+      margin:10px;
+    }
+  </style>
+</head>
+<body>
+
+<button>Snakes 🐍</button>
+<button>Cry 😂</button>
+<button>Ice Cream 🍦</button>
+<button>Flamin' 🔥</button>
+<button>Dancer 💃</button>
+
+<script>
+  //You can actually use the objecsts as the key in a map. 
+
+  //const obj = {
+  //  {..} //using object as the key... with the value becoming a string, number, etc.
+  // This map can be used as a metadata dictionary!
+  // }
+
+  //Using the button ITSELF as the actual key!
+  const clickCounts = new Map();
+  const buttons = document.querySelectorAll('button');
+  //Storing metadata ABOUT the object. 
+  buttons.forEach(button => {
+    clickCounts.set(button, 0); //the key itself is the button and the value is 0 at start. 
+    button.addEventListener('click', function() {
+      const val = clickCounts.get(this);
+      console.log(val);
+      clickCounts.set(this, val + 1);
+      console.log(clickCounts);
+    });
+  });
+</script>
+</body>
+</html>

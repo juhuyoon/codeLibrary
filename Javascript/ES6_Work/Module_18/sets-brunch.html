@@ -8,18 +8,19 @@
 <script>
   const brunch = new Set();
   // as people start coming in
-  brunch.add('wes');
-  brunch.add('Sarah');
-  brunch.add('Simone');
+  brunch.add('Jung');
+  brunch.add('Stella');
+  brunch.add('Tasya');
   // ready to open!
   const line = brunch.values();
+  //when you call next on line, it will remove itself from the set iterator. 
   console.log(line.next().value);
   console.log(line.next().value);
-  brunch.add('Heather');
-  brunch.add('Snickers');
-  console.log(line.next().value);
-  console.log(line.next().value);
-  console.log(line.next().value);
+  // brunch.add('Heather');
+  // brunch.add('Snickers');
+  // console.log(line.next().value);
+  // console.log(line.next().value);
+  // console.log(line.next().value);
 
 </script>
 </body>

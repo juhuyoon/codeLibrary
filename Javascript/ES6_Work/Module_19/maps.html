@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Maps!</title>
+</head>
+<body>
+<script>
+  //If sets are to arrays, then maps are to objects. 
+  const dogs = new Map(); //Has a key and a value instead of just the value as you would see in an object. 
+
+  dogs.set('Snickers', 3);
+  dogs.set('Sunny', 2);
+  dogs.set('Hugo', 10);
+
+  dogs.forEach((val, key) => console.log(val, key));
+
+  for (const [key, val] of dogs) {
+    console.log(key, val);
+  } //gives it in an array with key and values. 
+
+</script>
+</body>
+</html>

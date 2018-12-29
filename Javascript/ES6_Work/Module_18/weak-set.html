@@ -7,10 +7,15 @@
 <body>
 <script>
   let dog1 = { name: 'Snickers', age: 3 };
-  let dog2 = { name: 'sunny', age: 1 };
-
+  let dog2 = { name: 'Sunny', age: 1 };
+ 
   const weakSauce = new WeakSet([dog1, dog2]);
+  //weakSauce.has(dog1);
+  //weakSauce.has(dog2);
+  //weakSauce.add(dog2);
 
+  //You cannot loop over WeakSets.
+  //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet 
   console.log(weakSauce);
   dog1 = null;
   console.log(weakSauce);
