@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Custom Promises</title>
+</head>
+
+<body>
+  <script>
+    // breathe(1000, function() {
+    //   breathe(2000, function() {
+    //     ...
+    //   })
+    // }) //callback hell
+
+    function breathe(amount) {
+      return new Promise((resolve, reject) => {
+        if(amount < 500) {
+          reject('That is too small of a value');
+        }
+        setTimeout(() => resolve(`Done for ${amount} ms`), amount);
+      });
+    }
+
+      breathe(1000).then(res => {
+        console.log(res);
+        return breathe(5000);
+      }).then(res => {
+        console.log(res);
+        return breathe(6000);
+      }).catch(err => {
+        console.error(err);
+      })
+  </script>
+</body>
+
+</html>

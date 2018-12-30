@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Native Promises</title>
+</head>
+
+<video controls class="handsome"></video>
+
+<body>
+  <script>
+    //fetch APIs. (to complete AJAX requests)
+    // const res = fetch('https://api.github.com/users/juhuyoon');
+    // console.log(res);
+    // //expecting a .then as it is a promise. 
+    // fetch('https://api.github.com/users/juhuyoon').then(res => {
+    //     return res.json();
+    // }).then(res => {
+    //   console.log(res);
+    // }).catch(err => {
+    //   console.log(err);
+    // })
+
+    //built-in promises. 
+    const video = document.querySelector('.handsome');
+    navigator.mediaDevices.getUserMedia({video : true}).then(mediaStream => {
+      console.log(mediaStream);
+      video.srcObject = mediaStream;
+      //video.src = window.URL.createObjectURL(mediaStream);
+      video.load();
+      video.play();
+    }).catch(err => {
+        console.log(err);
+    })
+
+  </script>
+</body>
+
+</html>

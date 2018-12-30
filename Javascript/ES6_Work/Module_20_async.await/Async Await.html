@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Custom Promises</title>
+</head>
+
+<body>
+  <script>
+    //blocking is done to wait for data and force the javascript to wait as JS will execute immediately. 
+    //setInterval(() => console.log(Date.now()), 500);
+    //alert('hi') blocks
+
+    //Using async-await for flow control. 
+    //You must have a Promise function in order to build async-await
+    function breathe(amount) {
+      return new Promise((resolve, reject) => {
+        if(amount < 500) {
+          reject('That is too small of a value');
+        }
+        setTimeout(() => resolve(`Done for ${amount} ms`), amount);
+      });
+    }
+
+    //top level await is not allowed. 
+    // await breathe(100);
+    // await breathe(500);
+    // await breathe(5000);
+
+    // const go = async() => {
+      //also possible in arrow functions
+    // } 
+
+    //This was promisified, so you can use async await. 
+    // const userPage = router.get('/user', async (req, res, next) => {
+    //   try{
+    //     const users = await User.find() //10 users. 
+
+    //   } catch(e) {
+    //     res.render('error');
+    //   }
+    // });
+     
+    // async function go() {
+    //   try{ //by Using a try-catch error and encompassing the await inside it all. 
+    //     console.log('start');
+    //     const res = await breathe(1000);
+    //     console.log(res);
+    //     const res2 = await breathe(600);
+    //     console.log(res2);
+    //     const res3 = await breathe(500);
+    //     console.log(res3);
+    //     const res4 = await breathe(300);
+    //     console.log(res4); //how do I error handle this...?
+    //     console.log('end');
+    //   } catch(err) {
+    //     console.error(err);
+    //   }
+
+    // }
+
+    //error handling with high-order function!
+    //fn is any function that will be passed into catchErrors. [fn is the argument]
+    function catchErrors(fn) {
+      return function(...args) { //when you don't know how many arguments are coming, use a rest operator.
+        //console.log(fn);
+        return fn(...args).catch((err) => { //then using spread to get it out as an argument. 
+          console.error(err);
+        });
+      }
+    }
+
+        async function go(name, namer) {
+       
+        console.log(`Starts for ${name}, ${namer}`)
+        console.log('start');
+        const res = await breathe(1000);
+        console.log(res);
+        const res2 = await breathe(600);
+        console.log(res2);
+        const res3 = await breathe(500);
+        console.log(res3);
+        const res4 = await breathe(300);
+        console.log(res4); //how do I error handle this...?
+        console.log('end');
+    }
+
+    const wrappedFunction = catchErrors(go);
+
+    wrappedFunction('Jung', 'Wes');
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Async Await</title>
+</head>
+
+<body>
+  <script>
+    // //Not always do you want to fire up multiple tasks and wait for them all to come back. 
+    // async function go() {
+    //   const p1 = fetch('https://api.github.com/users/juhuyoon')
+    //   //.then(r => r.json()); //if you were to do async/await here, what would happen is that it would fetch the first user
+    //   const p2 = fetch('https://api.github.com/users/stolinski')
+    //   //.then(r => r.json()); //before it retrieves the second user. 
+    //   const p3 = fetch('https://api.github.com/users/wesbos')
+    //   //.then(r => r.json()); // you would want to get both at the same time. 
+
+    //   //Waiting for both of them to come back. 
+    //   const res = await Promise.all([p1, p2, p3]);
+    //   const dataPromises = res.map(r => r.json());
+    //   const fullDataSet = await Promise.all(dataPromises);
+    //   console.log(dataPromises);
+    //   console.log(fullDataSet)
+    //  // console.log(res);
+    // }
+
+    // go();
+
+    async function getData(names) {
+      const promises = names.map(name => fetch(`https://api.github.com/users/${name}`).then(r => r.json()));
+      const people = await Promise.all(promises);
+      console.log(people);
+    }
+
+    getData(['wesbos', 'stolinski', 'juhuyoon']);
+  </script>
+</body>
+
+</html>
