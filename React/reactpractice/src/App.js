@@ -1,14 +1,6 @@
 import React from "react";
-import Header from "./components/Header";
-import Section from "./components/Section";
-import Navbar from "./components/Navbar";
+import Counter from "./components/Counter";
 
-const App = () => (
-  <div>
-    <Navbar />
-    <Header />
-    <Section />
-  </div>
-);
+const App = () => <Counter />;
 
 export default App;
