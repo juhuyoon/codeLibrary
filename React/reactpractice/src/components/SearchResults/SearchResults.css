@@ -1,0 +1,3 @@
+ul.search-results img {
+  margin: 0 auto;
+}
