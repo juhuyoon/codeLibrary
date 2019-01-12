@@ -1,5 +1,8 @@
 import { join } from "path";
 
+//https://medium.freecodecamp.org/the-react-handbook-b71c27b0a795
+//R E A D T H I S
+
 //http://aimforsimplicity.com/post/13-things-you-need-to-know-about-react/ 
 
 //Things you should know about React
