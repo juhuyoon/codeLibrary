@@ -503,3 +503,6 @@ function tick() {
       document.getElementById('root')
     );
     
+
+    //https://medium.com/@joekarlsson/building-high-applications-react-applications-3d02145a81e6
+    //https://blog.logrocket.com/the-best-styling-in-react-tutorial-youve-ever-seen-676f1284b945
