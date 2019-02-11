@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - TernaryOperatorDemo",
+            "request": "launch",
+            "mainClass": "TernaryOperatorDemo"
+        }
+    ]
+}
