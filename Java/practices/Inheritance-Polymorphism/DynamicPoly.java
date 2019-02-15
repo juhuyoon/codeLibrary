@@ -17,3 +17,8 @@ public class DynamicPoly extends Animal {
         obj.animalSound();
     }
 }
+
+//public class Vehicle {  }
+//public class Car extends Vehicle {
+// private License myCarLicense;
+//} A Car IS-A Vehicle and HAS-A License then the code would look like this. 

@@ -2,6 +2,17 @@
     If we had a class
 */
 public abstract class Animal {
+    /* A method that is declared but not defined. Only method signature no body
+       Declared using the abstract keyword:
+       abstract publid void playInstrument();
+       Used to put some kind of compulsion on class who inherits the class has abstract methods. 
+       These cannot be abstract:
+            Constructors
+            Static Methods
+            Private Methods
+            Methods declared as 'final'
+    */
+    
     public abstract void animalSound();
 }
 
