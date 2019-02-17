@@ -10,6 +10,6 @@ class TwoSums {
         throw new IllegalArgumentException("No two sum solution");
     }
     public static void main(String[] args) {
-        System.out.println("Hello");
+        System.out.println(twoSum);
     }
 }
