@@ -16,3 +16,7 @@ Sometimes I worry that it's not maintained though, but concepts are still good.
 5. 
 https://medium.com/@samwsoftware/building-a-forum-with-react-and-node-242a2a3c2995
 Building with NodeBB if anyone is interested. 
+
+6. 
+https://www.dynamodbguide.com/what-is-dynamo-db
+For Amazon DynamoDB
