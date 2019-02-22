@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d1d98c7b-be8e-4626-ab3a-d24f5805eb75" name="Default Changelist" comment="" />
+    <list default="true" id="b0b58b23-49ba-4461-8081-98a7974c8c66" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Sum3and5/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/juhuyoon/SumOddRange.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../forStatementPrime/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../forStatementPrime/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,11 +17,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/juhuyoon/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="349">
-              <caret line="26" column="46" lean-forward="true" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="46" />
+            <state>
+              <caret column="14" selection-start-column="14" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/juhuyoon/SumOddRange.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="38" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -35,13 +50,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/juhuyoon/isPrime.java" />
-        <option value="$USER_HOME$/Downloads/Control-Flow-Statements-The-for-Statement-(plus-Challenge-Exercise)-Source-code/src/com/timbuchalka/Main.java" />
-        <option value="$PROJECT_DIR$/src/com/juhuyoon/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/juhuyoon/SumOdd.java" />
+        <option value="$PROJECT_DIR$/src/com/juhuyoon/SumOddRange.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="71" />
     <option name="y" value="23" />
     <option name="width" value="1369" />
@@ -53,21 +67,23 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="forStatementPrime" type="b2602c69:ProjectViewProjectNode" />
-              <item name="forStatementPrime" type="462c0819:PsiDirectoryNode" />
+              <item name="SumOdd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SumOdd" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="forStatementPrime" type="b2602c69:ProjectViewProjectNode" />
-              <item name="forStatementPrime" type="462c0819:PsiDirectoryNode" />
+              <item name="SumOdd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SumOdd" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="forStatementPrime" type="b2602c69:ProjectViewProjectNode" />
-              <item name="forStatementPrime" type="462c0819:PsiDirectoryNode" />
+              <item name="SumOdd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SumOdd" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="juhuyoon" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -75,12 +91,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550718903396" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550721150621" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -97,7 +111,7 @@
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.juhuyoon.Main" />
-      <module name="forStatementPrime" />
+      <module name="SumOdd" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
@@ -105,27 +119,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Main" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d1d98c7b-be8e-4626-ab3a-d24f5805eb75" name="Default Changelist" comment="" />
-      <created>1550718045585</created>
+      <changelist id="b0b58b23-49ba-4461-8081-98a7974c8c66" name="Default Changelist" comment="" />
+      <created>1550720418581</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1550718045585</updated>
+      <updated>1550720418581</updated>
     </task>
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="816" extended-state="6" />
+    <frame x="71" y="23" width="1369" height="816" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Image Layers" order="0" />
@@ -133,7 +142,7 @@
       <window_info id="UI Designer" order="2" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.1223176" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.24189901" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Terminal" order="1" />
@@ -145,7 +154,7 @@
       <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="9" />
-      <window_info anchor="bottom" id="Run" order="10" weight="0.2140884" />
+      <window_info anchor="bottom" id="Run" order="10" visible="true" weight="0.21536352" />
       <window_info anchor="right" id="Palette" order="0" />
       <window_info anchor="right" id="Theme Preview" order="1" />
       <window_info anchor="right" id="Maven" order="2" />
@@ -157,24 +166,17 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/juhuyoon/isPrime.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/Control-Flow-Statements-The-for-Statement-(plus-Challenge-Exercise)-Source-code/src/com/timbuchalka/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="489">
-          <caret line="47" lean-forward="true" selection-start-line="2" selection-end-line="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/juhuyoon/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="26" column="46" lean-forward="true" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="46" />
+        <state>
+          <caret column="14" selection-start-column="14" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/juhuyoon/SumOddRange.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="38" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
         </state>
       </provider>
     </entry>

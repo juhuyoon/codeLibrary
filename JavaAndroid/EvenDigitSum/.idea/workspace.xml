@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d1d98c7b-be8e-4626-ab3a-d24f5805eb75" name="Default Changelist" comment="" />
+    <list default="true" id="d2fb4ea3-ea1a-40f8-be55-19c60816acdc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../DigitSumChallenge/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FirstAndLastDigitSum/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Sum3and5/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SumOdd/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SumOdd/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SumOdd/src/com/juhuyoon/SumOddRange.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../While/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../numberPalindrome/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../forStatementPrime/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../forStatementPrime/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,20 +25,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/juhuyoon/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="349">
-              <caret line="26" column="46" lean-forward="true" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="46" />
+            <state relative-caret-position="360">
+              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
@@ -35,16 +39,14 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/juhuyoon/isPrime.java" />
-        <option value="$USER_HOME$/Downloads/Control-Flow-Statements-The-for-Statement-(plus-Challenge-Exercise)-Source-code/src/com/timbuchalka/Main.java" />
         <option value="$PROJECT_DIR$/src/com/juhuyoon/Main.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="71" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="742" />
     <option name="y" value="23" />
-    <option name="width" value="1369" />
+    <option name="width" value="698" />
     <option name="height" value="816" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -53,34 +55,13 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="forStatementPrime" type="b2602c69:ProjectViewProjectNode" />
-              <item name="forStatementPrime" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="forStatementPrime" type="b2602c69:ProjectViewProjectNode" />
-              <item name="forStatementPrime" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="forStatementPrime" type="b2602c69:ProjectViewProjectNode" />
-              <item name="forStatementPrime" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="juhuyoon" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550718903396" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550728205642" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -97,7 +78,7 @@
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.juhuyoon.Main" />
-      <module name="forStatementPrime" />
+      <module name="EvenDigitSum" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
@@ -116,16 +97,16 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d1d98c7b-be8e-4626-ab3a-d24f5805eb75" name="Default Changelist" comment="" />
-      <created>1550718045585</created>
+      <changelist id="d2fb4ea3-ea1a-40f8-be55-19c60816acdc" name="Default Changelist" comment="" />
+      <created>1550727610308</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1550718045585</updated>
+      <updated>1550727610308</updated>
     </task>
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="816" extended-state="6" />
+    <frame x="742" y="23" width="698" height="816" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Image Layers" order="0" />
@@ -133,12 +114,12 @@
       <window_info id="UI Designer" order="2" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.1223176" />
+      <window_info content_ui="combo" id="Project" order="5" weight="0.24173912" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Terminal" order="1" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="3" />
+      <window_info anchor="bottom" id="Messages" order="3" weight="0.32872927" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" />
       <window_info anchor="bottom" id="Debug" order="6" weight="0.4" />
@@ -157,24 +138,10 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/juhuyoon/isPrime.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/Control-Flow-Statements-The-for-Statement-(plus-Challenge-Exercise)-Source-code/src/com/timbuchalka/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="489">
-          <caret line="47" lean-forward="true" selection-start-line="2" selection-end-line="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/juhuyoon/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="26" column="46" lean-forward="true" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="46" />
+        <state relative-caret-position="360">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
         </state>
       </provider>
     </entry>
