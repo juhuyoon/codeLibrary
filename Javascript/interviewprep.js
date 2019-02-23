@@ -17,3 +17,4 @@ for(let i = 0; i < arr.length; i++) {
         console.log("The index of this number is : " + i + arr[i]);
     }, 3000);
 }
+
