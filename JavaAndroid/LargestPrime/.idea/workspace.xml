@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="19774d6f-8c36-484a-88cf-22220f5b2767" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/com/juhuyoon/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/juhuyoon/Main.java" afterDir="false" />
+    <list default="true" id="60fca8b2-1102-4707-a429-328c5dcc5d3a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../FlourPack/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ParsingValuesFromString/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ParsingValuesFromString/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ParsingValuesFromString/out/production/ParsingValuesFromString/com/juhuyoon/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ParsingValuesFromString/out/production/ParsingValuesFromString/com/juhuyoon/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ParsingValuesFromString/src/com/juhuyoon/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ParsingValuesFromString/src/com/juhuyoon/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,8 +20,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/juhuyoon/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+            <state relative-caret-position="120">
+              <caret line="8" selection-start-line="8" selection-end-line="20" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -46,14 +50,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane" />
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
-  </component>
-  <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550968927089" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -70,7 +70,7 @@
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.juhuyoon.Main" />
-      <module name="ParsingValuesFromString" />
+      <module name="LargestPrime" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
@@ -78,22 +78,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Main" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="19774d6f-8c36-484a-88cf-22220f5b2767" name="Default Changelist" comment="" />
-      <created>1550777452504</created>
+      <changelist id="60fca8b2-1102-4707-a429-328c5dcc5d3a" name="Default Changelist" comment="" />
+      <created>1550969525374</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1550777452504</updated>
+      <updated>1550969525374</updated>
     </task>
     <servers />
   </component>
@@ -118,7 +113,7 @@
       <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="9" />
-      <window_info anchor="bottom" id="Run" order="10" weight="0.2140884" />
+      <window_info anchor="bottom" id="Run" order="10" visible="true" weight="0.21536352" />
       <window_info anchor="right" id="Palette" order="0" />
       <window_info anchor="right" id="Theme Preview" order="1" />
       <window_info anchor="right" id="Maven" order="2" />
@@ -132,8 +127,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/com/juhuyoon/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        <state relative-caret-position="120">
+          <caret line="8" selection-start-line="8" selection-end-line="20" selection-end-column="5" />
         </state>
       </provider>
     </entry>
