@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="72a52696-f22c-4856-9145-228f63305ed3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/juhuyoon/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/juhuyoon/Main.java" afterDir="false" />
+    <list default="true" id="6f923020-4c22-4c36-93e1-37e99a55eb11" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ReferenceVsValue/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ReferenceVsValue/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ReferenceVsValue/out/production/ReferenceVsValue/com/juhuyoon/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ReferenceVsValue/out/production/ReferenceVsValue/com/juhuyoon/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ReferenceVsValue/src/com/juhuyoon/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ReferenceVsValue/src/com/juhuyoon/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,8 +19,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/juhuyoon/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="404">
-              <caret line="33" column="32" lean-forward="true" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
+            <state relative-caret-position="330">
+              <caret line="22" column="23" lean-forward="true" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -47,13 +49,13 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551766281496" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551835412213" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -70,7 +72,7 @@
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.juhuyoon.Main" />
-      <module name="ReferenceVsValue" />
+      <module name="MinimumElement" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
@@ -89,11 +91,11 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="72a52696-f22c-4856-9145-228f63305ed3" name="Default Changelist" comment="" />
-      <created>1551758763345</created>
+      <changelist id="6f923020-4c22-4c36-93e1-37e99a55eb11" name="Default Changelist" comment="" />
+      <created>1551766377356</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1551758763345</updated>
+      <updated>1551766377356</updated>
     </task>
     <servers />
   </component>
@@ -132,8 +134,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/com/juhuyoon/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="33" column="32" lean-forward="true" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
+        <state relative-caret-position="330">
+          <caret line="22" column="23" lean-forward="true" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
         </state>
       </provider>
     </entry>
