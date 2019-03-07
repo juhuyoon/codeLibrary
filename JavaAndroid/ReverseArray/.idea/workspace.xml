@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="71aa83bd-f852-4aae-963f-d4b00bb48853" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../MinimumElement/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceVsValue/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ReferenceVsValue/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceVsValue/out/production/ReferenceVsValue/com/juhuyoon/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ReferenceVsValue/out/production/ReferenceVsValue/com/juhuyoon/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReferenceVsValue/src/com/juhuyoon/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ReferenceVsValue/src/com/juhuyoon/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="71aa83bd-f852-4aae-963f-d4b00bb48853" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,7 +15,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/juhuyoon/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="405">
-              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+              <caret line="27" selection-start-line="27" selection-end-line="27" />
             </state>
           </provider>
         </entry>
@@ -136,7 +130,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/juhuyoon/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
         </state>
       </provider>
     </entry>
