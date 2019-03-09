@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ea822e3f-61e1-435a-bb36-52b8026d6958" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MobilePhoneApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MobilePhoneApp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MobilePhoneApp/src/com/juhuyoon/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MobilePhoneApp/src/com/juhuyoon/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MobilePhoneApp/src/com/juhuyoon/MobilePhone.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MobilePhoneApp/src/com/juhuyoon/MobilePhone.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/juhuyoon/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/juhuyoon/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/juhuyoon/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="111" selection-start-line="14" selection-start-column="111" selection-end-line="14" selection-end-column="111" />
+            <state relative-caret-position="510">
+              <caret line="34" column="8" lean-forward="true" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -37,7 +34,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="714" />
     <option name="y" value="23" />
     <option name="width" value="726" />
@@ -92,7 +89,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="714" y="23" width="726" height="821" extended-state="1" />
+    <frame x="714" y="23" width="726" height="821" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Image Layers" order="0" />
@@ -100,7 +97,7 @@
       <window_info id="UI Designer" order="2" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.24122807" />
+      <window_info content_ui="combo" id="Project" order="5" weight="0.24122807" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Terminal" order="1" />
@@ -126,8 +123,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/com/juhuyoon/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="111" selection-start-line="14" selection-start-column="111" selection-end-line="14" selection-end-column="111" />
+        <state relative-caret-position="510">
+          <caret line="34" column="8" lean-forward="true" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
         </state>
       </provider>
     </entry>
