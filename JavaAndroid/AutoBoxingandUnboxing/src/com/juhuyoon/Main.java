@@ -32,6 +32,17 @@ public class Main {
         //ArrayList<int> intArrayList = new ArrayList<int>(); Runs into issues here as int is a primitive type.
         ArrayList<IntClass> intClassArrayList = new ArrayList<IntClass>();
         intClassArrayList.add(new IntClass(54));
-        
+        Integer integer = new Integer(54);
+        Double doubleValue = new Double(12.25);
+
+        ArrayList<Integer> intArrayList = new ArrayList<Integer>();
+        for(int i = 0; i <= 10; i++) {
+            intArrayList.add(Integer.valueOf(i)); //taking the value of i as a primitive type
+            //and then converting it to Integer class.
+        }
+
+        for(int i = 0; i <= 10; i++) {
+            System.out.println(i + " ->" + intArray.get(i).intValue());
+        }
     }
 }
