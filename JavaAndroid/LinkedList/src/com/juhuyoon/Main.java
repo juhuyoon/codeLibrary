@@ -28,6 +28,10 @@ public class Main {
         intList.add(1, 2);
         for(int i = 0; i < intList.size(); i++) {
             System.out.println(i + ": " + intList.get(i));
+
+            //LinkedLists are alternatives to arrays, and
+            //stores actual link to the next item as well as the data.
+
         }
     }
 }
