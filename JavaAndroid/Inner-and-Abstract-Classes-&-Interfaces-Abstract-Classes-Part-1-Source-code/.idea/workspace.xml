@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="20ba2333-4dc7-4f95-a1b4-55950aac275d" name="Default" comment="" />
+    <list default="true" id="20ba2333-4dc7-4f95-a1b4-55950aac275d" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/timbuchalka/CanFly.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Abstraction/com/timbuchalka/Animal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Abstraction/com/timbuchalka/Animal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Abstraction/com/timbuchalka/Bird.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Abstraction/com/timbuchalka/Bird.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Abstraction/com/timbuchalka/Dog.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Abstraction/com/timbuchalka/Dog.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Abstraction/com/timbuchalka/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Abstraction/com/timbuchalka/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Abstraction/com/timbuchalka/Parrot.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Abstraction/com/timbuchalka/Parrot.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Abstraction/com/timbuchalka/Penguin.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Abstraction/com/timbuchalka/Penguin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/timbuchalka/Bird.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/timbuchalka/Bird.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/timbuchalka/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/timbuchalka/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/timbuchalka/Parrot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/timbuchalka/Parrot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/timbuchalka/Penguin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/timbuchalka/Penguin.java" afterDir="false" />
+    </list>
     <ignored path="Abstraction.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -23,8 +36,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/timbuchalka/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="330">
+              <caret line="22" column="60" selection-start-line="22" selection-start-column="60" selection-end-line="22" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -32,8 +45,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/timbuchalka/Dog.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            <state relative-caret-position="210">
+              <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -41,8 +54,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/timbuchalka/Bird.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="21" selection-end-column="31" />
+            <state relative-caret-position="345">
+              <caret line="23" column="58" selection-start-line="23" selection-start-column="58" selection-end-line="23" selection-end-column="58" />
             </state>
           </provider>
         </entry>
@@ -60,7 +73,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/timbuchalka/Penguin.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
-              <caret line="12" column="83" selection-start-line="12" selection-start-column="83" selection-end-line="12" selection-end-column="83" />
+              <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -68,8 +81,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/timbuchalka/Parrot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="59" selection-start-line="13" selection-start-column="59" selection-end-line="13" selection-end-column="59" />
+            <state relative-caret-position="150">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/timbuchalka/CanFly.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -80,6 +102,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -91,6 +114,7 @@
       <list>
         <option value="$PROJECT_DIR$/src/Animal.java" />
         <option value="$PROJECT_DIR$/src/com/timbuchalka/Dog.java" />
+        <option value="$PROJECT_DIR$/src/com/timbuchalka/CanFly.java" />
         <option value="$PROJECT_DIR$/src/com/timbuchalka/Bird.java" />
         <option value="$PROJECT_DIR$/src/com/timbuchalka/Parrot.java" />
         <option value="$PROJECT_DIR$/src/com/timbuchalka/Penguin.java" />
@@ -141,11 +165,9 @@
   </component>
   <component name="PropertiesComponent">
     <property name="FullScreen" value="false" />
-    <property name="OverrideImplement.combined" value="true" />
-    <property name="OverrideImplement.overriding.sorted" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552868728204" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552874527935" />
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="recentsLimit" value="5" />
@@ -588,7 +610,7 @@
     <layout>
       <window_info id="Image Layers" />
       <window_info id="Capture Tool" />
-      <window_info active="true" content_ui="combo" x="568" y="60" width="319" height="624" id="Project" order="0" visible="true" weight="0.25250357" />
+      <window_info content_ui="combo" x="568" y="60" width="319" height="624" id="Project" order="0" visible="true" weight="0.25250357" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info id="Palette&#9;" order="3" />
@@ -614,7 +636,7 @@
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Database" order="5" />
       <window_info anchor="right" id="Maven Projects" order="6" />
-      <window_info anchor="right" id="Run" order="7" weight="0.41640624" />
+      <window_info anchor="right" id="Run" order="7" weight="0.28683835" />
     </layout>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -631,36 +653,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/timbuchalka/Dog.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        <state relative-caret-position="210">
+          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/timbuchalka/CanFly.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/timbuchalka/Bird.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="21" selection-end-column="31" />
+        <state relative-caret-position="345">
+          <caret line="23" column="58" selection-start-line="23" selection-start-column="58" selection-end-line="23" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/timbuchalka/Parrot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/timbuchalka/Penguin.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
-          <caret line="12" column="83" selection-start-line="12" selection-start-column="83" selection-end-line="12" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/timbuchalka/Parrot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="59" selection-start-line="13" selection-start-column="59" selection-end-line="13" selection-end-column="59" />
+          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/timbuchalka/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="330">
+          <caret line="22" column="60" selection-start-line="22" selection-start-column="60" selection-end-line="22" selection-end-column="60" />
         </state>
       </provider>
     </entry>
