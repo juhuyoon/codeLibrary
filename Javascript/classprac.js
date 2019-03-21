@@ -115,3 +115,84 @@ function getSecondLargest(nums) {
     }
     return second;
 }
+
+/* 
+Task
+
+Complete the reverseString function; it has one parameter, . You must perform the following actions:
+
+Try to reverse string  using the split, reverse, and join methods.
+If an exception is thrown, catch it and print the contents of the exception's  on a new line.
+Print  on a new line. If no exception was thrown, then this should be the reversed string; if an exception was thrown, this should be the original string.
+
+*/
+/*
+ * Complete the reverseString function
+ * Use console.log() to print to stdout.
+ */
+function reverseString(s) {
+    try {
+        s = s.split("").reverse().join("");
+    }
+    catch(e) {
+        console.log(e.message);
+    } finally {
+        console.log(s);
+    }
+}
+
+/*
+Task
+
+Complete the isPositive function below. It has one integer parameter, . If the value of  is positive, it must return the string YES. Otherwise, it must throw an Error according to the following rules:
+
+If  is , throw an Error with  Zero Error.
+If  is negative, throw an Error with  Negative Error.
+*/
+
+/*
+ * Complete the isPositive function.
+ * If 'a' is positive, return "YES".
+ * If 'a' is 0, throw an Error with the message "Zero Error"
+ * If 'a' is negative, throw an Error with the message "Negative Error"
+ */
+function isPositive(a) {
+    if(a > 0) {
+        return "YES";
+    } else if(a === 0 ) {
+        throw Error("Zero Error");
+    } else {
+        throw Error("Negative Error");
+    }
+}
+
+
+/* Write a function that takes in a single word as a string and returns true if it's a palindrome and false otherwise (a palindrome is spelled the same way forwards and backwards).
+
+Ex:
+Input: "noon"
+Output: true
+
+Input: "horse"
+Output: false
+
+Input: "racecar"
+Output: true 
+*/
+
+const isPalindrome = function(str){
+    //for every iteration, in position i, if it does not equal
+    //the length - i+1, then return false. 
+    //else return true.
+    for(var i = 0; i < str.length; i++) {
+        if(str[i] !== str[str.length - (i + 1)]) {
+            return false;
+        }
+    }
+    return true;
+}
+
+const isPalindrome = function(str)
+{
+    return str.split("").reverse().join("") == str;
+}
