@@ -14,6 +14,18 @@ const practice = (n) => {
     console.log("Did not run");
 }
 
+var countVowels = function(str){
+    var count = 0;
+    var input = str.toLowerCase();
+    var vowelArr = ["a", "e", "i", "o", "u"];
+    for (var i = 0; i < input.length; i++){
+      if(vowelArr.includes(input[i])){
+          count++;
+    }
+    }
+    return count;
+}
+
 
 /* Write a function that takes in two numbers and outputs the max (the greater of the two numbers).
 
@@ -78,4 +90,28 @@ const maxArrayNum = nArr => {
         }
     }
     return maxArr;
+}
+
+
+/**
+*   Return the second largest number in the array.
+*   @param {Number[]} nums - An array of numbers.
+*   @return {Number} The second largest number in the array.
+**/
+function getSecondLargest(nums) {
+    // Complete the function
+    let first = nums[0]; //to hold the first number in the array. 
+    let second = -1; //from false to true
+
+    for(var i = 0; i < nums.length; i++) {
+        if(nums[i] > first) {
+            second = first;
+            first = nums[i];
+        }
+
+        if(nums[i] > second && nums[i] < first) {
+            second = nums[i];
+        }
+    }
+    return second;
 }
