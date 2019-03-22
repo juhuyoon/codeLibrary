@@ -196,3 +196,81 @@ const isPalindrome = function(str)
 {
     return str.split("").reverse().join("") == str;
 }
+
+//interview: what will the following code output?
+
+const arr = [10, 12, 15, 21];
+for(var i = 0; i < arr.length; i++) {
+    setTimeout(function() {
+        console.log('Index: ' + i + ', element: ' + arr[i]);
+    }, 3000);
+}
+//scoping, so answer is: index: 4, element = undefined. 
+
+//ways to solve this issue:
+//1): ES6 Solution
+for(let i = 0; i < arr.length; i++) {
+    //ES6 let syntax creates a new binding
+    //every single time the function is called
+    setTimeout(function() {
+        console.log("The index of this number is : " + i + arr[i]);
+    }, 3000);
+}
+
+/* SAMPLE INPUT
+Left Rotation: 
+A left rotation on an array shifts each element of the array 1 unit to the left.
+In this challenge, given an array 'arr' and a number 'd', perform 'd' rotation on the array and return the updated array. 
+arr = [1,2,3,4,5];
+d = 2;
+
+sample output = 
+[3,4,5,1,2];
+*/
+
+var arr = [1,2,3,4,5];
+var d = 2;
+console.log(rotateLeft(arr, 2));
+
+function rotateLeft(arr, d) {
+    //pesudocode
+    //separate empty array .shift() //instead of empty array, create a COPY of the array and save it in a temp variable. 
+    //for loop d, run through and pop out the element of the array, 
+    //store them in the empty array and store in temp variable.
+    //push them back into the array input at the end. .push()
+    if(arr.length < 2) {
+        return arr;
+    } else {
+    var arr2 = arr;
+
+    for(i = 0; i <=d-1; i++) {
+        //push the first element to the end of the array
+        arr2.push(arr2[0]);
+        //remove the first element
+        arr2.shift();
+    }
+    return arr2;
+}
+}
+
+
+function rotateArr(arr, d) {
+    //create a copy of the array and save it in a temp variable
+    let temp = arr.slice(0);
+    //loop through the array as many times as we need to do rotations
+    for(let i = 0; i < d; i++) {
+        //remove the first item of the array, store it in a temp variable
+        let first = temp.shift();
+        //add that temporary variable back at the end of the array
+        temp.push(first);
+        //once completed, return the newly rotated array. 
+    }
+    console.log(temp);
+    return temp;
+}
+
+function rotateOptimize(arr, d) {
+    let res = [...arr.slice(d), ...arr.slice(0, d-arr.length)];
+    console.log(res);
+    return res;
+}
