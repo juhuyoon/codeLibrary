@@ -274,3 +274,31 @@ function rotateOptimize(arr, d) {
     console.log(res);
     return res;
 }
+
+
+/* 
+Write a function that takes in a sentence as a string and outputs the number of words.
+
+
+Ex:
+Input: “let’s go!”
+Output: 2
+
+Input: “I can’t wait to start coding”
+Output: 6
+
+Input: “huh?”
+Output: 1
+
+*/
+
+const countWords = (sentence) => {
+    let count = 0; //count = 1 so that at minimum it will still be one word. 
+    const stringArray = sentence.split(" ");
+    for(let i = 0; i < stringArray.length; i++) {
+            count++;
+    }
+    return count;
+}
+countWords("The quick brown fox jumps over the lazy dog.");
+countWords("Shorter Sentence");
