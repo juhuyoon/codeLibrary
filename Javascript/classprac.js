@@ -302,3 +302,70 @@ const countWords = (sentence) => {
 }
 countWords("The quick brown fox jumps over the lazy dog.");
 countWords("Shorter Sentence");
+
+
+
+//Fizzbuzz
+let isThree = false;
+let isFive = false;
+
+for(let i = 1; i <= 100; i++) {
+    isThree = (i % 3 == 0);
+    isFinite = (i % 5 == 0);
+    if(isThree && isFive) {
+        console.log("FizzBuzz");
+    }
+}
+
+//Prime Checker
+const primeChecker = (number) => {
+    for(let i = 2; i < number; i++) {
+        if(number % i == 0) {
+            return false;
+        }
+    }
+    return (number > 1);
+}
+
+function Rectangle(a, b) {
+    this.length = a;
+    this.width = b;
+    this.perimeter = 2 * (a + b);
+    this.area = (a * b);
+}
+
+//bubble sort
+function bubbleSort(arr) {
+    var sorted = false;'
+    
+    while(!sorted) {
+        sorted = true;
+
+        for(var i = 0; i < arr.length; i++) {
+            if(arr[i] > arr[i+1]) {
+                sorted = false;
+                var temp = arr[i];
+                arr[i] = arr[i+1];
+                arr[i+1] = temp;
+            }
+        }
+    }
+    return arr;
+} 
+
+//other way to bubble sort
+function bubbleSort2(arr) {
+    var len = arr.length;
+    for(var i = len-1; i >= 0; i--) {
+        for(var j = 1; j <= i; j++) {
+            if(arr[j-1] > arr[j]) {
+                var temp = arr[j-1];
+                arr[j-1] = arr[j];
+                arr[j] = temp;
+            }
+        }
+    }
+    return arr;
+}
+
+//binary search tree to find a secret number
