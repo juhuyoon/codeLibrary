@@ -368,4 +368,49 @@ function bubbleSort2(arr) {
     return arr;
 }
 
-//binary search tree to find a secret number
+//binary search tree 
+
+BinarySearchTree.prototype.push = function(val){
+    var root = this.root;
+ 
+    if(!root){
+       this.root = new Node(val);
+       return;
+    }
+ 
+    var currentNode = root;
+    var newNode = new Node(val); 
+ 
+    while(currentNode){
+       if(val < currentNode.value){
+           if(!currentNode.left){
+              currentNode.left = newNode;
+              break;
+           }
+           else{
+              currentNode = currentNode.left;
+         }
+      }
+      else{
+          if(!currentNode.right){
+             currentNode.right = newNode;
+             break;
+          }
+          else{
+             currentNode = currentNode.right;
+          }
+      }
+   }
+ 
+ }
+
+
+/*
+ * Return a count of the total number of objects 'o' satisfying o.x == o.y.
+ * 
+ * Parameter(s):
+ * objects: an array of objects with integer properties 'x' and 'y'
+ */
+function getCount(objects) {
+    
+}
