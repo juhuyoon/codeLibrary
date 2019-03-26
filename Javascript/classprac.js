@@ -412,5 +412,108 @@ BinarySearchTree.prototype.push = function(val){
  * objects: an array of objects with integer properties 'x' and 'y'
  */
 function getCount(objects) {
-    
+    var ctr = 0;
+    for(var i=0; i<objects.length; i++){
+      if(objects[i].x == objects[i].y) {
+        ctr++;
+      }
+    }
+    return ctr;
 }
+
+//prototype property:
+    /* 
+        Every function in JS has a prototype property,
+        which is empty by default. 
+        It is an object blueprint where you can add methods and properties to the prototpye,
+        accessible to all instances of that function. 
+        Useful for inheritance.     
+    */
+
+    function Fruit(type) {
+        this.type = type;
+        this.color = 'unknown';
+    }
+
+    Fruit.prototype.getInformation = () => {
+        return 'This ' + this.type + ' is ' + this.color + '.';
+    }
+
+    let lime = new Fruit('Mexican Lime');
+        console.log(lime.getInformation());
+    lime.color = 'green';
+        console.log(lime.getInformation());
+
+
+    //with objects:
+        let lime = {
+            type: 'Mexican lime',
+            color: 'green',
+            getInformation: function() {
+                return 'This ' + this.type + ' is ' + this.color + '.';
+            }
+        }
+
+        console.log(lime.getInformation());
+        lime.color = 'yellow';
+        console.log(lime.getInformation());
+
+
+
+//Singleton Class Using a Function
+/* 
+    singleton class is a design pattern that restricts a class
+    to a single instance. When we assign the value of new function() {}
+    to a variable, the following happens:
+    1) Define an anonymous constructor function.
+    2) Invoke the anonymous constructor function with the new keyword.
+*/
+
+let lime = new function() {
+    this.type = 'Mexican lime';
+    this.color = 'green';
+    this.getInformation = function() {
+        return 'This ' + this.type + ' is ' + this.color + '.';
+    };   
+}
+
+console.log(lime.getInformation());
+lime.color = 'yellow';
+console.log(lime.getInformation());
+
+/* 
+    Classes:
+        Use class declaration.     
+    
+*/
+class Polygon {
+    constructor(height, width) {
+        this.height = height;
+        this.width = width;
+    }
+}
+
+let p = new Polygon(1,2);
+console.log('Polygon p: ', p);
+
+/*
+ * Implement a Polygon class with the following properties:
+ * 1. A constructor that takes an array of integer side lengths.
+ * 2. A 'perimeter' method that returns the sum of the Polygon's side lengths.
+ */
+
+    class Polygon {
+        constructor(sides) {
+            this.sides = sides;
+        }
+        perimeter() {
+            return this.sides.reduce(function(a,b) {
+                return a + b
+            });
+        }
+    }
+
+/* Inheritance
+    Create an object prototype/class that is an extension of 
+    another object prototype or class. 
+*/
