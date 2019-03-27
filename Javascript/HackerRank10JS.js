@@ -517,3 +517,70 @@ console.log('Polygon p: ', p);
     Create an object prototype/class that is an extension of 
     another object prototype or class. 
 */
+class Rectangle {
+    constructor(w, h) {
+        this.w = w;
+        this.h = h;
+    }
+}
+
+/*
+ *  Write code that adds an 'area' method to the Rectangle class' prototype
+ */
+Rectangle.prototype.area = function () {
+    return (this.w * this.h);
+}
+
+/*
+ * Create a Square class that inherits from Rectangle and implement its class constructor
+ */
+class Square extends Rectangle{
+    constructor(s) {
+        super(s);
+        this.h = s;
+        this.w = s;
+    }
+}
+
+/* 
+    Write a function that takes in an array of numbers and outputs the average of all the numbers. 
+    Input: [1,4,7]
+    Output: 4
+
+    Input: [10,5]
+    Output: 7.5
+
+    Input: [1.5, 3, 2.5, 1]
+    Output: 2
+*/
+
+ const average = (numArr) => {
+     let sum = 0;
+     for(let i = 0; i < numArr.length; i++) {
+         sum += numArr[i];
+     }
+     return sum / numArr.length;
+ }
+
+/* 
+Template Literals
+*/ 
+
+/*
+ * Determine the original side lengths and return an array:
+ * - The first element is the length of the shorter side
+ * - The second element is the length of the longer side
+ * 
+ * Parameter(s):
+ * literals: The tagged template literal's array of strings.
+ * expressions: The tagged template literal's array of expression values (i.e., [area, perimeter]).
+ */
+function sides(literals, ...expressions) {
+    //destructuring of arrays
+    const [a, p] = expressions;
+    const root = Math.sqrt((p*p) - (16*a));
+    const s1 = (p + root)/4;
+    const s2 = (p + root)/4;
+
+    return ([s2,s1])
+}
