@@ -5,3 +5,5 @@
 3) Pseudocode
 4) Talk through every step and show your thought process.
 5) Educated Guess/explanined answer is better than saying "I'm not sure" or "I don't know"
+
+https://khan4019.github.io/front-end-Interview-Questions/

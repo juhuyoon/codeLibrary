@@ -582,5 +582,5 @@ function sides(literals, ...expressions) {
     const s1 = (p + root)/4;
     const s2 = (p + root)/4;
 
-    return ([s2,s1])
+    return ([s2,s1]);
 }
