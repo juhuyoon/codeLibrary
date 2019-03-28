@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Rock Paper Scissors Part 2
+  </title>
+</head>
+
+<body>
+
+  <div id = "game">
+
+    <p id ="directions-text">Press r, p or s to start playing!</p>
+    <p id="userchoice-text"></p>
+    <p id="computerchoice-text"></p>
+    <p id="wins-text"></p>
+    <p id="losses-text"></p>
+    <p id="ties-text"></p>
+          
+  </div>
+
+  <script type="text/javascript">
+    // Creates an array that lists out all of the options (Rock, Paper, or Scissors).
+    var computerChoices = ["r", "p", "s"];
+    var wins = 0; 
+    var losses = 0;
+    var ties = 0;
+    
+    // This function is run whenever the user presses a key.
+    document.onkeyup = function(event) {
+      // Determines which key was pressed.
+      var userGuess = event.key;
+
+      console.log(userGuess);
+      // Randomly chooses a choice from the options array. This is the Computer's guess.
+      var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+      console.log(computerGuess)
+      if ((userGuess === 'r') ||(userGuess === 'p') ||(userGuess === 's')) {
+        if ((userGuess === "r" && computerGuess === computerChoices[2]) ||
+           (userGuess === "p" && computerGuess === computerChoices[0]) ||
+           (userGuess === "s" && computerGuess === computerChoices[1])) {
+             wins++;
+             console.log("Wins" + wins);
+           }
+           else if (userGuess === computerGuess) {
+             ties++;
+             console.log("Ties" + ties);
+           }
+           else {
+             losses++;
+             console.log("Losses" + losses);
+           }
+        document.getElementById("userchoice-text").textContent = ("You chose: " + userGuess);
+        document.getElementById("computerchoice-text").textContent = ("The computer chose: " + computerGuess);
+        //computerChoiceText.textContent = "The computer chose: " + computerGuess; if we create the var computerChoiceText = "computerchoice-text"
+        document.getElementById("wins-text").textContent = ("Wins: " + wins);
+        document.getElementById("losses-text").textContent = ("Loses: " + losses);
+        document.getElementById("ties-text").textContent = ("Ties: " + ties);
+
+
+      }
+      
+    };
+  </script>
+
+</body>
+
+</html>
