@@ -615,3 +615,36 @@ function getDayName(dateString) {
     const weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     return weekDays[day.getDay()];
 }
+
+function regexVar(str) {
+ //  ^ => first item matches:
+// () => stores matching value captured within
+// [aeiou] => matches any of the characters in the brackets
+// . => matches any character:
+// + => for 1 or more occurrances (this ensures str length > 3)
+// \1 => matches to previously stored match. 
+    // \2 looks for matched item stored 2 instances ago 
+    // \3 looks for matched item stored 3 ago, etc
+
+//  $ ensures that matched item is at end of the sequence
+
+let re = /^([aeiou]).+\1$/;
+    return re;
+}
+
+/* Write a function that takes in an input and returns true if it’s an integer and false otherwise.
+
+Ex:
+Input: "7"
+Output: false
+
+Input: 7
+Output: true
+
+Input: 4.3
+Output: false
+*/
+
+const isInt = input => {
+    return parseInt(input) === input;
+}
