@@ -594,3 +594,24 @@ function sides(literals, ...expressions) {
 function modifyArray(nums) {
     return nums.map(n => n = (n % 2 == 0) ? n * 2 : n * 3);
 }
+
+/* Bitwise Operators*/
+function getMaxLessThanK(n, k) {
+    let max_anb = 0;
+    for (let b = n; b > 0; b--) {
+        for (let a = b - 1; a > 0; a--) {
+            if ((a & b) < k && (a & b) > max_anb) {
+                max_anb = (a & b);
+            }
+        }
+    }
+    return max_anb;
+}
+
+// The days of the week are: "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
+function getDayName(dateString) {
+    // Write your code here
+    const day = new Date(dateString);
+    const weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    return weekDays[day.getDay()];
+}
