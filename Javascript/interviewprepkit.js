@@ -40,3 +40,19 @@ For example, c = [0, 1, 0, 0, 0, 1, 0] indexed from 0...6.
 The number on each cloud is its index in the list so she must avoid the clouds are indexes 1 and 5. 
 She could follow the following two paths: 0 -> 2 -> 4 -> 6 or 0 -> 2 -> 3 -> 4 -> 6.
  The first path takes 3 jumps while the second takes 4.*/
+
+ function jumpingOnClouds(c) {
+    let count = 0;
+    let i = 0;
+    while(true) {
+        if((i + 2 < c.length) && (c[i+2] === 0)) {
+            i += 2;
+        }  else if((i+1 < c.length)) {
+            i++;
+        } else {
+            break;
+        }
+        count++;
+    }
+    return count;
+ }
