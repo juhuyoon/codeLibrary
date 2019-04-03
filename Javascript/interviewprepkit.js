@@ -56,3 +56,48 @@ She could follow the following two paths: 0 -> 2 -> 4 -> 6 or 0 -> 2 -> 3 -> 4 -
     }
     return count;
  }
+
+ /* 
+ Gary is an avid hiker. He tracks his hikes meticulously, paying close attention to small details like topography. During his last hike he took exactly n steps. For every step he took, he noted if it was an uphill, U, or a downhill, D step. Gary's hikes start and end at sea level and each step up or down represents a 1 unit change in altitude. We define the following terms:
+
+A mountain is a sequence of consecutive steps above sea level, starting with a step up from sea level and ending with a step down to sea level.
+A valley is a sequence of consecutive steps below sea level, starting with a step down from sea level and ending with a step up to sea level.
+Given Gary's sequence of up and down steps during his last hike, find and print the number of valleys he walked through. For example, if Gary's path is s = [DDUUUUDD], he first enters a valley 2 units deep. Then he climbs out an up onto a mountain 2 units high. Finally, he returns to sea level and ends his hike.
+ */
+
+ const countingValeys = (n, s) => {
+     let h = 0;
+     let count = 0;
+
+     for(let i = 0; i < n; i++) {
+         if(s.charAt(i) === 'D' && h === 0) {
+             count++;
+             h--;
+         } else if(s.charAt(i) === 'D' && h !== 0) {
+             h--;
+         } else if(s.charAt(i) === 'U') {
+             h++;
+         }
+     }
+     return count;
+ }
+
+ /* Repeated String 
+ Lilah has a string, s, of lowercase English letters that she repeated infinitely many times. 
+ Given an integer, n, find and print the number of letter a's in the first n letters of Lilah's infinite string.
+  s = string to repeat
+  n = number of characters to consider. 
+ */
+
+ const repeatedStrings = (s, n) => {
+    let x = Math.floor(n / s.length);
+    let count = (s.split("a").length-1) * x; //-1 since it's in an array. 
+    let rem = n % s.length;
+
+    for(let i = 0; i < rem; i++) {
+        if(s.charAt(i) === 'a') {
+            count++;
+        }
+    }
+    return count;
+}

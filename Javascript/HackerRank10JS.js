@@ -648,3 +648,40 @@ Output: false
 const isInt = input => {
     return parseInt(input) === input;
 }
+
+/* Write a funciton that takes an array of integers as an input and outputs the first duplicate. 
+x:
+Input: [ 2, 5, 6, 3, 5 ]
+Output: 5
+
+Input: [ 1, 3, 4, 1, 3, 4 ]
+Output: 1
+
+Input: [ 2, 4, 5 ]
+Output: undefined 
+*/
+
+const findDuplicates = (arr) => {
+    for(let i = 0; i < arr.length; i++) {
+        for(var j = 0; j < i; j++) {
+            if(arr[i] === arr[j]) {
+                return arr[i];
+            } 
+        }
+    }
+}
+
+//better
+// key is dups[val], value = true, 
+//once the dups[val] = true shows up, return that value. 
+const findDuplicates = (arr) => {
+    const dups = {};
+    for(let i = 0; i < arr.length; i++) {
+        const val = arr[i];
+        if(dups[val]) {
+            return val;
+        } else {
+            dups[val] = true;
+        }
+    }
+}
