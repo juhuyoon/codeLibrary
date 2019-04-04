@@ -101,3 +101,16 @@ Given Gary's sequence of up and down steps during his last hike, find and print 
     }
     return count;
 }
+
+/* 2dArray
+Given a 6x6 2D array arr,
+Define an hourglass in A to be a subset of values with indices falling in this pattern arr's graphical representation:
+There are 16 hourglasses in arr, and an hourglass sum is the sum of an hourglass's values.
+Calculate the hourglass sum for every hourglass in arr, then print the maximum hourglass sum.
+*/
+
+const hourGlassSum = (arr) => {
+    let f = Math.pow((arr.length - 2),2);
+    let max;
+    let sum;
+}
