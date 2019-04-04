@@ -113,4 +113,8 @@ const hourGlassSum = (arr) => {
     let f = Math.pow((arr.length - 2),2);
     let max;
     let sum;
+
+    for(let i =0; i < f; i++) {
+        
+    }
 }
