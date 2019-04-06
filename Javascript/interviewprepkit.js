@@ -115,6 +115,46 @@ const hourGlassSum = (arr) => {
     let sum;
 
     for(let i =0; i < f; i++) {
-        
+        if (i < 4) {
+            sum = arr[0][i] + arr[0][i + 1] + arr[0][i + 2];
+            sum += arr[1][i + 1];
+            sum += arr[2][i] + arr[2][i + 1] + arr[2][i + 2];
+          } else if (i < 8 && i >= 4) {
+            sum = arr[1][i - 4] + arr[1][i - 3] + arr[1][i - 2];
+            sum += arr[2][i - 3];
+            sum += arr[3][i - 4] + arr[3][i - 3] + arr[3][i - 2];
+          } else if (i < 12 && i >= 8) {
+            sum = arr[2][i - 8] + arr[2][i - 7] + arr[2][i - 6];
+            sum += arr[3][i - 7];
+            sum += arr[4][i - 8] + arr[4][i - 7] + arr[4][i - 6];
+          } else if (i >= 12) {
+            sum = arr[3][i - 12] + arr[3][i - 11] + arr[3][i - 10];
+            sum += arr[4][i - 11];
+            sum += arr[5][i - 12] + arr[5][i - 11] + arr[5][i - 10];
+          }
+          if (sum > max) {
+            max = sum;
+          } else if (!max) {
+            max = sum;
+          }
     }
+    return max;
+}
+
+//Left Rotation
+/* 
+A left rotation operation on an array shifts each of the array's elements 1 unit to the left. For example, if 2 left rotations are performed on array [1, 2, 3, 4, 5], then the array would become [3, 4, 5, 1, 2].
+
+Given an array a of n integers and a number, d, perform d left rotations on the array. Return the updated array to be printed as a single line of space-separated integers.
+*/
+
+const rotLeft = (a, d) => {
+    a = a.concat(a.splice(0,d));
+    return a;
+}
+
+//rotating to the right:
+const rotRight = (a, d) => {
+    a = a.concat(a.splice(0, a.length -d));
+    return a;
 }
