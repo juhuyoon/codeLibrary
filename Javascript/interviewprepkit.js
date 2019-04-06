@@ -158,3 +158,58 @@ const rotRight = (a, d) => {
     a = a.concat(a.splice(0, a.length -d));
     return a;
 }
+
+/* 
+Copying arrays and objects in JS
+JS variables, when you save them in another variable, are simply storing the reference.
+This means that when you modify the second variable it also modifies the original copy of the array.
+*/
+
+let arr1 = ['a', 'b', 'c', 'd'];
+let arr2 = arr1; //arr2 now is holding the arr1 objects.
+arr2.push('e');
+console.log(arr1); //['a', 'b', 'c', 'd', 'e'];
+
+//can use .slice() to make a shallow copy of a portion of an array into a new array object. 
+//original array will NOT be modified. 
+
+let arr3 = ['a', 'b', 'c', 'd'];
+let arr4 = arr3.slice();
+arr4.push('e');
+console.log(arr3); //['a', 'b', 'c', 'd'];
+console.log(arr4); //['a', 'b', 'c', 'd', 'e'];
+
+/* If the array has objects, .slice() does not work. 
+If you slice, it is only a shallow copy of the array as the objects inside of the array are only references to the existing object.
+Copy each object in the array individually over into the new array.
+Use JSON.parse(JSON.strinigfy(arr)) in order to create a copy and NOT a reference.
+*/
+
+let arr5 = [{a: 1}, {b:2}, {c:3}];
+let arr6 = JSON.parse(JSON.stringify(arr5));
+arr6[0].a = 5;
+console.log(arr5[0].a) //1
+console.log(arr5); //[{a: 1}, {b:2}, {c:3}];
+console.log(arr6); //[{a: 5}, {b:2}, {c:3}];
+
+//This method CANNOT be used to copy object methods which are saved in the array/object.
+/*Wont' be able to copy [
+    {a: function a() {
+    return true;
+}}, {b:2}, {c:3}
+]
+//would skip over the first object a and return [{b:2}, {c:3}]
+*/
+
+//New Year Chaos
+/* 
+It's New Year's Day and everyone's in line for the Wonderland rollercoaster ride! There are a number of people queued up, and each person wears a sticker indicating their initial position in the queue. Initial positions increment by 1 from 1 at the front of the line to n at the back.
+
+Any person in the queue can bribe the person directly in front of them to swap positions. If two people swap positions, they still wear the same sticker denoting their original places in line. One person can bribe at most two others. For example, if n = 8 and Person 5 bribes Person 5, the queue will look like this: 1, 2, 3, 5, 4, 6, 7, 8.
+
+Fascinated by this chaotic queue, you decide you must know the minimum number of bribes that took place to get the queue into its current state!
+*/
+
+const minimumBribes = (q) => {
+    
+}
