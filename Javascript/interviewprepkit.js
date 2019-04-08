@@ -65,7 +65,7 @@ A valley is a sequence of consecutive steps below sea level, starting with a ste
 Given Gary's sequence of up and down steps during his last hike, find and print the number of valleys he walked through. For example, if Gary's path is s = [DDUUUUDD], he first enters a valley 2 units deep. Then he climbs out an up onto a mountain 2 units high. Finally, he returns to sea level and ends his hike.
  */
 
- const countingValeys = (n, s) => {
+ const countingValues = (n, s) => {
      let h = 0;
      let count = 0;
 
@@ -266,3 +266,33 @@ const minimumSwaps = (n, arr) => {
     return swaps;
 }
 
+/* 
+Array Manipulation 
+Starting with a 1-indexed array of zeros and a list of operations, for each operation add a value to each of the array element between two given indices, inclusive. Once all operations have been performed, return the maximum value in your array.
+
+*/
+
+/* Verify if a number is a prime number */
+const isPrime = (n) => {
+    let divisor = 2;
+    if(n === 2) {
+        return true;
+    }
+
+    while(n > 2) {
+        if(n % divisor !== 0) {
+            return true;
+            divisor++;
+        } else {
+            return false;
+        }
+    }
+}
+
+const fibonacci = n => {
+    let arr = [0,1];
+    for(let i = 2; i < n + 1; i++) {
+        arr.push(arr[i-2] + arr[i-1]);
+    }
+    return arr[n]
+}
