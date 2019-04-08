@@ -220,11 +220,11 @@ const minimumBribes = (q) => {
     while(swapped === true) {
         swapped = false;
         for(let i = 0; i < q.length; i++) {
-            if(q[i] - 1 > 3 && firstRun) {
+            if(q[i] - i > 3 && firstRun) {
                 tooChaotic = true;
             }
 
-            if(q[i] && q[i+1] && q[i] > q[i+1]) {
+            if(q[i] && q[i] > q[i+1]) {
                 let temp = q[i];
                 q[i] = q[i+1];
                 q[i+1] = temp;
@@ -236,7 +236,6 @@ const minimumBribes = (q) => {
     }
 
     if(tooChaotic) {
-        console.log(bribes);
         console.log("Too chaotic");
     } else {
         console.log(bribes);
