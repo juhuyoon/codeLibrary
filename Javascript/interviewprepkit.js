@@ -241,3 +241,28 @@ const minimumBribes = (q) => {
         console.log(bribes);
     }
 }
+
+/* Minimum Swaps 2:
+    You are given an unordered array consiting of consecutive integers [1, 2, 3, ..., n] without any duplicates. You are allowed to swap any two elements. You need to find the minimum number of swaps required to sort the array in ascending order.
+
+    for each position in the array
+    if a number is in the wrong location
+        find the position the number should go
+        perform a swap
+*/
+const minimumSwaps = (n, arr) => {
+    let swaps = 0;
+    for(let i = 0, l = Math.max(...arr); i < l; i++) {
+        while(arr[i] !== i+1) {
+            var temp;
+            temp = arr[i];
+            arr[i] = arr[arr[i]-1];
+            arr[temp-1] = temp;
+            if(!arr[i]) 
+            break;
+            swaps++;
+        }
+    }
+    return swaps;
+}
+
