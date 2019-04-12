@@ -303,3 +303,29 @@ function fibRecursive(n) {
     }
     return fibRecursive(n - 1) + fibRecursive(n - 2);
 }
+
+/* 
+Hash Table Ransom Notes:
+harold is a kidnapper who wrote a ransom note, but now he is worried it will be traced back to him through his handwriting.
+he found a magazine and wants to know if he can cut out whole words from it and use them to create an untraceable replica of his rnasom note.
+The words in his note are case-sensitive and he must use only whole words available in the magazine.
+He cannot use substrings or concatentation to create the words he needs.
+Given the words in the magazine and the words in the ransom note, print Yes if he can replicate his ransom note exactly using whole words from the magazine;
+other print no.
+*/
+
+const checkMagazine = (magazine, note) => {
+    for(let i = 0; i < note.length; i++) {
+        let finder = magazine.indexOf(note[i])
+        if(finder != -1) {
+            magazine[finder] = '';
+            if(i === note.length - 1) {
+                console.log("Yes");
+            }
+        } else {
+            console.log("No");
+            break;
+        }
+    }
+}
+
