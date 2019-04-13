@@ -329,3 +329,29 @@ const checkMagazine = (magazine, note) => {
     }
 }
 
+/* 
+Given two strings, determine if they share a common substring. A substring may be as small as one character.
+For example, the words "a", "and", "art" share the common substring . The words "be" and "cat" do not share a substring.
+*/
+
+function processData(input) {
+    'use strict';
+    const arr = input.split('\n'); 
+    const t = parseInt(arr.shift()); 
+    const len = arr.length; 
+    const alph = 'abcdefghijklmnopqrstuvwxyz'; 
+    for(let i=0;i<len;i+=2){ 
+        let a = arr[i];
+        let b = arr[i+1];
+        for(let x of alph){ 
+            let ai = a.indexOf(x); 
+            let bi = b.indexOf(x);
+            if(ai > -1 && bi > -1){ 
+                console.log('YES'); 
+                break; 
+            }
+            if(x === 'z'){ 
+                console.log('NO');
+            }
+        }
+    }

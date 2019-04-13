@@ -729,7 +729,9 @@ function removeDuplicate(arr){
     }
     return outArr;
   }
-
+var myfunction = function() {
+    
+}
     
 //merge two sorted array
 function mergeSortedArray(a, b){
