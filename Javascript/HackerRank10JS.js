@@ -730,7 +730,7 @@ function removeDuplicate(arr){
     return outArr;
   }
 var myfunction = function() {
-    
+
 }
     
 //merge two sorted array
@@ -765,3 +765,26 @@ function mergeSortedArray(a, b){
     return merged;
   }
   
+  //button creation:
+  var btn = document.createElement("Button");
+
+    btn.innerHTML = "0";
+    btn.id = "btn";
+    document.body.appendChild(btn);
+
+    btn.onclick = function() {
+        btn.innerHTML++;
+    }
+
+//buttonGrid
+    btn5.onclick = ()=>{
+        var originalbtn1 = btn1.innerHTML;
+        btn1.innerHTML = btn4.innerHTML;
+        btn4.innerHTML = btn7.innerHTML;
+        btn7.innerHTML = btn8.innerHTML;
+        btn8.innerHTML = btn9.innerHTML;
+        btn9.innerHTML = btn6.innerHTML;
+        btn6.innerHTML = btn3.innerHTML;
+        btn3.innerHTML = btn2.innerHTML;
+        btn2.innerHTML = originalbtn1;
+    }
