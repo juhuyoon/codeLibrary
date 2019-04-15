@@ -36,10 +36,10 @@ Cracking the Code Interview [the book](https://www.amazon.com/Cracking-Coding-In
 4) Technical Interviews and how to [approach](https://github.com/juhuyoon/codeLibrary/blob/master/Cracking%20the%20Code%20Interview/Technical_Questions.java) 
 
 Java[link] (https://github.com/juhuyoon/codeLibrary/tree/master/Java)
-1) Coursera Studies: [Java Solving problems with software](https://github.com/juhuyoon/codeLibrary/tree/master/Java/coursera/solving_problems_with_software)
-1a) Week One [link](https://github.com/juhuyoon/codeLibrary/tree/master/Java/coursera/solving_problems_with_software/week_one)
-1b) Week Two [link] (https://github.com/juhuyoon/codeLibrary/tree/master/Java/coursera/solving_problems_with_software/week_two)
-1c) Week Three [link] (https://github.com/juhuyoon/codeLibrary/tree/master/Java/coursera/solving_problems_with_software/week_three)
+1) Coursera Studies: [Java Solving problems with software](https://github.com/juhuyoon/codeLibrary/tree/master/Java/coursera/solving_problems_with_software)  
+1a) Week One [link](https://github.com/juhuyoon/codeLibrary/tree/master/Java/coursera/solving_problems_with_software/week_one)  
+1b) Week Two [link](https://github.com/juhuyoon/codeLibrary/tree/master/Java/coursera/solving_problems_with_software/week_two)  
+1c) Week Three [link](https://github.com/juhuyoon/codeLibrary/tree/master/Java/coursera/solving_problems_with_software/week_three)  
 
 
 Random Files 
