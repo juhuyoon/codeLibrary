@@ -334,25 +334,20 @@ Given two strings, determine if they share a common substring. A substring may b
 For example, the words "a", "and", "art" share the common substring . The words "be" and "cat" do not share a substring.
 */
 
-function processData(input) {
-    'use strict';
-    const arr = input.split('\n'); 
-    const t = parseInt(arr.shift()); 
-    const len = arr.length; 
-    const alph = 'abcdefghijklmnopqrstuvwxyz'; 
-    for(let i=0;i<len;i+=2){ 
-        let a = arr[i];
-        let b = arr[i+1];
-        for(let x of alph){ 
-            let ai = a.indexOf(x); 
-            let bi = b.indexOf(x);
-            if(ai > -1 && bi > -1){ 
-                console.log('YES'); 
-                break; 
-            }
-            if(x === 'z'){ 
-                console.log('NO');
-            }
-        }
-    }
+function twoStrings(s1, s2) {
+    const s1len = s1.length;
+    const s2len = s2.length;
+    let result = "NO";
+
+    if(s1len >= 1 
+        && s1len <= 100000
+        && s2len >= 1
+        && s2len <= 100000) {
+            //traverses each letter to see if one letter === in other string.
+            result = s1.split('')
+            //use filter to remove any character not present in the other string.
+                        .filter((el, key) => s2.indexOf(el) > -1)
+                        ? "YES" : "NO";
+        }   
+        return result;
 }
