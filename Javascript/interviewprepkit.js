@@ -333,6 +333,7 @@ const checkMagazine = (magazine, note) => {
 Given two strings, determine if they share a common substring. A substring may be as small as one character.
 For example, the words "a", "and", "art" share the common substring . The words "be" and "cat" do not share a substring.
 */
+//https://codeburst.io/learn-understand-javascripts-filter-function-bde87bce206
 
 function twoStrings(s1, s2) {
     const s1len = s1.length;
@@ -344,10 +345,10 @@ function twoStrings(s1, s2) {
         && s2len >= 1
         && s2len <= 100000) {
             //traverses each letter to see if one letter === in other string.
-            result = s1.split('')
+            result = (s1.split('')
             //use filter to remove any character not present in the other string.
                         .filter((el, key) => s2.indexOf(el) > -1)
-                        ? "YES" : "NO";
+                        .length > 0) ? "YES" : "NO";
         }   
         return result;
 }
