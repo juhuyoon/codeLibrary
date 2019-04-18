@@ -261,4 +261,49 @@ let data = [
   })
 
   //chaining map, filter, reduce
+  data = [
+    {
+      name: 'Butters',
+      age: 3,
+      type: 'dog'
+    },
+    {
+      name: 'Lizzy',
+      age: 6,
+      type: 'dog'
+    },
+    {
+      name: 'Red',
+      age: 1,
+      type: 'cat'
+    },
+    {
+      name: 'Joey',
+      age: 3,
+      type: 'dog'
+    },
+  ];
 
+  const getAge = (data) => {
+      let sum = 0;
+      for(let i = 0; i < data.length; i++) {
+          if(data[i].type === 'dog') {
+              let tempAge = data[i].age;
+              sum += (tempAge * 7);
+          }
+      }
+      return sum;
+  }
+  //getAges(data) = 84
+
+  //doing it with map, filter, reduce
+  let ages = data
+            .filter((animal) => {
+                return animal.type === 'dog';
+        }).map((animal) => {
+            return animal.age * 7;
+        }).reduce((sum, animal) => {
+            return sum + animal.age;
+        });
+
+        //ages = 84;
