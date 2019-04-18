@@ -194,3 +194,71 @@ console.table(ordered);
         //ternary function of same sorting list
         const ordered = inventors.sort((sorta,b) => a.year > b.year ? 1 : -1)
 
+const filters = () => {
+    let arr = [1,2,3,4,5,6];
+    let even = [];
+    //return only even numbers, 
+    //so return true if a number is even, false is not.
+    let even = arr.filter(el => {
+        return el % 2 === 0;
+    });
+    even = [2,4,6];
+}
+
+let data = [
+    {
+      country: 'China',
+      population: 1409517397,
+    },
+    {
+      country: 'India',
+      population: 1339180127,
+    },
+    {
+      country: 'USA',
+      population: 324459463,
+    },
+    {
+      country: 'Indonesia',
+      population: 263991379,
+    }
+  ]
+  let cities = data.filter(ele => {
+      ele.population > 500000000;
+  })
+
+  //ES6 simplification
+  let cities = data.filter(ele => ele.population > 50000000);
+
+  //reduce
+  var arr = [1,2,3,4];
+  let sum = arr.reduce((acc, val) => {
+    return acc + val;
+  }, 100); //adds up the array, but also starts at 100.
+  //so instead of sum = 10, it'll be sum = 110.
+
+  let data = [
+    {
+      country: 'China',
+      pop: 1409517397,
+    },
+    {
+      country: 'India',
+      pop: 1339180127,
+    },
+    {
+      country: 'USA',
+      pop: 324459463,
+    },
+    {
+      country: 'Indonesia',
+      pop: 263991379,
+    }
+  ]
+
+  let sum = data.reduce((acc, val) => {
+      return val.country == 'China' ? acc : acc + val.pop;
+  })
+
+  //chaining map, filter, reduce
+
