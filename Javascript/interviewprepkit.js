@@ -362,3 +362,16 @@ There are a number of different toys lying in front of him, tagged with their pr
 //subtract prices from total money  before no more money
 //won't buy others if we can't buy highest priced one.
 
+function processData(input) {
+    let setup = input.split("\n"),
+        params = setup[0].split(' ').map(Number),
+        toys = setup[1].split(' ').map(Number).sort((a,b) => a - b),
+        toyNum = params[0],
+        money = params[1],
+        total = 0;
+    while (money > 0 && total < toyNum) {
+        money -= toys[total];
+        total++;
+    }
+    console.log((total === toyNum) ? toyNum : total - 1);
+} 
