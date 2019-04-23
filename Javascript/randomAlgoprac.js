@@ -872,3 +872,34 @@ let elem = document.getElementById("res");
       alert("Line must ends with number.")
     }
   }
+
+  /* 
+Write a function that takes in a number and returns the corresponding day of the week.
+
+Ex:
+Input: 1
+Output: 'Monday'
+
+Input: 5
+Output: 'Friday'
+
+Input: 8
+Output: undefined
+
+*/
+
+const getDay = () => {
+    switch(num) {
+        case 1:
+        return 'Monday';
+        break;
+        case 2: 
+        return 'Tuesday';
+        break;
+        case 5:
+        return 'Friday';
+        default:
+        return undefined;
+        break;
+    }
+}
