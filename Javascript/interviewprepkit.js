@@ -375,3 +375,33 @@ function processData(input) {
     }
     console.log((total === toyNum) ? toyNum : total - 1);
 } 
+
+/* 
+Given two strings, a and b, that may or may not be of the same length, determine the minimum number of character deletions required to make a and b anagrams. 
+Any characters can be deleted from either of the strings.
+*/
+
+function getDeleteCountUsingIndexOf() {
+    var aChars = a.split("");
+    var bChars = b.split("");
+  
+    if (aChars.length > bChars.length) {
+      var outer = aChars;
+      var inner = bChars;
+    } else {
+      var outer = bChars;
+      var inner = aChars;
+    }
+  
+    var outerIndex = outer.length-1;
+    while (inner.length > 0 && outer.length > 0 && outerIndex >= 0) {
+      let innerIndex = inner.indexOf(outer[outerIndex]);
+      if (innerIndex !== -1) {
+        outer.splice(outerIndex, 1);
+        inner.splice(innerIndex, 1);
+      }
+      --outerIndex;
+    }
+  
+    return outer.length + inner.length;
+  }
