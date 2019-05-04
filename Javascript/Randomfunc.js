@@ -352,3 +352,15 @@ var writeFileCallback = function(err) {
 };
 
 fs.writeFile("log.txt", "Log message!", writeFileCallback);
+
+//with ES6
+const logBefore = str => {
+  console.log(str);
+  return new Promise(resolve =>  {
+    resolve();
+  });
+}
+
+logBefore('hi').then(() => {
+  
+});
