@@ -53,3 +53,28 @@ class Bird extends Animal {
         this.mate
     }
 }
+
+class Programmer {
+    constructor(name, position, age, language) {
+        this.name = name;
+        this.position = position;
+        this.age = age;
+        this.language = language;
+    }
+
+printInfo() {
+    console.log(this.name);
+}
+}
+
+const bob = new Programmer("Bob Smith", 'supreme', 33, 'js');
+bob.printInfo();
+
+class SrProgrammer extends Programmer {
+    constructor(name, position, age, language, yearsExp) {
+        super(name, position, age, language);
+
+        this.yearsExp = yearsExp;
+    }
+    printInfo();
+}
