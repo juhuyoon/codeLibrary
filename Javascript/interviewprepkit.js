@@ -511,3 +511,30 @@ request('https://api.agency.gov/data/fiscal?format=json', function(err, res, bod
         }
     }
 });
+
+/*
+Write a function that takes an array of numbers and returns an array with each number doubled. 
+
+Ex:
+Input: [1,2,3]
+Output: [2,4,6]
+
+Input: [-1,-2,-3]
+Output: [-2, -4, -6]
+*/
+
+const numDouble = (arr) => {
+    let newArr = [];
+
+    for(let i = 0; i < arr.length; i++) {
+        let newNum = arr[i] * 2;
+        newArr.push(newNum);
+    }
+    return newArr;
+}
+
+const arrDouble = (arr) => {
+    const result = arr.map(i => i * 2);
+    return result;
+}
+
