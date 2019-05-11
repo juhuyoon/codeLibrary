@@ -1,10 +1,11 @@
 {
-  "name": "Docker",
+  "name": "dockerrds",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "RDSAWSmysql.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha './test/**.spec.js'",
+    "start": "node greatBay.js"
   },
   "keywords": [],
   "author": "",
@@ -13,5 +14,9 @@
     "dotenv": "^8.0.0",
     "inquirer": "^6.3.1",
     "mysql": "^2.17.1"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4"
   }
 }

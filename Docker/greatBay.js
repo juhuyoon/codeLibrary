@@ -1,21 +1,16 @@
 //mysql -h YOUR_AWS_RDS_ENDPOINT -u YOUR_AWS_RDS_USERNAME -p
+require('dotenv').config();
 
 var mysql = require("mysql");
 var inquirer = require('inquirer');
-require('dotenv').config();
+var config = require('./config');
 
 var connection = mysql.createConnection({
-  host: process.env.DB_HOST,
-
-  // Your port; if not 3306
-  port: 3306,
-
-  // Your username
-  user: process.env.DB_USER,
-
-  // Your password
-  password: process.env.DB_PASS, //mypassword
-  database: process.env.DB_DATA
+  host: config.dbHost,
+  port: config.port,
+  user: config.dbUser,
+  password: config.dbPass,
+  database: config.dbData
 });
 
 connection.connect(function(err) {

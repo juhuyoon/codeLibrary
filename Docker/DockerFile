@@ -8,4 +8,4 @@ RUN npm install
 
 COPY . . 
 
-CMD ['node', 'RDSAWSmysql.js']
+CMD ['node', 'greatBay.js']
