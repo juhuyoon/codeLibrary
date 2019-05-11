@@ -1,3 +1,4 @@
-/./.vscode
-/../Docker/node_modules
-/../Docker/.env
+.DS_store
+.env
+.vscode
+node_modules
