@@ -1,0 +1,3 @@
+./.vscode
+../Docker/node_modules
+../Docker/.env
