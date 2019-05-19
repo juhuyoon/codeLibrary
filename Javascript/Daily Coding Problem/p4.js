@@ -10,3 +10,19 @@ You can modify the input array in-place.
 
 //Linear time and constant space. O(n) time and O(n) space.
 
+const example1 = [3, 4, -1, 1];
+const example2 = [1, 2, 0];
+
+const p4 = (input) => {
+    const positives = input.filter(number => number > 0);
+    let i =1;
+    while(i <= Math.max(...positives) +1) {
+        if(!positives.includes(i)) {
+            return i;
+            i++;
+        }
+    }
+}
+
+console.log(p4(example1));
+console.log(p4(example2));
