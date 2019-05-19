@@ -24,3 +24,23 @@ const p2 = (list) => {
 
 
 console.log(p2([1, 2, 3, 4, 5]));
+
+
+//faster
+const p2Faster = (list) => {
+    let mult = [];
+    let product = 1;
+
+    for(let i = 0; i < list.length; i++) {
+        for(let j = 0; j < list.length; j++) {
+            if(j !== i) {
+                product *= list[j];
+            }
+            mult[i] = product;
+            product = 1;
+        }
+        return mult;
+    }
+}
+
+console.log(p2Faster([1,2,3,4,5]));
