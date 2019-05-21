@@ -33,5 +33,37 @@ const tree =                        new Node(0,
                  1,              1) ,            new Node(0)));
 
 const countUnival = (root) => {
-   
+   let numUnival = 0;
+
+   const processNode = (node, value) => {
+      if(node.right || node.left) {
+         if(node.right) {
+            if(node.right.val === value) {
+               if(processNode(node.right, value)) {
+                  numUnival++;
+               } 
+            } else {
+               return processNode(node.right, value);
+            }
+         }
+
+         if(node.left) {
+            if(node.left.val === value) {
+               if(processNode(node.left, value)) {
+                  numUnival++;
+               }
+            } else {
+               return processNode(node.left, value);
+            }
+         }
+      } else {
+         numUnival++;
+         return true;
+      }
+   }
+
+   processNode(root, root.val);
+   return numUnival;
 }
+
+console.log(countUnival(tree));
