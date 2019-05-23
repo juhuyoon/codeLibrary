@@ -28,4 +28,22 @@ const decodeCount = (message) => {
             array1.push(message.charAt(i) + message.charAt(i+1));
         }
     }
+
+
+    //Split1, start at index 1
+    array2.push(message.charAt(0));
+    for (var i = 1; i < message.length; i+=2) {
+      // If we have enough letters left to make a par
+      if(message.charAt(i+1)){
+        array2.push(message.charAt(i) + message.charAt(i+1))
+      } else {
+        array2.push(message.charAt(i))
+      }
+      
+    }
+    console.log(array1, array2)
+    // base : one way to solve
+    // Every time we encounter an index that is <= 26, that's another way 
+    const nbWays = 1 + array1.concat(array2).filter( x => x <= 26 && x >= 10).length ;
+    return nbWays
 }
