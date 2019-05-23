@@ -652,3 +652,29 @@ const flipDigits = (num) => {
     * Math.sign(num);
 };
 
+
+/* 
+
+*/
+const input = "Tammer Galal"
+
+const lowercase = (input) => {
+    let storeTemp = '';
+
+    for(let i = 0; i < input.length; i++) {
+        if(str[i] !== ' '){
+            storeTemp += input[i];
+        }
+    }
+    return storeTemp.toLowerCase();
+}
+
+console.log(lowercase(input));
+
+/* Other way to do it: */
+var singleWord = function (str){
+
+    var newStr = str.toLowerCase().replace(/\s/g,'')
+  
+    return newStr;
+  }
