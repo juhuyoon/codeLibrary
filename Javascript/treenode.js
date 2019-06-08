@@ -29,9 +29,10 @@ const tree = new Tree('CEO')
 
 tree._root
 
-Tree.prototype.traverseDF = function (cb) { //depth-first search
+// traverseDF(cb) for depth-first search
+Tree.prototype.traverseDF = function (cb) { 
   (function recurse (currentNode) {
-    for(let i = 0; length = currentNode.children.length; i < length; i++ ) {
+    for(let i = 0; length = currentNode.children.length; i < length; i++) {
       recurse(currentNode.children[i]);
     }
     cb(currentNode);
@@ -42,7 +43,8 @@ tree.traverseDF(function(node) {
   console.log(node.data)
 });
 
-Tree.prototype.traverseBF = function (cb) { //breadth-first search
+// traverseBF(cb) for breadth-first search
+Tree.prototype.traverseBF = function (cb) { 
   const queue = new Queue();
 
   queue.enqueue(this._root);
@@ -61,3 +63,15 @@ Tree.prototype.traverseBF = function (cb) { //breadth-first search
 tree.traverseBF(function(node) {
   console.log(node.data)
 });
+
+// contains(cb, traversal) to search for a particular value in our tree.
+// This is to use either of the traversal tree methods. 
+Tree.prototype.contains = function(cb, traversal) {
+  traversal.call(this, callback);
+}
+
+tree.contains(function(node) {
+  if(node.data === 'two') {
+    console.log(node);
+  }
+}, tree.traverseBF);
