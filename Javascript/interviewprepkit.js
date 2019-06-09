@@ -759,5 +759,42 @@ const two_sum = (list, k) => {
     }
 }
 
-//Runtime O(n)
 
+/*
+Asked by Apple.
+Implement a job scheduler which takes in a function f and an integer n, and calls f after n milliseconds.
+*/
+
+const fn = () => {
+    console.log('ring');
+}
+
+//setTimeout is for JS already.
+setTimeout(fn, 5000);
+
+
+
+/* 
+If given two integer arrays and a target value, 
+Write a function that takes in these three as parameters and returns a pair of numbers that can make a sum from the two arrays that's closest to the target value.
+The two given arrays have the same length;
+e.g.: 
+[ -1, 3, 8, 2, 9, 5];
+[4, 1, 2, 10, 5, 20];
+target: 24
+
+(5, 20) and (3,20) 
+*/
+
+// 1 Brute force solution:
+    //O(n^2) where you for loop twice and add the pairs of numbers and compare to the target. 
+
+//2 Simpler version of the problem: 
+    //Initialize an empty set, go through elements in the first array and put into this set.
+    //Go through elements of the second array, check if there's a pair that adds to the exact target. 
+    //O(n) as you only have to go through each array once.
+    //to either get the target number of get the closest number to it, each search would be of O(n), so the time would be
+    //O(x * n), where x is the number of times you run it to get those closest values, but x is negligible. 
+
+//3) Think with simpler examples => Try noticing a pattern. 
+    
