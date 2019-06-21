@@ -817,7 +817,7 @@ Hint: Try preprocessing the dictionary into a more efficient data structure to s
 */
 const Words = ['foo', 'bar', 'fool'];
 const autocomplete = (s) => {
-    let results = "";
+    let results = new Set();
 
     for(let word in Words) {
         if (word.startsWith(s)) {
@@ -826,4 +826,55 @@ const autocomplete = (s) => {
     }
     return results; 
 }
+
+//Solving the autocomplete with TrieNodes
+//Will be in the TrieNodes.js
+
+/* 
+This problem was asked by Amazon.
+
+There exists a staircase with N steps, and you can climb up either 1 or 2 steps at a time.
+Given N, write a function that returns the number of unique ways you can climb the staircase.
+The order of the steps matters.
+
+For example, if N is 4, then there are 5 unique ways:
+
+1, 1, 1, 1
+2, 1, 1
+1, 2, 1
+1, 1, 2
+2, 2
+What if, instead of being able to climb 1 or 2 steps at a time, you could climb any number from a set of positive integers X?
+For example, if X = {1, 3, 5}, you could climb 1, 3, or 5 steps at a time.
+*/
+
+// Recognize that at the end of this, the stars is a fibonacci sequence.
+const stairs = (n) => {
+    let arr = [];
+    if (n <= 1) {
+        return 1
+    }
+    for(let i = 1; i < (n+1); i++) {
+        arr.push(arr[i-2] + arr[i-1])
+    }
+    return arr;
+}
+stairs()
+
+// What if I wanted to specify the steps taken?
+const stairsSteps = (n, X) => {
+    if(n < 0) {
+        return 0
+    } else if( n === 0) {
+        return 1 
+    } else {
+        const sum = () => {
+            for (let p1 in X) {
+                stairsSteps(n - p1, X)
+            }
+        }
+        return sum 
+    }
+}
+stairsSteps();
 
