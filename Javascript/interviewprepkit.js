@@ -878,3 +878,36 @@ const stairsSteps = (n, X) => {
 }
 stairsSteps();
 
+/* 
+This problem was asked by Amazon.
+
+Given an integer k and a string s, find the length of the longest substring that contains at most k distinct characters.
+
+For example, given s = "abcba" and k = 2, the longest substring with k distinct characters is "bcb".
+*/
+
+const distinctCount = (str, k) => {
+    const allsubString = [];
+    let longestSubstring = "";
+
+    for(let i =0; i < str.length; i+=1) {
+        let currentSubString = "";
+        let distinctCount = 0;
+        for(let j = i; j < str.length; j+=1) {
+            if(!currentSubString.includes(str.charAt(j))) {
+                distinctCount++;
+                if(distinctCount > k) {
+                    break;
+                }
+            }
+            currentSubString += str.charAt(j);
+        }
+        longestSubstring = currentSubString.length > longestSubstring.length ? currentSubString : longestSubstring;
+        allSubString.push(currentSubString);
+    }
+    console.log({allSubString})
+    return longestSubstring
+}
+
+
+
