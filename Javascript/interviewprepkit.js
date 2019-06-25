@@ -916,4 +916,14 @@ Given a stream of elements too large to store in memory,
 pick a random element from the stream with uniform probability.
 */
 
+const pickNum = (bigStream) => {
+    const random_ele = 0;
 
+    for (const i in Object.entries()) {
+        if(Math.random(1, i+1) === 1) {
+            random_ele = i
+        }
+        return random_element
+    } 
+    //have to check if it works. 
+}
