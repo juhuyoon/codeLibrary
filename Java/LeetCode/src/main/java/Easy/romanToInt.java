@@ -1,4 +1,6 @@
-class Solution {
+package Easy;
+
+class romanToInt {
   public int romanToInt(String s) {
       int sum = 0;
       int highest = -1;

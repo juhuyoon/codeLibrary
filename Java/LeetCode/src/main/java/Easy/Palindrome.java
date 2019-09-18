@@ -1,4 +1,6 @@
-class Solution {
+package Easy;
+
+class isPalindrome {
   public boolean isPalindrome(int input) {
     if(input < 0) {
       return false;

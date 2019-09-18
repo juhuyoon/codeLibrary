@@ -1,4 +1,4 @@
-// public int reverse(int x) {
+package Easy;// public int reverse(int x) {
 //   int rev = 0;
 //   while( x != 0) {
 //       int pop = x % 10;
@@ -10,14 +10,14 @@
 //   return rev;
 // }
 
-class Solution {
+class reverseInteger {
   public int reverse(int x) {
 int reversal = 0;
 while(x != 0) {
   if(reversal > Integer.MAX_VALUE/10 || reversal < Integer.MIN_VALUE/10) {
       return 0;
   }
-  reversal = revesral * 10 + (x % 10);
+  reversal = reversal * 10 + (x % 10);
   x = x/10;
 }
 return reversal;
