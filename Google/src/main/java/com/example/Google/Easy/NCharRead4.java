@@ -6,7 +6,7 @@ public class NCharRead4 {
     private int buffCnt = 0;
 
     private char[] buff = new char[4];
-    public int read(char[] buff, int n) {
+    public int read(char[] buf, int n) {
         int ptr = 0;
         while(ptr < n) {
             if(buffPtr == 0) {
@@ -16,7 +16,7 @@ public class NCharRead4 {
                 break;
             }
             while(ptr < n && buffPtr < buffCnt) {
-                buff[ptr++] = buff[buffPtr++];
+                buf[ptr++] = buff[buffPtr++];
             }
             if(buffPtr >= buffCnt) {
                 buffPtr = 0;
