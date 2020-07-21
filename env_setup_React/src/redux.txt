@@ -1,0 +1,26 @@
+REDUX FLOW:
+
+{type: RATE_COURSE, rating: 5}
+Action  ==>   Store ===> <== Reducers
+                ==> React
+
+= Action describes a user's intent, a plain function
+= Requires a type property
+
+rateCourse(rating) {
+    return {type: RATE_COURSE, rating: rating} <--- the action itself
+}
+
+
+
+Function that returns a new state based on the action
+= Reducers function appReducer(state = defaultState, action) {
+    sweitch(action.type){
+         case(RATE_COURSE) 
+         == Return Some data
+ }
+ }
+
+Once new state is returned from reducer, state is updated, then notifies React via React-Redux library
+
+
