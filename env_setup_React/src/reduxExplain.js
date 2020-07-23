@@ -25,10 +25,6 @@ function appReducer(state = defaultState, action) {
 }
 
 
-// When using redux, should try to avoid methods that directly mutate the arrays;
-
-// AVOID
-Array.push()
 Array.pop();
 Array.reverse()
 
